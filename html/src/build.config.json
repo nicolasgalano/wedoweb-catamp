@@ -1,0 +1,35 @@
+{
+  "autoprefixer_options": ["last 5 versions"],
+  "sass_lint": {
+    "src": "src/sass/**/*.scss",
+    "options": {
+      "config_file": "src/.sass-lint.yml"
+    }
+  },
+  "app_files": {
+    "images": "src/images/**/*",
+    "videos": "src/videos/**/*",
+    "fonts": [
+      "src/fonts/**/*",
+      "node_modules/bootstrap-sass/assets/fonts/**/*",
+      "node_modules/font-awesome/fonts/*"
+    ],
+    "php": ["src/php/**/*.php"],
+    "js": ["src/js/**/*.js"],
+    "vendor_js": [
+      "node_modules/jquery/dist/jquery.min.js",
+      "node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js",
+      "node_modules/wow.js/dist/wow.min.js",
+      "node_modules/jquery-validation/dist/jquery.validate.min.js"
+    ],
+    "pug": [ "src/pug/**/*.pug",
+             "!src/pug/partials/**/*.pug"
+           ],
+    "sass": ["src/sass/app.scss"]
+  },
+  "output_files": {
+    "build": "build",
+    "css": "css"
+  }
+
+}

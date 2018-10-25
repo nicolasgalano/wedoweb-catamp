@@ -1,0 +1,83 @@
+// *************************************
+//
+//   Config
+//   -> Variables de Bootstrap
+//
+// *************************************
+
+//@import './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+
+// -------------------------------------
+//   Typography
+// -------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Lato:200,200i,300,300i,400,400i,700,700i,900,900i');
+
+$lato: 'Lato', Arial, sans-serif;
+$arial: Arial, sans-serif;
+
+$font-family-base: $lato;
+$font-family-second: $lato;
+$font-size-base: 14px;
+$link-hover-decoration: none;
+$b-letter-spacing-m: 1.7px;
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// ----- Palette ----- //
+
+$white: #FFF;
+$white-alpha: rgba(255, 255, 255, .8);
+$green-light: #3ecf8e;
+$green-lighter: #e3f5ed;
+$gray: #3c3d41;
+$gray-light: #656b6f;
+
+// ----- Base ----- //
+$text-color: $gray;
+$c-menu-options-bg: $white-alpha;
+$c-text-main: $white;
+$c-btn-bg: $green-light;
+$c-btn-text: $white;
+$c-btn-text-hover: $white;
+$c-menu-icon-color: $white;
+$c-navbar-link-hover-mobile: $green-light;
+$c-navbar-bg: rgba($gray, .7);
+$c-section-row-title: $gray;
+$c-section-row-subtitle: $gray-light;
+
+// -------------------------------------
+//   Navbar
+// -------------------------------------
+$navbar-default-bg: transparent;
+$navbar-height: 59px;
+$navbar-border-radius: 0;
+$navbar-default-toggle-border-color: transparent;
+$footer-default-bg: $gray;
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+$main-slider-font-color: $white;
+$main-slider-title-sm-size: ceil(($font-size-base * 2.57));
+$main-slider-title-lg-size: ceil(($font-size-base * 4.64));
+$mains-slider-label-size: ceil(($font-size-base * .78));
+
+$btn-font-size: ceil(($font-size-base * .71));
+
+$section-row-title-font-lg-size: ceil($font-size-base * 3.71);
+$section-row-title-font-sm-size: ceil($font-size-base * 2.57);
+$section-row-subtitle-font-lg-size: ceil($font-size-base * 1.42);
+$section-row-subtitle-font-sm-size: ceil($font-size-base * 1.14);
+
+$input-bg: #e9e9e9;
+$input-color: $gray-light;
+$input-color-placeholder: $gray-light;
+$input-height-large: 45px;
+$input-border-focus: $green-light;
+$form-group-margin-bottom: 28px;
+.wow {
+    visibility: hidden;
+}
