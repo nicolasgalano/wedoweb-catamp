@@ -10,17 +10,12 @@ block content
     
     //Logo
     
-    .section-row.main-logo
-    
-          .container
-    
-                header.main
-                    
-                    //img
-                        
-                    p Cámara Argentina del Transporte Automotor de Mercancias y Residuos Peligrosos
-              
-            
+    .section-row.row-main
+        .container
+
+            img(src="images/home/im_main_logo.png")
+
+            p Cámara Argentina del Transporte Automotor de Mercancias y Residuos Peligrosos
                 
                 
     //About
@@ -41,76 +36,76 @@ block content
                       .type.vid
                         
                           .multimedia
-                              iframe(src="")
+                              
                     
     //services
     .section-row.row-services
         .container
             .row
               
-              h2 Servicios
+                h2 Servicios
               
-              .col-xs-12.col-sm-6.col-md-4
-                  
-                article.cipet
-                  
-                  figure
-                      
-                     img(src="images/cipet.png" alt="cipet  ")
-                    
-                  p Un servicio de CATAMP que se encuentra operando ininterrumpidamente desde 2008 dando una respuesta rapida y eficiente en la atencion de las emergencias en el transporte carretero, procurando que los caminos sean cada vez mas seguros.
-                    
-              .col-xs-12.col-sm-6.col-md-4
-                      
-                article.cursos
-                    
-                  figure
-                        
-                    img(src="images/cursos.png" alt="cursos")
-                        
-                  p CATAMP brinda cursos que permiten la obtención de la Licencia Nacional Habilitante para la categoría de Cargas Generales y Mercancías Peligrosas.
+                .col-xs-12.col-sm-6.col-md-4
+
+                    article.cipet
+
+                        figure
+
+                            img(src="images/dummie/logos/lg_cipet.png" alt="cipet")
+
+                        p Un servicio de CATAMP que se encuentra operando ininterrumpidamente desde 2008 dando una respuesta rapida y eficiente en la atencion de las emergencias en el transporte carretero, procurando que los caminos sean cada vez mas seguros.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    article.cursos
+
+                        figure
+
+                            img(src="images/dummie/logos/lg_lnh.png" alt="cursos")
+
+                        p CATAMP brinda cursos que permiten la obtención de la Licencia Nacional Habilitante para la categoría de Cargas Generales y Mercancías Peligrosas.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    article.ruta
+
+                        figure
+
+                            img(src="images/dummie/logos/lg_ruta.png" alt="ruta")
+
+                        p Es el Registro Único de Transporte Automotor.
+                        p Es obligatorio y con validez oficial por un año y renovable luego de transcurridos 12 meses.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    article.indice
+
+                        figure
+
+                            img(src="images/dummie/logos/lg_indice.png" alt="indice")
+
+                        p CATAMP tomó la decisión de calcular índices que reflejen las variaciones del costo de transporte de productos que mueven sus asociados. Motivó esta medida la necesidad de incluir en su cálculo los costos particulares que tiene nuestra actividad.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    article.legislacion
+
+                        figure
+
+                            img(src="images/dummie/logos/lg_legizlacion.png" alt="legislacion")
+
+                        p Toda la legislación correspondiente al Transporte de Mercancías peligrosas por carretera.
+                        p Contiene una recopilación de toda la legislación Nacional, Provincial y Municipal sobre este tipo de transporte en particular y sobre el transporte de cargas generales
                 
-              .col-xs-12.col-sm-6.col-md-4
-                              
-                article.ruta
-                    
-                  figure
-                            
-                    img(src="images/ruta.png" alt="ruta")
-                                
-                  p Es el Registro Único de Transporte Automotor.
-                  p Es obligatorio y con validez oficial por un año y renovable luego de transcurridos 12 meses.
-                                                                                                           
-              .col-xs-12.col-sm-6.col-md-4
-                            
-                article.registro
-                            
-                  figure
-                                
-                     img(src="images/rnpq.png" alt="registro")
-                      
-                  p CATAMP cuenta con un servicio de asesoramiento y gestión de trámites para los asociados que deban inscribirse ante dicho registro.
-                   
-              .col-xs-12.col-sm-6.col-md-4
-                                         
-                article.indice
-                         
-                  figure
-                                       
-                    img(src="images/indice.png" alt="indice")
-                                           
-                  p CATAMP tomó la decisión de calcular índices que reflejen las variaciones del costo de transporte de productos que mueven sus asociados. Motivó esta medida la necesidad de incluir en su cálculo los costos particulares que tiene nuestra actividad.
-    
-              .col-xs-12.col-sm-6.col-md-4
-                             
-                article.legislacion
-                             
-                   figure
-                                 
-                     img(src="images/legislacion.png" alt="legislacion")
-                           
-                   p Toda la legislación correspondiente al Transporte de Mercancías peligrosas por carretera.
-                   p Contiene una recopilación de toda la legislación Nacional, Provincial y Municipal sobre este tipo de transporte en particular y sobre el transporte de cargas generales.
+                .col-xs-12.col-sm-6.col-md-4
+
+                    article.registro
+
+                        figure
+
+                            img(src="images/dummie/logos/lg_rnpq.png" alt="registro")
+
+                        p CATAMP cuenta con un servicio de asesoramiento y gestión de trámites para los asociados que deban inscribirse ante dicho registro.
                        
     //be part
     .section-row.row-bepart  
@@ -123,7 +118,7 @@ block content
             a(href="#", target="_blank" ) Ver asociados
             
     //News
-    .section-row-row-News
+    .section-row.row-news
         .container
             .row
               
@@ -171,97 +166,97 @@ block content
               a(href="#", target="_blank" ) Ver mas
               
     //questions
-    .section-row-row-questions
+    .section-row.row-questions
         .container
           
           h2 ¿Tenes alguna consulta?
           
-          a(href="#", target="_blank" ) Contactanos
+          a(href="#", target="_blank") Contactanos
           
     //comision
     .section-row.row-comision
         .container
             .row
               
-              .col-xs-18.col-sm-9.col-md-6
-                
-                h2 Comisión Directiva 2018/2020
-                
+                .col-xs-18.col-sm-9.col-md-6
+
+                    h2 Comisión Directiva 2018/2020
+
                 //slider
-                
-              .col-xs-18.col-sm-9.col-md-6
-              
-                h3 Comisión Directiva 2018/2020
-                
-                ul.comision
+
+                .col-xs-18.col-sm-9.col-md-6
+
+                    h3 Comisión Directiva 2018/2020
+
+                    ul.comision
                   
-                  li
-                      p 
-                            span Sr. Angel Fuente Fuente
-                            label Presidente
-                  li
-                      p 
-                            span Sr. Juan Diego Segovia
-                            label Vicepresidente
-                  li
-                      p 
-                            span Sr. Walter José Bo
-                            label Secretario
-                  li
-                      p 
-                            span Lic. Gustavo A. Contrini
-                            label Prosecretario
-                  li
-                      p 
-                            span Dr. Guillermo Canievsky
-                            label Tesorero
-                  li
-                      p 
-                            span Sr. Nestor Angiletta
-                            label Protesorero
-                  li
-                      p 
-                            span Sr. Hugo Daniel Baciunas
-                            label Vocal Titular            
-                  li
-                      p 
-                            span Sr. José Nereo Silva
-                            label Vocal Titular
-                  li
-                      p 
-                            span Ing. Christian E Barbara
-                            label Vocal Titular
-                  li
-                      p 
-                            span Ing Claudio Kauffmann
-                            label Vocal Suplente
-                  li
-                      p 
-                            span Sr. Jorge fennema
-                            label Vocal Suplente
+                        li
+                            p 
+                                span Sr. Angel Fuente Fuente
+                                label Presidente
+                        li
+                            p 
+                                span Sr. Juan Diego Segovia
+                                label Vicepresidente
+                        li
+                            p 
+                                span Sr. Walter José Bo
+                                label Secretario
+                        li
+                            p 
+                                span Lic. Gustavo A. Contrini
+                                label Prosecretario
+                        li
+                            p 
+                                span Dr. Guillermo Canievsky
+                                label Tesorero
+                        li
+                            p 
+                                span Sr. Nestor Angiletta
+                                label Protesorero
+                        li
+                            p 
+                                span Sr. Hugo Daniel Baciunas
+                                label Vocal Titular            
+                        li
+                            p 
+                                span Sr. José Nereo Silva
+                                label Vocal Titular
+                        li
+                            p 
+                                span Ing. Christian E Barbara
+                                label Vocal Titular
+                        li
+                            p 
+                                span Ing Claudio Kauffmann
+                                label Vocal Suplente
+                        li
+                            p 
+                                span Sr. Jorge fennema
+                                label Vocal Suplente
                     
-                ul.fiscales
-                  
-                  li
-                      p 
-                            span Sr. Roberto Atilio Colombo
-                            label Titular
-                  li
-                      p 
-                            span Sr. Roberto Luis Martinez
-                            label Titular
-                  li
-                      p 
-                            span Ing. Diego Mariano Folch
-                            label Titular
-                  li
-                      p 
-                            span Srta. Carolina Colombo
-                            label Suplente
-                  li
-                      p 
-                            span Sr. Guillermo Conti
-                            label Suplente
+                    ul.fiscales
+
+                        li
+                            p 
+                                span Sr. Roberto Atilio Colombo
+                                label Titular
+                        li
+                            p 
+                                span Sr. Roberto Luis Martinez
+                                label Titular
+                        li
+                            p 
+                                span Ing. Diego Mariano Folch
+                                label Titular
+                        li
+                            p 
+                                span Srta. Carolina Colombo
+                                label Suplente
+                        li
+                            p 
+                                span Sr. Guillermo Conti
+                                label Suplente
                     
     //Asociados                                    
     .section-row.row-asociados
@@ -501,153 +496,146 @@ block content
                                     label Transporte Hugo Pou S.R.L
                             li
                                 p
-                                    label Logística &amp Transporte Rodriguez S.A
+                                    label Logística &amp; Transporte Rodriguez S.A
                             li
                                 p
                                     label Transportadora La Pampeana S.A
     
+    //ADHERENTES
     .section-row.row-adherentes
         .container
             
-                .row
+            .row
+            
+                h2 Adherentes
+            
+                .col-xs-12.col-sm-6.col-md-4
                 
-                    h2 Adherentes
-                
-                    .col-xs-12.col-sm-6.col-md-4
-                    
-                        ul.adherentes
-                            
-                            li
-                                p
-                                    label Air Liquide Argentina S.A
-                            li
-                                p
-                                    label Bayer Argentina S.A
-                            li
-                                p
-                                    label Bolland y Cia S.A       
-                            li
-                                p
-                                    label Clariant Argentina S.A               
-                            li
-                                p
-                                    label Destileria Argentina de Petroleo S.A    
-                            li
-                                p
-                                    label DGM Argentina S.R.L
-                            li
-                                p
-                                    label El Emporio del Tanque S.A
-                                    
-                    .col-xs-12.col-sm-6.col-md-4
-                                    
-                        ul.adherentes
-                                            
-                            li
-                                p
-                                    label Grupo Linde Gas S.A
-                            li
-                                p
-                                    label Heil Trailer Int S.A
-                            li
-                                p
-                                    label Oxy-net S.A    
-                            li
-                                p
-                                    label Pampa Energía S.A               
-                            li
-                                p
-                                    label Proviser S.A    
-                            li
-                                p
-                                    label Química Callegari S.R.L
-                            li
-                                p
-                                    label Soil Keeper S.A
-                                    
-                    .col-xs-12.col-sm-6.col-md-4
-                                    
-                        ul.adherentes
-                                            
-                            li
-                                p
-                                    label UNIPAR INDUCA SAIC
-                            li
-                                p
-                                    label Transporte Gottig S.R.L
-                            li
-                                p
-                                    label YPF       
-                            li
-                                p
-                                    label Juan Messina S.A               
-                            li
-                                p
-                                    label Michelín Argentina S.A.I.C y F  
+                    ul.adherentes
+                        
+                        li
+                            p
+                                label Air Liquide Argentina S.A
+                        li
+                            p
+                                label Bayer Argentina S.A
+                        li
+                            p
+                                label Bolland y Cia S.A       
+                        li
+                            p
+                                label Clariant Argentina S.A               
+                        li
+                            p
+                                label Destileria Argentina de Petroleo S.A    
+                        li
+                            p
+                                label DGM Argentina S.R.L
+                        li
+                            p
+                                label El Emporio del Tanque S.A
+                                
+                .col-xs-12.col-sm-6.col-md-4
+                                
+                    ul.adherentes
+                                        
+                        li
+                            p
+                                label Grupo Linde Gas S.A
+                        li
+                            p
+                                label Heil Trailer Int S.A
+                        li
+                            p
+                                label Oxy-net S.A    
+                        li
+                            p
+                                label Pampa Energía S.A               
+                        li
+                            p
+                                label Proviser S.A    
+                        li
+                            p
+                                label Química Callegari S.R.L
+                        li
+                            p
+                                label Soil Keeper S.A
+                                
+                .col-xs-12.col-sm-6.col-md-4
+                                
+                    ul.adherentes
+                                        
+                        li
+                            p
+                                label UNIPAR INDUCA SAIC
+                        li
+                            p
+                                label Transporte Gottig S.R.L
+                        li
+                            p
+                                label YPF       
+                        li
+                            p
+                                label Juan Messina S.A               
+                        li
+                            p
+                                label Michelín Argentina S.A.I.C y F  
                                     
     //Contacto
-    
     .section-row.row-contacto
         .container
         
-                .row
+            .row
+                
+                .col-xs-12.col-sm-6.col-md-4
                     
-                    .col-xs-12.col-sm-6.col-md-4
+                    h2 Contacto
+                    
+                    ul.contacto
                         
-                            h2 Contacto
-                            
-                            ul.contacto
-                                
-                                li
-                                    p
-                                        label Moreno 1850 - 4° Piso
-                                li
-                                    p
-                                        label (C1094AAB) C.A.B.A - Argentina
-                                li
-                                    p
-                                        label (+54-11) 53688480 Lineas rotativas
-                                li
-                                    p
-                                        label Pers. Juridica Res. IGJ: 000768
-                                li
-                                    i.fas.fa-envelope
-                                        label catamp@catamp.org.ar                               
+                        li
+                            p
+                                label Moreno 1850 - 4° Piso
+                        li
+                            p
+                                label (C1094AAB) C.A.B.A - Argentina
+                        li
+                            p
+                                label (+54-11) 53688480 Lineas rotativas
+                        li
+                            p
+                                label Pers. Juridica Res. IGJ: 000768
+                        li
+                            i.fas.fa-envelope
+                                label catamp@catamp.org.ar                               
+                    
+                .col-xs-6.col-sm-3.col-md-2
+                    
+                    img(src="images/home/im_contacto_iram.png" alt="iram")
+                    
+                .col-xs-6.col-sm-3.col-md-2
+                    
+                    ul.about-as
+                        li
+                            a(href="") ¿QUE ES CATAMP?
+                        li
+                            a(href="") SERVICIOS
+                        li
+                            a(href="") ASOCIARCE
+                        li
+                            a(href="") NOTICIAS
+                        li
+                            a(href="") COMISIÓN DIRECTIVA
+                        li
+                            a(href="") ASOCIADOS
+                        li
+                            a(href="") CONTACTO
+                                        
+                .col-xs-12.col-sm-6.col-md-4
+                    
+                    img(src="images/home/im_contacto_rnbd.png" alt="registro")
                         
-                    .col-xs-6.col-sm-3.col-md-2
-                        
-                        img(src="images/iram.png" alt="iram")
-                        
-                    .col-xs-6.col-sm-3.col-md-2
-                        
-                        ul.about-as
-                            li
-                                p
-                                    label ¿QUE ES CATAMP?
-                            li
-                                p
-                                    label SERVICIOS
-                            li
-                                p
-                                    label ASOCIARCE
-                            li
-                                p
-                                    label NOTICIAS
-                            li
-                                p
-                                    label COMISIÓN DIRECTIVA
-                            li
-                                p
-                                    label ASOCIADOS
-                            li
-                                p
-                                    label CONTACTO
-                                            
-                    .col-xs-12.col-sm-6.col-md-4
-                        
-                        img(src="images/registro.png" alt="registro")
-                            
-                        img(src="images/fadeac.png" alt="fadeac")
+                    img(src="images/home/im_contacto_faadeac.png" alt="faadeac")
         
                                 
                         

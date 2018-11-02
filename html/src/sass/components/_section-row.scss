@@ -1,6 +1,88 @@
 .section-row {
 //DIVIDI CADA PARTE DEL DISEÑO EN UNA SECCION NUEVA
-
+    min-height:200px;
     font-family: $lato;//VARIABLE DEFINIDA EN CONFIG QUE DEFINE LA TIPOGRAFIA DE GOOGLE FONTS LATO
+
+    h2{
+
+    }
+
+    h3{
+
+    }
+
+}
+
+//MAIN
+.row-main{
+
+    background: url(../images/home/bg_main.jpg) no-repeat;
+    background-size: cover;
+
+}
+
+//QUE ES
+.row-about{
+
+    background: url(../images/home/bg_que.png) bottom right no-repeat;
+    background-size: contain;
+
+}
+
+//SERVICIOS
+.row-services{
+
+    background: url(../images/home/bg_servicios.jpg) no-repeat;
+    background-size: cover;
+
+}
+
+//SE PARTE
+.row-bepart{
+
+
+
+}
+
+//NOTICIAS
+.row-news{
+
+    background: #f2f2f2;
+
+}
+
+//CONSULTAS
+.row-questions{
+
+    background: url(../images/home/bg_consultas.jpg) no-repeat;
+    background-size: cover;
+
+}
+
+//COMISION
+.row-comision{
+
+
+
+}
+
+//ASOCIADOS
+.row-asociados{
+
+
+
+}
+
+//ADHERENTES
+.row-adherentes{
+
+
+
+}
+
+//CONTACTO
+.row-contacto{
+
+
 
 }
