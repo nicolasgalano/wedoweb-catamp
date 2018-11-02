@@ -5,7 +5,42 @@
 // *************************************
 
 footer {
+    position: relative;
+    padding:30px 50px;
+    text-align: center;
+    a.logo{
+        display: block;
+        position:absolute;
+        top:30px;
+        left:50px;
+    }
 
-    
+    p.copyright{
+        line-height: 66px;
+        margin:0;
+        width:100%;
+        font-size: 18px;
+    }
+
+    ul.redes{
+        position:absolute;
+        top:40px;
+        right:50px;
+        li{
+            float:left;
+            list-style:none;
+            margin:0px 0 0 18px;
+            border:1px solid #59595b;
+            border-radius: 30px;
+            width:48px;
+            height:48px;
+            text-align: center;
+            i{
+                font-size:28px;
+                color:#59595b;
+                line-height: 48px;
+            }
+        }
+    }
 
 }

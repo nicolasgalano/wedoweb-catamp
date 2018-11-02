@@ -1,23 +1,61 @@
+@media(min-width: 1400px){
+    .container {
+        width: 1370px !important;
+    }
+}
+
 .section-row {
 //DIVIDI CADA PARTE DEL DISEÑO EN UNA SECCION NUEVA
     min-height:200px;
     font-family: $lato;//VARIABLE DEFINIDA EN CONFIG QUE DEFINE LA TIPOGRAFIA DE GOOGLE FONTS LATO
 
     h2{
-
+        font-size:80px;
+        font-family:'Roboto';
+        font-weight: 100;
+        color:#59595B;
     }
 
     h3{
 
     }
 
+    p{
+        font-size:25px;
+        line-height: 40px;
+        font-family:'Roboto';
+        font-weight: 300;
+        color:#59595B;
+    }
+
+    a.btn{
+        background:#003263;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size:20px;
+        font-family:'Roboto';
+        margin:0;
+    }
+
 }
 
 //MAIN
 .row-main{
-
+    height:90vh;
     background: url(../images/home/bg_main.jpg) no-repeat;
     background-size: cover;
+    padding-top:15%;
+    text-align: center;
+    img{
+
+    }
+    p{
+        font-size:47px;
+        line-height: 60px;
+        font-weight: 100;
+        color:#003263;
+        margin:20px 0 0;
+    }
 
 }
 
@@ -26,6 +64,36 @@
 
     background: url(../images/home/bg_que.png) bottom right no-repeat;
     background-size: contain;
+    text-align: center;
+    padding:80px 0 30px;
+
+    h2{
+        margin-bottom:28px;
+        text-align: left;
+    }
+    p{
+        margin:0;
+        text-align: left;
+    }
+    a.btn{
+        margin:25px 0;
+    }
+
+    .multimedia{
+        display:inline-block;
+        background: url(../images/home/im_que_play.png) top center no-repeat;
+        text-align: center;
+        width:180px;
+        padding:195px 0 0;
+        margin:120px 0 0;
+        span{
+            font-size:25px;
+            line-height: 40px;
+            font-family:'Roboto';
+            font-weight: 300;
+            color:#59595B;
+        }
+    }
 
 }
 
@@ -83,6 +151,7 @@
 //CONTACTO
 .row-contacto{
 
-
+    background: url(../images/home/bg_consultas.jpg) no-repeat;
+    background-size: cover;
 
 }

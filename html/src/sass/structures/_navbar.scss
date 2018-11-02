@@ -11,5 +11,49 @@ nav{
     top:0;
     left:0;
     width:100%;
+    z-index: 10;
+
+    h1{
+        float:left;
+        margin:32px 0 0 55px;
+        a{
+
+        }
+    }
+
+    ul.redes{
+        float:right;
+        li{
+            float:left;
+            list-style:none;
+            margin:53px 0 0 18px;
+            i{
+                font-size:28px;
+                color:#003263;
+            }
+        }
+    }
+
+    a.btn-menu{
+        float:right;
+        width:33px;
+        height:22px;
+        background:url(../images/home/im_header_menu.png) no-repeat;
+        margin:56px 55px 0 42px;
+    }
+
+    ul.menu{
+        display:none;
+        position:fix;
+        top:0;
+        right:0;
+
+        li{
+
+            a{
+
+            }
+        }
+    }
 
 }
