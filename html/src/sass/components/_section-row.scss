@@ -3,6 +3,16 @@
         width: 1370px !important;
     }
 }
+@media(min-width: 1600px){
+    .container {
+        width: 1570px !important;
+    }
+}
+@media(min-width: 1800px){
+    .container {
+        width: 1770px !important;
+    }
+}
 
 .section-row {
 //DIVIDI CADA PARTE DEL DISEÑO EN UNA SECCION NUEVA
@@ -14,15 +24,18 @@
         font-family:'Roboto';
         font-weight: 100;
         color:#59595B;
+        @media(max-width: 600px){
+            font-size:60px;
+            text-align: center !important;
+        }
     }
 
     h3{
-
+        font-family:'Roboto';
     }
 
     p{
         font-size:25px;
-        line-height: 40px;
         font-family:'Roboto';
         font-weight: 300;
         color:#59595B;
@@ -35,6 +48,7 @@
         font-size:20px;
         font-family:'Roboto';
         margin:0;
+        border-radius:8px;
     }
 
 }
@@ -44,10 +58,10 @@
     height:90vh;
     background: url(../images/home/bg_main.jpg) no-repeat;
     background-size: cover;
-    padding-top:15%;
+    padding-top:25vh;
     text-align: center;
     img{
-
+        width:90%;
     }
     p{
         font-size:47px;
@@ -55,6 +69,10 @@
         font-weight: 100;
         color:#003263;
         margin:20px 0 0;
+        @media(max-width: 800px){
+            font-size:30px;
+            line-height: 40px;
+        }
     }
 
 }
@@ -65,7 +83,7 @@
     background: url(../images/home/bg_que.png) bottom right no-repeat;
     background-size: contain;
     text-align: center;
-    padding:80px 0 30px;
+    padding:140px 0 30px;
 
     h2{
         margin-bottom:28px;
@@ -73,6 +91,7 @@
     }
     p{
         margin:0;
+        line-height: 40px;
         text-align: left;
     }
     a.btn{
@@ -93,6 +112,9 @@
             font-weight: 300;
             color:#59595B;
         }
+        @media(max-width: 990px){
+            margin:40px 0 40px;
+        }
     }
 
 }
@@ -102,13 +124,70 @@
 
     background: url(../images/home/bg_servicios.jpg) no-repeat;
     background-size: cover;
+    padding:140px 0 90px;
+
+    h2{
+        color:#FFF;
+        margin-bottom:90px;
+    }
+
+    article{
+        min-height:450px;
+        padding-bottom:20px;
+
+        figure{
+            min-height:120px;
+        }
+        @media(max-width: 990px){
+            min-height:auto;
+            padding-bottom:40px;
+            figure{
+                min-height:110px;
+            }
+        }
+    }
+
+    p{
+        font-size:20px;
+        line-height: 40px;
+        color:#FFF;
+        @media(max-width: 990px){
+            font-size:18px;
+            line-height: 22px;
+        }
+    }
 
 }
 
 //SE PARTE
 .row-bepart{
 
+    text-align: center;
+    padding:110px 0 50px;
 
+    h2{
+        font-size:56px;
+        font-weight: 300;
+        padding-bottom:40px;
+    }
+
+    a.btn{
+        text-transform:none;
+        font-size: 28px;
+        padding:0 85px;
+        height:59px;
+        line-height: 59px;
+        font-weight: 300;
+        margin-bottom:26px;
+    }
+    a.link{
+        display: block;
+        font-size:20px;
+        line-height: 22px;
+        font-family:'Roboto';
+        font-weight: 300;
+        color:#003263;
+    }
 
 }
 
@@ -116,35 +195,169 @@
 .row-news{
 
     background: #f2f2f2;
+    text-align: center;
+    padding:110px 0 50px;
+
+    h2{
+        margin:0 0 40px;
+    }
+
+    article{
+        margin:0 10px 40px;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow:0 0px 40px rgba(0,0,0,0.2);
+        min-height: 655px;
+
+        figure{
+
+            img{
+                width:100%;
+            }
+        }
+
+        .cont{
+            padding:20px 35px;
+            text-align: left;
+
+            span{
+                font-size: 22px;
+                font-family:'Roboto';
+                font-weight: 500;
+                color:#003263;
+            }
+            h3{
+                font-size: 30px;
+                font-weight: 300;
+                color:#414042;
+            }
+            p{
+                font-size: 20px;
+                line-height: 36px;
+                font-weight: 300;
+            }
+        }
+    }
 
 }
 
 //CONSULTAS
-.row-questions{
+.section-row.row-questions{
 
     background: url(../images/home/bg_consultas.jpg) no-repeat;
     background-size: cover;
+    text-align: center;
+    padding:110px 0 50px;
+
+    h2{
+        font-size:56px;
+        font-weight: 300;
+        padding-bottom:40px;
+        color:#FFF;
+    }
+
+    a.btn{
+        color:#59595B !important;
+        background:#FFF;
+        text-transform:none;
+        font-size: 28px;
+        padding:0 70px;
+        height:59px;
+        line-height: 59px;
+        font-weight: 300;
+        margin-bottom:26px;
+    }
 
 }
 
 //COMISION
 .row-comision{
 
+    background: #f2f2f2;
+    padding:110px 0 50px;
 
+    h2{
+
+    }
+
+    .comision-box{
+        background: #FFF;
+        border-radius: 15px;
+        padding:15px 35px 15px 35px;
+
+        h3{
+            text-align: center;
+            font-size:29px;
+            font-weight: 300;
+            color:#1B3561;
+            padding:0 50px 20px;
+            @media(max-width: 600px){
+                font-size:20px;
+            }
+        }
+
+        ul{
+            padding:0 0 10px;
+            margin:0;
+            li{
+                list-style: none;
+                float:left;
+                width:100%;
+                padding:0 0 5px;
+                margin:0;
+                p{
+                    font-family: 'Roboto';
+
+                    span{
+                        font-size: 25px;
+                        float:left;
+                        @media(max-width: 600px){
+                            font-size:16px;
+                        }
+                    }
+                    label{
+                        font-weight: 300;
+                        font-size:18px;
+                        margin:5px 0 0;
+                        line-height: 30px;
+                        float:right;
+                        @media(max-width: 600px){
+                            font-size:14px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 
 }
 
 //ASOCIADOS
 .row-asociados{
+    padding:110px 0 70px;
 
+    h2{
+        margin:40px 0 40px;
+    }
 
-
-}
-
-//ADHERENTES
-.row-adherentes{
-
-
+    ul{
+        margin:0;
+        padding:0;
+        li{
+            list-style: none;
+            p{
+                font-family: 'Roboto';
+                font-weight: 100 !important;
+                font-size:25px;
+                margin:0 0 2px;
+                color:#59595B;
+                @media(max-width: 1000px){
+                    font-size:20px;
+                }
+            }
+        }
+    }
 
 }
 
@@ -153,5 +366,83 @@
 
     background: url(../images/home/bg_consultas.jpg) no-repeat;
     background-size: cover;
+    padding:80px 0 90px;
+
+    li{
+        list-style:none;
+        color:#FFF;
+    }
+    a{
+        color:#FFF;
+    }
+    h2{
+        color:#FFF;
+        margin-top:20px;
+        margin-bottom: 32px;
+    }
+
+    ul.contacto{
+        margin:0;
+        padding:0;
+        li{
+            font-family: 'Roboto';
+            font-weight: 100 !important;
+            font-size:20px;
+            margin-bottom: 9px;
+            &.big{
+                font-weight: 300 !important;
+                font-size:22px;
+            }
+            &.mail{
+                padding-top:23px;
+                font-weight: 500 !important;
+                font-size:25px;
+                a{
+                    display:inline-block;
+                    padding-left:14px;
+                }
+            }
+        }
+    }
+
+    img.iram{
+        margin-top:170px;
+    }
+
+    ul.about-as{
+        margin:20px 0 0;
+        padding:0;
+        li{
+            padding:0 0 26px;
+            a{
+                font-size: 17px;
+                font-weight: 100 !important;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    img.registro{
+        width:100%;
+        max-width:388px;
+        margin-top:0px;
+    }
+
+    img.faadeac{
+        margin-top:60px;
+        margin-right:25px;
+    }
+
+    img.fpt{
+        margin-top:33px;
+    }
+
+    @media(max-width: 1000px){
+        img.iram{
+            display: none;
+        }
+    }
 
 }

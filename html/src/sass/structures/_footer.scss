@@ -8,11 +8,17 @@ footer {
     position: relative;
     padding:30px 50px;
     text-align: center;
+    @media(max-width: 800px){
+        padding:20px 20px;
+    }
     a.logo{
         display: block;
         position:absolute;
         top:30px;
         left:50px;
+        @media(max-width: 800px){
+            left:30px;
+        }
     }
 
     p.copyright{
@@ -20,12 +26,18 @@ footer {
         margin:0;
         width:100%;
         font-size: 18px;
+        @media(max-width: 900px){
+            padding-top:90px;
+        }
     }
 
     ul.redes{
         position:absolute;
         top:40px;
         right:50px;
+        @media(max-width: 800px){
+            right:30px;
+        }
         li{
             float:left;
             list-style:none;
@@ -39,6 +51,9 @@ footer {
                 font-size:28px;
                 color:#59595b;
                 line-height: 48px;
+            }
+            @media(max-width: 600px){
+                margin:0px 0 0 6px;
             }
         }
     }

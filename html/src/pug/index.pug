@@ -10,10 +10,10 @@ block content
     
     //Logo
     
-    .section-row.row-main
+    .section-row.row-main(data-midnight="blue")
         .container
 
-            img(src="images/home/im_main_logo.png")
+            img(src="images/home/im_main_logo.png",style="max-width:647px;")
 
             p Cámara Argentina del Transporte<br>Automotor de Mercancias y Residuos Peligrosos
                 
@@ -37,11 +37,12 @@ block content
                               
                     
     //services
-    .section-row.row-services
+    .section-row.row-services(data-midnight="white")
         .container
             .row
-              
-                h2 Servicios
+                
+                .col-xs-12
+                    h2 Servicios
               
                 .col-xs-12.col-sm-6.col-md-4
 
@@ -109,67 +110,76 @@ block content
     .section-row.row-bepart  
         .container
           
-            h2 ¿Queres ser parte de CATAMP?
-            
-            a(href="#", target="_blank" ) Asociate
-            
-            a(href="#", target="_blank" ) Ver asociados
+            .col-xs-12
+                h2 ¿Queres ser parte de CATAMP?
+                
+                a.btn(href="#", target="_blank" ) Asociate
+                
+                a.link(href="#", target="_blank" ) Ver asociados
             
     //News
     .section-row.row-news
         .container
             .row
-              
-              h2 Noticias
-              
-              .col-xs-12.col-sm-6.col-md-4
-                
-                article
-                  
-                  figure
-                    
-                    img(src="images/news1.png" alt="noticia1")
-                      
-                h3 Solidaridad
-                
-                p.news1 16° edición del festival Trichaco
-                p gracias al aporte de muchas empresas de transporte llegaron donaciones de comida leche y articulos necesarios para esta comunidad.     
-                
-              .col-xs-12.col-sm-6.col-md-4
-                  
-                article
-                    
-                  figure
-                      
-                    img(src="images/news2.png" alt="noticia2")
-                        
-                h3 Actualidad
-                  
-                p.news2 Reunión de especialistas transporte MMPP
-                p Se definieron los temas que presentará nuestro País en la proxima Asamblea del SGT N° 5 Transporte del MERCOSUR.
 
-              .col-xs-12.col-sm-6.col-md-4
-                    
-                article
-                      
-                  figure
+                .col-xs-12
+                    h2 Noticias
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    article
+
+                        figure
+
+                            img(src="images/news1.png" alt="noticia1")
                         
-                    img(src="images/news3.png" alt="noticia3")
-                          
-                h3 Formación
-                    
-                p.news3 Entrega de certificados Diplomado en MMPP
-                p el IRAM Entregó los certificados a los alumnos que aprobaron el curso del diplomado en el transporte de MMPP
-              
-              a(href="#", target="_blank" ) Ver mas
+                        .cont
+                            
+                            span Solidaridad
+
+                            h3 16° edición del festival Trichaco
+                            p gracias al aporte de muchas empresas de transporte llegaron donaciones de comida leche y articulos necesarios para esta comunidad.     
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    article
+
+                        figure
+
+                            img(src="images/news2.png" alt="noticia2")
+                        
+                        .cont
+                            
+                            span Actualidad
+
+                            h3 Reunión de especialistas transporte MMPP
+                            p Se definieron los temas que presentará nuestro País en la proxima Asamblea del SGT N° 5 Transporte del MERCOSUR.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    article
+
+                        figure
+
+                            img(src="images/news3.png" alt="noticia3")
+                        
+                        .cont
+                            
+                            span Formación
+
+                            h3 Entrega de certificados Diplomado en MMPP
+                            p el IRAM Entregó los certificados a los alumnos que aprobaron el curso del diplomado en el transporte de MMPP
+
+                
+                a.btn(href="#", target="_blank" ) Ver más
               
     //questions
-    .section-row.row-questions
+    .section-row.row-questions(data-midnight="white")
         .container
           
           h2 ¿Tenes alguna consulta?
           
-          a(href="#", target="_blank") Contactanos
+          a.btn(href="#", target="_blank") Contactanos
           
     //comision
     .section-row.row-comision
@@ -180,407 +190,315 @@ block content
 
                     h2 Comisión Directiva 2018/2020
 
-                //slider
+                    //slider
 
                 .col-xs-18.col-sm-9.col-md-6
+                
+                    .comision-box
+                
+                        h3 Comisión Directiva 2018/2020
+                            
+                        ul.comision.clearfix
+                      
+                            li
+                                p 
+                                    span Sr. Angel Fuente Fuente
+                                    label Presidente
+                            li
+                                p 
+                                    span Sr. Juan Diego Segovia
+                                    label Vicepresidente
+                            li
+                                p 
+                                    span Sr. Walter José Bo
+                                    label Secretario
+                            li
+                                p 
+                                    span Lic. Gustavo A. Contrini
+                                    label Prosecretario
+                            li
+                                p 
+                                    span Dr. Guillermo Canievsky
+                                    label Tesorero
+                            li
+                                p 
+                                    span Sr. Nestor Angiletta
+                                    label Protesorero
+                            li
+                                p 
+                                    span Sr. Hugo Daniel Baciunas
+                                    label Vocal Titular            
+                            li
+                                p 
+                                    span Sr. José Nereo Silva
+                                    label Vocal Titular
+                            li
+                                p 
+                                    span Ing. Christian E Barbara
+                                    label Vocal Titular
+                            li
+                                p 
+                                    span Ing Claudio Kauffmann
+                                    label Vocal Suplente
+                            li
+                                p 
+                                    span Sr. Jorge fennema
+                                    label Vocal Suplente
+                                    
+                        h3 Órgano de Fiscalización Comisión Revisora de Cuentas
+                        
+                        ul.fiscales.clearfix
 
-                    h3 Comisión Directiva 2018/2020
-
-                    ul.comision
-                  
-                        li
-                            p 
-                                span Sr. Angel Fuente Fuente
-                                label Presidente
-                        li
-                            p 
-                                span Sr. Juan Diego Segovia
-                                label Vicepresidente
-                        li
-                            p 
-                                span Sr. Walter José Bo
-                                label Secretario
-                        li
-                            p 
-                                span Lic. Gustavo A. Contrini
-                                label Prosecretario
-                        li
-                            p 
-                                span Dr. Guillermo Canievsky
-                                label Tesorero
-                        li
-                            p 
-                                span Sr. Nestor Angiletta
-                                label Protesorero
-                        li
-                            p 
-                                span Sr. Hugo Daniel Baciunas
-                                label Vocal Titular            
-                        li
-                            p 
-                                span Sr. José Nereo Silva
-                                label Vocal Titular
-                        li
-                            p 
-                                span Ing. Christian E Barbara
-                                label Vocal Titular
-                        li
-                            p 
-                                span Ing Claudio Kauffmann
-                                label Vocal Suplente
-                        li
-                            p 
-                                span Sr. Jorge fennema
-                                label Vocal Suplente
-                    
-                    ul.fiscales
-
-                        li
-                            p 
-                                span Sr. Roberto Atilio Colombo
-                                label Titular
-                        li
-                            p 
-                                span Sr. Roberto Luis Martinez
-                                label Titular
-                        li
-                            p 
-                                span Ing. Diego Mariano Folch
-                                label Titular
-                        li
-                            p 
-                                span Srta. Carolina Colombo
-                                label Suplente
-                        li
-                            p 
-                                span Sr. Guillermo Conti
-                                label Suplente
+                            li
+                                p 
+                                    span Sr. Roberto Atilio Colombo
+                                    label Titular
+                            li
+                                p 
+                                    span Sr. Roberto Luis Martinez
+                                    label Titular
+                            li
+                                p 
+                                    span Ing. Diego Mariano Folch
+                                    label Titular
+                            li
+                                p 
+                                    span Srta. Carolina Colombo
+                                    label Suplente
+                            li
+                                p 
+                                    span Sr. Guillermo Conti
+                                    label Suplente
                     
     //Asociados                                    
     .section-row.row-asociados
         .container
                 .row
-                    h2 Asociados
+                    
+                    .col-xs-12
+                        h2 Asociados
                             
                     .col-xs-12.col-sm-6.col-md-4
                         
                        ul.asociados
                            
                             li
-                                p
-                                    label Aliani y Meroi S.R.L.
+                                p                 Aliani y Meroi S.R.L.
                             li
-                                p
-                                    label All Road S.A
+                                p                 All Road S.A
                             li
-                                p
-                                    label Carlos E Delgado y Cia S.A
+                                p                 Carlos E Delgado y Cia S.A
                             li
-                                p
-                                    label Carlos G Barberis e Hijos S.A
+                                p                 Carlos G Barberis e Hijos S.A
                             li
-                                p
-                                    label Chamical Compactación S.A
+                                p                 Chamical Compactación S.A
                             li
-                                p
-                                    label Conteman S.A
+                                p                 Conteman S.A
                             li
-                                p
-                                    label Contenedores GA-LE-LIO de Norberto Francisco Gimenez
+                                p                 Contenedores GA-LE-LIO de Norberto Francisco Gimenez
                             li
-                                p
-                                    label Contenedores Hugo
+                                p                 Contenedores Hugo
                             li
-                                p
-                                    label New Conti Group S.A
+                                p                 New Conti Group S.A
                             li
-                                p
-                                    label Contrini Hnos S.R.L
+                                p                 Contrini Hnos S.R.L
                             li
-                                p
-                                    label Deltacom S.A
+                                p                 Deltacom S.A
                             li
-                                p
-                                    label Deposito Alzaga de Roberto Mastronardi y Raul Mastronardi
+                                p                 Deposito Alzaga de Roberto Mastronardi y Raul Mastronardi
                             li
-                                p
-                                    label El Charabón S.A.C.I
+                                p                 El Charabón S.A.C.I
                             li
-                                p
-                                    label Embalse del Litoral S.A
+                                p                 Embalse del Litoral S.A
                             li
-                                p
-                                    label Expreso Ruta 12 de Salomon Canievsky S.A
+                                p                 Expreso Ruta 12 de Salomon Canievsky S.A
                             li
-                                p
-                                    label FJW S.A.T
+                                p                 FJW S.A.T
                             li
-                                p
-                                    label Jomase S.R.L
+                                p                 Jomase S.R.L
                             li
-                                p
-                                    label Jorge Eduardo Grotschl
+                                p                 Jorge Eduardo Grotschl
                             li
-                                p
-                                    label Jose Eduardo Rodriguez S.A
+                                p                 Jose Eduardo Rodriguez S.A
                             li
-                                p
-                                    label Juan Carlos patricio S.A
+                                p                 Juan Carlos patricio S.A
                             li
-                                p
-                                    label Logistica y Servicios Integrales S.A
+                                p                 Logistica y Servicios Integrales S.A
                             li
-                                p
-                                    label Lujan Gas S.A
+                                p                 Lujan Gas S.A
                             li
-                                p
-                                    label Mameli y Asociados S.R.L
+                                p                 Mameli y Asociados S.R.L
                             li
-                                p
-                                    label Master Transp S.R.L
+                                p                 Master Transp S.R.L
                                 
                     .col-xs-12.col-sm-6.col-md-4
                                     
                        ul.asociados
                                        
                             li
-                                p
-                                    label Matlack Roman Transportes S.A 
+                                p                 Matlack Roman Transportes S.A 
                             li
-                                p
-                                    label MULTI-TRA S.A
+                                p                 MULTI-TRA S.A
                             li
-                                p
-                                    label P.Tortorielo y Cia S.R.L
+                                p                 P.Tortorielo y Cia S.R.L
                             li
-                                p
-                                    label Petrovalle S.A.T
+                                p                 Petrovalle S.A.T
                             li
-                                p
-                                    label Retiros El Sol de Juan Domingo Danielo
+                                p                 Retiros El Sol de Juan Domingo Danielo
                             li
-                                p
-                                    label Roberto Luis Martinez S.R.L
+                                p                 Roberto Luis Martinez S.R.L
                             li
-                                p
-                                    label Rodolfo Alberto Donnet S.A
+                                p                 Rodolfo Alberto Donnet S.A
                             li
-                                p
-                                    label Roli Gas S.A
+                                p                 Roli Gas S.A
                             li
-                                p
-                                    label S.I.P.E Soluciones Integradas para Empresas S.R.L
+                                p                 S.I.P.E Soluciones Integradas para Empresas S.R.L
                             li
-                                p
-                                    label Sertec gestión Ambiental S.A
+                                p                 Sertec gestión Ambiental S.A
                             li
-                                p
-                                    label Spital Hnos S.R.L
+                                p                 Spital Hnos S.R.L
                             li
-                                p
-                                    label Telga S.A.T
+                                p                 Telga S.A.T
                             li
-                                p
-                                    label Transporte Tracción S.R.L
+                                p                 Transporte Tracción S.R.L
                             li
-                                p
-                                    label Trans Luck S.R.L
+                                p                 Trans Luck S.R.L
                             li
-                                p
-                                    label Trans Tony S.R.L
+                                p                 Trans Tony S.R.L
                             li
-                                p
-                                    label Transbahia S.A
+                                p                 Transbahia S.A
                             li
-                                p
-                                    label Translogística Oroz S.R.L
+                                p                 Translogística Oroz S.R.L
                             li
-                                p
-                                    label Transol S.R.L
+                                p                 Transol S.R.L
                             li
-                                p
-                                    label Transcent S.A
+                                p                 Transcent S.A
                             li
-                                p
-                                    label Transportes Adamo S.A
+                                p                 Transportes Adamo S.A
                             li
-                                p
-                                    label Transportes Colombo S.R.L
+                                p                 Transportes Colombo S.R.L
                             li
-                                p
-                                    label Empresa de Transportes Don Pedro S.R.L
+                                p                 Empresa de Transportes Don Pedro S.R.L
                             li
-                                p
-                                    label Transportes Fennema S.A
+                                p                 Transportes Fennema S.A
                             li
-                                p
-                                    label Transportes Garay S.A                                                   
+                                p                 Transportes Garay S.A                                                   
                             li
-                                p
-                                    label Transportes Jose Beraldi S.A
+                                p                 Transportes Jose Beraldi S.A
                                     
                     .col-xs-12.col-sm-6.col-md-4
                                                     
                        ul.asociados
                                                        
                             li
-                                p
-                                    label Transportes Mammola S.R.L 
+                                p                 Transportes Mammola S.R.L 
                             li
-                                p
-                                    label Transportes Maranata S.H
+                                p                 Transportes Maranata S.H
                             li
-                                p
-                                    label Transporte Mugas S.A
+                                p                 Transporte Mugas S.A
                             li
-                                p
-                                    label Transportes Orlando Menconi
+                                p                 Transportes Orlando Menconi
                             li
-                                p
-                                    label Transportes Puerto Nuevo S.R.L
+                                p                 Transportes Puerto Nuevo S.R.L
                             li
-                                p
-                                    label Transportes RDP S.R.L
+                                p                 Transportes RDP S.R.L
                             li
-                                p
-                                    label Transportes Savini S.R.L
+                                p                 Transportes Savini S.R.L
                             li
-                                p
-                                    label Vaca e Hijos S.R.L
+                                p                 Vaca e Hijos S.R.L
                             li
-                                p
-                                    label Victorio Podesta y Cia S.A
+                                p                 Victorio Podesta y Cia S.A
                             li
-                                p
-                                    label Vigna S.R.L
+                                p                 Vigna S.R.L
                             li
-                                p
-                                    label Volquetes y Transportes Marino S.A
+                                p                 Volquetes y Transportes Marino S.A
                             li
-                                p
-                                    label Zarcam S.A
+                                p                 Zarcam S.A
                             li
-                                p
-                                    label Defiba Servicios Portuarios S.A
+                                p                 Defiba Servicios Portuarios S.A
                             li
-                                p
-                                    label SERTEC Servicios y Tecnología en limpieza S.A
+                                p                 SERTEC Servicios y Tecnología en limpieza S.A
                             li
-                                p
-                                    label Servicios HLB S.A
+                                p                 Servicios HLB S.A
                             li
-                                p
-                                    label Tradelog S.A
+                                p                 Tradelog S.A
                             li
-                                p
-                                    label Tranes S.R.L
+                                p                 Tranes S.R.L
                             li
-                                p
-                                    label Transporte Euskadi de Juan Ignacio Otegui
+                                p                 Transporte Euskadi de Juan Ignacio Otegui
                             li
-                                p
-                                    label Viana y Viana S.R.L
+                                p                 Viana y Viana S.R.L
                             li
-                                p
-                                    label Transporte Vesprini S.A
+                                p                 Transporte Vesprini S.A
                             li
-                                p
-                                    label Transcont S.R.L
+                                p                 Transcont S.R.L
                             li
-                                p
-                                    label Petroandina S.R.L
+                                p                 Petroandina S.R.L
                             li
-                                p
-                                    label Transporte Hugo Pou S.R.L
+                                p                 Transporte Hugo Pou S.R.L
                             li
-                                p
-                                    label Logística &amp; Transporte Rodriguez S.A
+                                p                 Logística &amp; Transporte Rodriguez S.A
                             li
-                                p
-                                    label Transportadora La Pampeana S.A
+                                p                 Transportadora La Pampeana S.A
     
-    //ADHERENTES
-    .section-row.row-adherentes
-        .container
-            
-            .row
-            
-                h2 Adherentes
-            
-                .col-xs-12.col-sm-6.col-md-4
+                    .col-xs-12
+                        h2 Adherentes
                 
-                    ul.adherentes
-                        
-                        li
-                            p
-                                label Air Liquide Argentina S.A
-                        li
-                            p
-                                label Bayer Argentina S.A
-                        li
-                            p
-                                label Bolland y Cia S.A       
-                        li
-                            p
-                                label Clariant Argentina S.A               
-                        li
-                            p
-                                label Destileria Argentina de Petroleo S.A    
-                        li
-                            p
-                                label DGM Argentina S.R.L
-                        li
-                            p
-                                label El Emporio del Tanque S.A
-                                
-                .col-xs-12.col-sm-6.col-md-4
-                                
-                    ul.adherentes
-                                        
-                        li
-                            p
-                                label Grupo Linde Gas S.A
-                        li
-                            p
-                                label Heil Trailer Int S.A
-                        li
-                            p
-                                label Oxy-net S.A    
-                        li
-                            p
-                                label Pampa Energía S.A               
-                        li
-                            p
-                                label Proviser S.A    
-                        li
-                            p
-                                label Química Callegari S.R.L
-                        li
-                            p
-                                label Soil Keeper S.A
-                                
-                .col-xs-12.col-sm-6.col-md-4
-                                
-                    ul.adherentes
-                                        
-                        li
-                            p
-                                label UNIPAR INDUCA SAIC
-                        li
-                            p
-                                label Transporte Gottig S.R.L
-                        li
-                            p
-                                label YPF       
-                        li
-                            p
-                                label Juan Messina S.A               
-                        li
-                            p
-                                label Michelín Argentina S.A.I.C y F  
+                    .col-xs-12.col-sm-6.col-md-4
+                    
+                        ul.adherentes
+                            
+                            li
+                                p              Air Liquide Argentina S.A
+                            li
+                                p              Bayer Argentina S.A
+                            li
+                                p              Bolland y Cia S.A       
+                            li
+                                p              Clariant Argentina S.A               
+                            li
+                                p              Destileria Argentina de Petroleo S.A    
+                            li
+                                p              DGM Argentina S.R.L
+                            li
+                                p              El Emporio del Tanque S.A
                                     
+                    .col-xs-12.col-sm-6.col-md-4
+                                    
+                        ul.adherentes
+                                            
+                            li
+                                p              Grupo Linde Gas S.A
+                            li
+                                p              Heil Trailer Int S.A
+                            li
+                                p              Oxy-net S.A    
+                            li
+                                p              Pampa Energía S.A               
+                            li
+                                p              Proviser S.A    
+                            li
+                                p              Química Callegari S.R.L
+                            li
+                                p              Soil Keeper S.A
+                                    
+                    .col-xs-12.col-sm-6.col-md-4
+                                    
+                        ul.adherentes
+                                            
+                            li
+                                p              UNIPAR INDUCA SAIC
+                            li
+                                p              Transporte Gottig S.R.L
+                            li
+                                p              YPF       
+                            li
+                                p              Juan Messina S.A               
+                            li
+                                p              Michelín Argentina S.A.I.C y F  
+                                        
     //Contacto
-    .section-row.row-contacto
+    .section-row.row-contacto(data-midnight="white")
         .container
         
             .row
@@ -591,27 +509,19 @@ block content
                     
                     ul.contacto
                         
-                        li
-                            p
-                                label Moreno 1850 - 4° Piso
-                        li
-                            p
-                                label (C1094AAB) C.A.B.A - Argentina
-                        li
-                            p
-                                label (+54-11) 53688480 Lineas rotativas
-                        li
-                            p
-                                label Pers. Juridica Res. IGJ: 000768
-                        li
-                            i.fas.fa-envelope
-                                label catamp@catamp.org.ar                               
+                        li Moreno 1850 - 4° Piso
+                        li (C1094AAB) C.A.B.A - Argentina
+                        li (+54-11) 53688480 Lineas rotativas
+                        li.big Pers. Juridica Res. IGJ: 000768
+                        li.mail
+                            img(src="images/home/im_contacto_mail.png" alt="iram")
+                            a(href="mailto:catamp@catamp.org.ar") catamp@catamp.org.ar                               
                     
-                .col-xs-6.col-sm-3.col-md-2
+                .col-xs-12.col-sm-6.col-md-3
                     
-                    img(src="images/home/im_contacto_iram.png" alt="iram")
+                    img.iram(src="images/home/im_contacto_iram.png" alt="iram")
                     
-                .col-xs-6.col-sm-3.col-md-2
+                .col-xs-12.col-sm-6.col-md-2
                     
                     ul.about-as
                         li
@@ -629,11 +539,13 @@ block content
                         li
                             a(href="") CONTACTO
                                         
-                .col-xs-12.col-sm-6.col-md-4
+                .col-xs-12.col-sm-6.col-md-3
                     
-                    img(src="images/home/im_contacto_rnbd.png" alt="registro")
+                    img.registro(src="images/home/im_contacto_rnbd.png" alt="registro")
                         
-                    img(src="images/home/im_contacto_faadeac.png" alt="faadeac")
+                    img.faadeac(src="images/home/im_contacto_faadeac.png" alt="faadeac")
+                        
+                    img.fpt(src="images/home/im_contacto_fpt.png" alt="fpt")
         
                                 
                         
