@@ -1,0 +1,49 @@
+extends layout
+
+block body
+    body.index
+    
+block header
+    include partials/header
+            
+block content
+            
+    //ficha
+    .section-row.row-join_us
+        
+        .container
+                      
+                //img
+                      
+                label.main Asociarse a CATAMP
+                
+                h2 ¿Porqué Asociarse?
+                
+                p Los empresarios del transporte de mercancías y residuos peligrosos necesitamos agruparnos,construir una entidad mas grande, mas fuerte y mas representativa. Así lograremos tener mayor peso en nuestra representatividad y que el provechoso e insustituible trabajo del empresario del transporte sea valorado en su justa dimensión. Para ello tenemos que unirnos, sumar.
+                
+                p Los asociados pueden serlo en dos categorías: activos y adherentes.Los primeros, a través del voto directo en la asamblea, pueden acceder a la Comisión Directiva, órgano ejecutivo máximo de CATAMP.
+                
+                form(method='post' action='')
+                    div.form-group
+                        label(for='name') Nombre y Apellido
+                        input#name.form-control(type='text', name='name' required )
+                    div.form-group
+                        label(for='company') Empresa
+                        input#company.form-control(type='text', name='company' required )
+                    div.form-group
+                        label(for='phone') Telefono de Contacto
+                        input#phone.form-control(type='number', name='phone' required )
+                    div.form-group
+                        label(for='time') Horario de Contacto
+                        input#time.form-control(type='text', name='time' required ) 
+                    div.form-group
+                        label(for='activity') Actividad de la empresa
+                        input#activity.form-control(type='text', name='activity' required )                          
+                    div.form-group
+                        label(for='email') Email
+                        input#email.form-control(type='email', name='email' required )
+                    div.form-group
+                        label(for='message') Comentarios
+                        input#message.form-control(type='text', name='message' )
+                            
+                        button.btn(type='submit') Enviar
