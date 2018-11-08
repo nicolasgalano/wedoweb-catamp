@@ -110,10 +110,14 @@
 //MAIN
 .row-main{
     height:90vh;
-    background: url(../images/home/bg_main.jpg) no-repeat;
+    background: url(../images/home/bg_main.jpg) center center no-repeat;
     background-size: cover;
     padding-top:25vh;
     text-align: center;
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
+    }
     img{
         width:90%;
     }
@@ -176,7 +180,7 @@
 //SERVICIOS
 .row-services{
 
-    background: url(../images/home/bg_servicios.jpg) no-repeat;
+    background: url(../images/home/bg_servicios.jpg) center center no-repeat;
     background-size: cover;
     padding:140px 0 90px;
 
@@ -298,7 +302,7 @@
 //CONSULTAS
 .section-row.row-questions{
 
-    background: url(../images/home/bg_consultas.jpg) no-repeat;
+    background: url(../images/home/bg_consultas.jpg) center center no-repeat;
     background-size: cover;
     text-align: center;
     padding:110px 0 50px;
@@ -418,7 +422,7 @@
 //CONTACTO
 .row-contacto{
 
-    background: url(../images/home/bg_consultas.jpg) no-repeat;
+    background: url(../images/home/bg_consultas.jpg) center center no-repeat;
     background-size: cover;
     padding:80px 0 90px;
 
@@ -503,11 +507,15 @@
 //Ficha Indice
 .row-ficha-indice{
 
-    height:110vh;
-    background: url(../images/inner/bg_indice.jpg) no-repeat;
+    height:90vh;
+    background: url(../images/inner/bg_indice.jpg) center center no-repeat;
     background-size: cover;
     padding-top:25vh;
     text-align: center;
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
+    }
     img{
 
     }
@@ -521,6 +529,7 @@
 .inner-ficha{
 
     margin-top: 75px;
+    margin-bottom: 75px;
 
     a.btn{
 
@@ -539,15 +548,20 @@
 }
 // RNPQ
 .row-rnpq{
-    height:110vh;
-    background: url(../images/inner/bg_rnpq.jpg) no-repeat;
+    height:90vh;
+    background: url(../images/inner/bg_rnpq.jpg) center center no-repeat;
     background-size: cover;
     padding-top:25vh;
     text-align: center;
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
+    }
+
     img{
 
-
     }
+
     h2{
         font-size: 47px;
         font-weight: 100;
@@ -556,20 +570,24 @@
     }
 
 }
+
 .inner-rnpq{
     margin-top: 75px;
-
-
-    }
+    margin-bottom: 75px;
+}
 
 
 //Calidad
 .row-calidad{
-    height:110vh;
-    background: url(../images/inner/bg_calidad.jpg) no-repeat;
+    height:90vh;
+    background: url(../images/inner/bg_calidad.jpg) center center no-repeat;
     background-size: cover;
     padding-top:25vh;
     text-align: center;
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
+    }
     img{
 
 
@@ -584,11 +602,15 @@
 }
 //Legislacion
 .row-legislacion{
-    height:110vh;
-    background: url(../images/inner/bg_legislacion.jpg) no-repeat;
+    height:90vh;
+    background: url(../images/inner/bg_legislacion.jpg) center center no-repeat;
     background-size: cover;
     padding-top:25vh;
     text-align: center;
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
+    }
     img{
 
 
@@ -603,6 +625,7 @@
 }
 .inner-legislacion{
     margin-top: 75px;
+    margin-bottom: 75px;
 
     a.btn{
         margin-bottom: 50px;
@@ -626,11 +649,15 @@
 }
 //RUTA
 .row-ruta{
-    height:110vh;
-    background: url(../images/inner/bg_ruta.jpg) no-repeat;
+    height:90vh;
+    background: url(../images/inner/bg_ruta.jpg) center center no-repeat;
     background-size: cover;
     padding-top:25vh;
     text-align: center;
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
+    }
     img{
 
     }
@@ -643,6 +670,7 @@
 }
 .inner-ruta{
     margin-top: 75px;
+    margin-bottom: 75px;
 }
 .laws{
 
@@ -675,16 +703,19 @@
 }
 // What is
 .row-what_is{
-    height:110vh;
-    background: url(../images/inner/bg_top.jpg) no-repeat;
+    height:90vh;
+    background: url(../images/inner/bg_top.jpg) center center no-repeat;
     background-size: cover;
     padding-top:25vh;
     text-align: center;
-    img{
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
     }
 }
 .inner-what_is{
     margin-top: 75px;
+    margin-bottom: 75px;
 
     a.btn{
         padding-left: 60px;
@@ -693,11 +724,15 @@
 }
 //join us
 .row-join_us{
-    height:110vh;
-    background: url(../images/inner/bg_joinus.jpg) no-repeat;
+    height:90vh;
+    background: url(../images/inner/bg_joinus.jpg) center center no-repeat;
     background-size: cover;
     padding-top:40vh;
     text-align: center;
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
+    }
     img{
     }
     h2{
@@ -709,4 +744,19 @@
 }
 .inner-join_us{
     margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+//NOTICIAS
+.row-noticias{
+    height:50vh;
+    background: url(../images/dummie/noticias/im_nota.png) center center no-repeat;
+    background-size: cover;
+    padding-top:0;
+    text-align: center;
+
+}
+.inner-noticias{
+    margin-top: 75px;
+    margin-bottom: 75px;
 }

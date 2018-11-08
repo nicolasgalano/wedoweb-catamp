@@ -55,20 +55,6 @@ nav{
         }
     }
 
-    ul.menu{
-        display:none;
-        position:fix;
-        top:0;
-        right:0;
-
-        li{
-
-            a{
-
-            }
-        }
-    }
-
     //MIDNIGHT JS
     .midnightHeader.white{
         h1{
@@ -105,8 +91,47 @@ nav{
         }
     }
 
+}
 
-
-
-
+.menu{
+    display:none;
+    position:fixed;
+    top:0;
+    right:-300px;
+    width:440px;
+    height:94vh;
+    z-index:20;
+    padding:56px 56px;
+    box-sizing: border-box;
+    background:#003263;
+    @media(max-width: 800px){
+        padding:56px 30px 56px 40px;
+    }
+    @media(max-width: 600px){
+        width:330px;
+    }
+    opacity:0;
+    a.btn-menu{
+        float:right;
+        width:33px;
+        height:22px;
+        background:url(../images/home/im_header_menu-active.png) no-repeat !important;
+    }
+    ul{
+        float: left;
+        margin:0;
+        padding:12vh 0 0 0;
+        li{
+            list-style:none;
+            margin:0;
+            padding:1vh 0;
+            a{
+                color:#FFF;
+                font-family: 'Roboto';
+                font-size:28px;
+                line-height:40px;
+                font-weight: 100;
+            }
+        }
+    }
 }
