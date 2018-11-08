@@ -57,9 +57,54 @@
 .section-row.row-inner{
 
     p{
-        font-size:20px;
+        font-size:25px;
+        font-weight: 300;
+        line-height: 40px;
+        margin-bottom: 30px;
     }
 
+    h3{
+        font-size: 80px;
+        font-weight: 100;
+        line-height: 96px;
+    }
+
+    h4{
+        font-size:25px;
+        font-weight: 400;
+        line-height: 40px;
+        color: #003263
+    }
+
+    li{
+
+        a{
+            font-size:25px;
+            font-weight: 400;
+            line-height: 54px;
+            color: #003263;
+
+        }
+
+    }
+
+}
+.link{
+    margin-bottom: 30px;
+
+    span{
+        font-family: 'Roboto';
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 40px;
+
+     }
+    a{
+        font-family: 'Roboto';
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 40px;
+    }
 }
 
 //MAIN
@@ -454,4 +499,214 @@
         }
     }
 
+}
+//Ficha Indice
+.row-ficha-indice{
+
+    height:110vh;
+    background: url(../images/inner/bg_indice.jpg) no-repeat;
+    background-size: cover;
+    padding-top:25vh;
+    text-align: center;
+    img{
+
+    }
+    h2{
+        font-size: 47px;
+        font-weight: 100;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+}
+.inner-ficha{
+
+    margin-top: 75px;
+
+    a.btn{
+
+        padding-left: 100px;
+        padding-right: 100px;
+        text-align: center;
+        margin-top: 45px;
+        }
+    h3{
+        margin-bottom: 45px;
+        padding-left: 20px;
+
+    }
+
+
+}
+// RNPQ
+.row-rnpq{
+    height:110vh;
+    background: url(../images/inner/bg_rnpq.jpg) no-repeat;
+    background-size: cover;
+    padding-top:25vh;
+    text-align: center;
+    img{
+
+
+    }
+    h2{
+        font-size: 47px;
+        font-weight: 100;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+
+}
+.inner-rnpq{
+    margin-top: 75px;
+
+
+    }
+
+
+//Calidad
+.row-calidad{
+    height:110vh;
+    background: url(../images/inner/bg_calidad.jpg) no-repeat;
+    background-size: cover;
+    padding-top:25vh;
+    text-align: center;
+    img{
+
+
+    }
+    h2{
+        font-size: 47px;
+        font-weight: 100;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+
+}
+//Legislacion
+.row-legislacion{
+    height:110vh;
+    background: url(../images/inner/bg_legislacion.jpg) no-repeat;
+    background-size: cover;
+    padding-top:25vh;
+    text-align: center;
+    img{
+
+
+    }
+    h2{
+        font-size: 47px;
+        font-weight: 100;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+
+}
+.inner-legislacion{
+    margin-top: 75px;
+
+    a.btn{
+        margin-bottom: 50px;
+    }
+    a.btn.download{
+        margin-bottom: 50px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    ul{
+        margin:10px;
+        padding:0;
+
+        li{
+
+            p{
+                margin: 0 !important;
+                }
+            }
+        }
+}
+//RUTA
+.row-ruta{
+    height:110vh;
+    background: url(../images/inner/bg_ruta.jpg) no-repeat;
+    background-size: cover;
+    padding-top:25vh;
+    text-align: center;
+    img{
+
+    }
+    h2{
+        font-size: 47px;
+        font-weight: 100;
+        line-height: 56px;
+        color: #FFFFFF;
+    }
+}
+.inner-ruta{
+    margin-top: 75px;
+}
+.laws{
+
+    label{
+        font-family: 'Roboto';
+        font-size: 31px;
+        font-weight: bold;
+        line-height: 40px;
+    }
+}
+.box{
+
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
+.locales{
+
+    span{
+        font-size: 25px;
+        line-height: 40px;
+        font-weight: 500;
+        color: #003263;
+    }
+    p{
+        margin:0 !important;
+    }
+    span.wsp{
+        color: #098909;
+    }
+}
+// What is
+.row-what_is{
+    height:110vh;
+    background: url(../images/inner/bg_top.jpg) no-repeat;
+    background-size: cover;
+    padding-top:25vh;
+    text-align: center;
+    img{
+    }
+}
+.inner-what_is{
+    margin-top: 75px;
+
+    a.btn{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+//join us
+.row-join_us{
+    height:110vh;
+    background: url(../images/inner/bg_joinus.jpg) no-repeat;
+    background-size: cover;
+    padding-top:40vh;
+    text-align: center;
+    img{
+    }
+    h2{
+        font-size: 103px;
+        font-weight: 100;
+        line-height: 122px;
+        color: #FFFFFF;
+    }
+}
+.inner-join_us{
+    margin-top: 40px;
 }
