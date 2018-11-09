@@ -186,13 +186,39 @@ block content
         .container
             .row
               
-                .col-xs-18.col-sm-9.col-md-6
+                .col-xs-12.col-md-12.col-lg-7
 
                     h2 Comisión Directiva 2018/2020
 
-                    //slider
+                    // Swiper
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .chabon
+                                    .top.clearfix
+                                        .photo(style="background-image:url(images/dummie/comision/comision-2.png);")
+                                        .texto
+                                            h5 Sr. Juan Diego Segovia
+                                            h6 Vicepresidente
+                                    .bottom
+                                        p
+                                            | "Nuestros desafíos implican seguir apostando por nuestro país como lo venimos haciendo y que está demostrado a través de la calidad del servicio que prestamos, la capacitación y constante cuidado de nuestros recursos humanos"    
+                            .swiper-slide 
+                                .chabon
+                                    .top.clearfix
+                                        .photo(style="background-image:url(images/dummie/comision/comision-1.png);")
+                                        .texto
+                                            h5 Sr. Angel Fuente Fuente 
+                                            h6 Presidente
+                                    .bottom
+                                        p
+                                            | "Nuestros desafíos implican seguir apostando por nuestro país como lo venimos haciendo y que está demostrado a través de la calidad del servicio que prestamos, la capacitación y constante cuidado de nuestros recursos humanos"    
+                                    
+                        // Add Pagination
+                        .swiper-pagination
+                        
 
-                .col-xs-18.col-sm-9.col-md-6
+                .col-xs-12.col-md-12.col-lg-5
                 
                     .comision-box
                 

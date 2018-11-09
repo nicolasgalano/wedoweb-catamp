@@ -338,6 +338,94 @@
 
     }
 
+    .swiper-container{
+        padding-bottom: 90px;
+
+        .swiper-pagination-bullet{
+            border:0;
+            background: #838383;
+            height:13px;
+            width: 13px;
+            border-radius: 13px;
+            opacity: 1;
+            margin-bottom:1px;
+        }
+        .swiper-pagination-bullet-active{
+            background: transparent;
+            border:1px solid #838383;
+            height:16px;
+            width: 16px;
+            border-radius: 13px;
+            opacity: 1;
+            margin-bottom:0px;
+        }
+        .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
+            bottom:60px !important;
+        }
+    }
+    .chabon{
+        box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+        background: #FFF;
+        width: 94%;
+        height: 590px;
+        margin: 50px 3%;
+        border-radius: 12px;
+        padding:65px 75px;
+        @media(max-width: 700px){
+            padding:45px 55px;
+        }
+        @media(max-width: 500px){
+            padding:25px 35px;
+            height: auto;
+        }
+        .top{
+
+            .photo{
+                float:left;
+                height:134px;
+                width:134px;
+                border-radius:134px;
+                background-repeat:no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+            .texto{
+                float:left;
+                padding:18px 0 0 23px;
+                h5,h6{
+                    font-family: 'Roboto';
+                    font-weight: 500;
+                    font-size:27px;
+                    line-height: 32px;
+                    @media(max-width: 700px){
+                        font-size:24px;
+                    }
+                }
+                h5{
+                    color:#003263;
+                }
+                h6{
+                    color:#939598;
+                    font-weight: 300;
+                }
+            }
+        }
+        .bottom{
+            padding:48px 0 0;
+            p{
+                font-family: 'Roboto';
+                font-weight: 100;
+                font-size:22px;
+                font-style: italic;
+                line-height: 40px;
+                @media(max-width: 700px){
+                    font-size:18px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
     .comision-box{
         background: #FFF;
         border-radius: 15px;
