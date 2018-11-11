@@ -15,15 +15,16 @@ nav{
 
     h1{
         float:left;
-        margin:32px 0 0 55px;
+        margin:18px 0 0 30px;
         a{
             display:block;
-            width:184px;
-            height:66px;
+            width: 145px;
+            height: 52px;
             background:url(../images/home/im_header_logo.png) no-repeat;
+            background-size: contain;
         }
         @media(max-width: 800px){
-            margin:32px 0 0 30px;
+            margin:18px 0 0 30px;
         }
     }
 
@@ -33,9 +34,9 @@ nav{
         li{
             float:left;
             list-style:none;
-            margin:53px 0 0 18px;
+            margin:31px 0 0 17px;
             i{
-                font-size:28px;
+                font-size:20px;
                 color:#59595b;
             }
         }
@@ -46,12 +47,13 @@ nav{
 
     a.btn-menu{
         float:right;
-        width:33px;
-        height:22px;
+        width: 22px;
+        height: 15px;
         background:url(../images/home/im_header_menu_gray.png) no-repeat;
-        margin:56px 55px 0 42px;
+        background-size: contain;
+        margin: 32px 35px 0 30px;
         @media(max-width: 800px){
-            margin:56px 30px 0 32px;
+            margin:32px 30px 0 30px;
         }
     }
 
@@ -59,11 +61,11 @@ nav{
     .midnightHeader.white{
         h1{
             a{
-                background:url(../images/home/im_header_logo_w.png) no-repeat;
+                background-image:url(../images/home/im_header_logo_w.png);
             }
         }
         a.btn-menu{
-            background:url(../images/home/im_header_menu-active.png) no-repeat;
+            background-image:url(../images/home/im_header_menu-active.png);
         }
         ul.redes{
             li{
@@ -80,7 +82,7 @@ nav{
             }
         }
         a.btn-menu{
-            background:url(../images/home/im_header_menu.png) no-repeat;
+            background-image:url(../images/home/im_header_menu.png);
         }
         ul.redes{
             li{
@@ -98,24 +100,23 @@ nav{
     position:fixed;
     top:0;
     right:-300px;
-    width:440px;
-    height:94vh;
+    width:320px;
+    height:90vh;
     z-index:20;
-    padding:56px 56px;
+    padding:32px 35px 56px 30px;
     box-sizing: border-box;
     background:#003263;
-    @media(max-width: 800px){
-        padding:56px 30px 56px 40px;
-    }
     @media(max-width: 600px){
-        width:330px;
+        width:280px;
     }
     opacity:0;
     a.btn-menu{
         float:right;
-        width:33px;
-        height:22px;
+        display:block;
+        width: 22px;
+        height: 15px;
         background:url(../images/home/im_header_menu-active.png) no-repeat !important;
+        background-size: contain !important;
     }
     ul{
         float: left;
@@ -128,8 +129,8 @@ nav{
             a{
                 color:#FFF;
                 font-family: 'Roboto';
-                font-size:28px;
-                line-height:40px;
+                font-size: 18px;
+                line-height: 30px;
                 font-weight: 100;
             }
         }

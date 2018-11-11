@@ -20,12 +20,12 @@
     font-family: $lato;//VARIABLE DEFINIDA EN CONFIG QUE DEFINE LA TIPOGRAFIA DE GOOGLE FONTS LATO
 
     h2{
-        font-size:80px;
+        font-size:60px;
         font-family:'Roboto';
         font-weight: 100;
         color:#59595B;
         @media(max-width: 600px){
-            font-size:60px;
+            font-size:40px;
             text-align: center !important;
         }
     }
@@ -35,7 +35,7 @@
     }
 
     p{
-        font-size:25px;
+        font-size:18px;
         font-family:'Roboto';
         font-weight: 300;
         color:#59595B;
@@ -45,7 +45,7 @@
         background:#003263;
         text-transform: uppercase;
         font-weight: 400;
-        font-size:20px;
+        font-size:15px;
         font-family:'Roboto';
         margin:0;
         border-radius:8px;
@@ -119,7 +119,9 @@
         min-height: 500px;
     }
     img{
-        width:90%;
+        width:40%;
+        max-width:647px;
+        min-width:320px;
     }
     p{
         font-size:47px;
@@ -127,7 +129,7 @@
         font-weight: 100;
         color:#003263;
         margin:20px 0 0;
-        @media(max-width: 800px){
+        @media(max-width: 1200px){
             font-size:30px;
             line-height: 40px;
         }
@@ -149,7 +151,7 @@
     }
     p{
         margin:0;
-        line-height: 40px;
+        line-height: 25px;
         text-align: left;
     }
     a.btn{
@@ -162,10 +164,10 @@
         text-align: center;
         width:180px;
         padding:195px 0 0;
-        margin:120px 0 0;
+        margin:80px 0 0;
         span{
-            font-size:25px;
-            line-height: 40px;
+            font-size:18px;
+            line-height: 25px;
             font-family:'Roboto';
             font-weight: 300;
             color:#59595B;
@@ -182,7 +184,7 @@
 
     background: url(../images/home/bg_servicios.jpg) center center no-repeat;
     background-size: cover;
-    padding:140px 0 90px;
+    padding:100px 0 70px;
 
     h2{
         color:#FFF;
@@ -190,29 +192,28 @@
     }
 
     article{
-        min-height:450px;
+        min-height:300px;
         padding-bottom:20px;
 
         figure{
-            min-height:120px;
+            min-height:90px;
+            img{
+                height: 60px;
+            }
         }
         @media(max-width: 990px){
             min-height:auto;
             padding-bottom:40px;
             figure{
-                min-height:110px;
+                min-height:80px;
             }
         }
     }
 
     p{
-        font-size:20px;
-        line-height: 40px;
+        font-size:17px;
+        line-height: 26px;
         color:#FFF;
-        @media(max-width: 990px){
-            font-size:18px;
-            line-height: 22px;
-        }
     }
 
 }
@@ -224,19 +225,19 @@
     padding:110px 0 50px;
 
     h2{
-        font-size:56px;
+        font-size:46px;
         font-weight: 300;
         padding-bottom:40px;
     }
 
     a.btn{
-        text-transform:none;
-        font-size: 28px;
-        padding:0 85px;
-        height:59px;
-        line-height: 59px;
+        text-transform: none;
+        font-size: 22px;
+        padding: 0 55px;
+        height: 45px;
+        line-height: 45px;
         font-weight: 300;
-        margin-bottom:26px;
+        margin-bottom: 26px;
     }
     a.link{
         display: block;
@@ -265,7 +266,7 @@
         border-radius: 10px;
         background: #FFF;
         box-shadow:0 0px 40px rgba(0,0,0,0.2);
-        min-height: 655px;
+        min-height: 525px;
 
         figure{
 
@@ -279,19 +280,19 @@
             text-align: left;
 
             span{
-                font-size: 22px;
+                font-size: 18px;
                 font-family:'Roboto';
                 font-weight: 500;
                 color:#003263;
             }
             h3{
-                font-size: 30px;
+                font-size: 24px;
                 font-weight: 300;
                 color:#414042;
             }
             p{
-                font-size: 20px;
-                line-height: 36px;
+                font-size: 16px;
+                line-height: 24px;
                 font-weight: 300;
             }
         }
@@ -308,7 +309,7 @@
     padding:110px 0 50px;
 
     h2{
-        font-size:56px;
+        font-size:46px;
         font-weight: 300;
         padding-bottom:40px;
         color:#FFF;
@@ -318,10 +319,10 @@
         color:#59595B !important;
         background:#FFF;
         text-transform:none;
-        font-size: 28px;
-        padding:0 70px;
-        height:59px;
-        line-height: 59px;
+        font-size: 22px;
+        padding:0 55px;
+        height:45px;
+        line-height: 45px;
         font-weight: 300;
         margin-bottom:26px;
     }
