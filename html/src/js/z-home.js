@@ -3,7 +3,7 @@
     $(document).ready(function(){
 
         // Change this to the correct selector.
-        $('nav.container-fluid').midnight();
+        $('nav').midnight();
 
         //NAV BEHAVIOUR
         $('.open-menu').click(function(e){

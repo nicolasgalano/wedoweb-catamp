@@ -25,7 +25,7 @@
         font-weight: 100;
         color:#59595B;
         @media(max-width: 600px){
-            font-size:40px;
+            font-size:50px;
             text-align: center !important;
         }
     }
@@ -55,7 +55,8 @@
 
 //NOTHOME
 .section-row.row-inner{
-
+    padding-right:30px;
+    padding-left:30px;
     p{
         font-size:20px;
         font-weight: 300;
@@ -91,25 +92,24 @@
 }
 .link{
     margin-bottom: 30px;
-
     span{
         font-family: 'Roboto';
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 300;
-        line-height: 40px;
+        line-height: 25px;
 
      }
     a{
         font-family: 'Roboto';
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 300;
-        line-height: 40px;
+        line-height: 25px;
     }
 }
 
 //MAIN
 .row-main{
-    height:90vh;
+    height:100vh;
     background: url(../images/home/bg_main.jpg) center center no-repeat;
     background-size: cover;
     padding-top:25vh;
@@ -162,8 +162,9 @@
         display:inline-block;
         background: url(../images/home/im_que_play.png) top center no-repeat;
         text-align: center;
-        width:180px;
-        padding:195px 0 0;
+        background-size: contain;
+        width: 150px;
+        padding: 165px 0 0;
         margin:80px 0 0;
         span{
             font-size:18px;
@@ -189,24 +190,39 @@
     h2{
         color:#FFF;
         margin-bottom:90px;
+        @media(max-width: 990px){
+            margin-bottom:60px;
+        }
     }
 
-    article{
+    a{
+        display:block;
         min-height:300px;
         padding-bottom:20px;
 
         figure{
-            min-height:90px;
+            display: table; height: 60px; overflow: hidden;
+            margin-bottom:30px;
             img{
                 height: 60px;
+                float:left;
+                margin-right: 20px;
+            }
+            span{
+                display: table-cell; vertical-align: middle;
+                height:60px;
+                font-size:25px;
+                line-height: 30px;
+                color:#FFF;
+
             }
         }
-        @media(max-width: 990px){
+        @media(max-width: 1100px){
+            min-height:360px;
+        }
+        @media(max-width: 770px){
             min-height:auto;
             padding-bottom:40px;
-            figure{
-                min-height:80px;
-            }
         }
     }
 
@@ -261,12 +277,13 @@
         margin:0 0 40px;
     }
 
-    article{
+    a.article{
+        display: block;
         margin:0 10px 40px;
         border-radius: 10px;
         background: #FFF;
         box-shadow:0 0px 40px rgba(0,0,0,0.2);
-        min-height: 525px;
+        min-height: 565px;
 
         figure{
 
@@ -552,8 +569,15 @@
         }
     }
 
+    a.iram{
+        display:block;
+        margin-top:90px;
+        color:#FFF;
+        text-align: center;
+        width:206px;
+    }
     img.iram{
-        margin-top:105px;
+        margin-top:10px;
     }
 
     ul.about-as{
@@ -580,7 +604,8 @@
     img.faadeac{
         width:48%;
         margin-top:60px;
-        margin-right:4%;
+        margin-right:3%;
+        margin-left:1%;
     }
 
     img.fpt{
@@ -589,8 +614,8 @@
     }
 
     @media(max-width: 1000px){
-        img.iram{
-            display: none;
+        ul.about-as{
+            display:none;
         }
         img.faadeac{
             width:auto;
@@ -655,20 +680,18 @@
     @media(max-width: 800px){
         min-height: 500px;
     }
-
-    img{
-
-    }
-
     h2{
         font-size: 47px;
         font-weight: 100;
         line-height: 56px;
         color: #FFFFFF;
+        @media(max-width: 600px){
+            font-size: 35px;
+            font-weight: 100;
+            line-height: 44px;
+        }
     }
-
 }
-
 .inner-rnpq{
     margin-top: 75px;
     margin-bottom: 75px;
@@ -769,36 +792,35 @@
 .inner-ruta{
     margin-top: 75px;
     margin-bottom: 75px;
-}
-.laws{
+    .laws{
+        label{
+            font-family: 'Roboto';
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 30px;
+        }
+    }
+    .box{
+        padding-top: 30px;
+        padding-bottom: 45px;
+    }
+    .locales{
 
-    label{
-        font-family: 'Roboto';
-        font-size: 31px;
-        font-weight: bold;
-        line-height: 40px;
+        span{
+            font-size: 25px;
+            line-height: 40px;
+            font-weight: 500;
+            color: #003263;
+        }
+        p{
+            margin:0 !important;
+        }
+        span.wsp{
+            color: #098909;
+        }
     }
 }
-.box{
 
-    padding-top: 30px;
-    padding-bottom: 45px;
-}
-.locales{
-
-    span{
-        font-size: 25px;
-        line-height: 40px;
-        font-weight: 500;
-        color: #003263;
-    }
-    p{
-        margin:0 !important;
-    }
-    span.wsp{
-        color: #098909;
-    }
-}
 // What is
 .row-what_is{
     height:90vh;

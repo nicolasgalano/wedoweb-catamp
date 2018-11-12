@@ -46,7 +46,7 @@ block content
               
                 .col-xs-12.col-sm-6.col-md-4
 
-                    article.cipet
+                    a.cipet(href="#")
 
                         figure
 
@@ -56,7 +56,7 @@ block content
 
                 .col-xs-12.col-sm-6.col-md-4
 
-                    article.cursos
+                    a.cursos(href="#")
 
                         figure
 
@@ -66,9 +66,9 @@ block content
 
                 .col-xs-12.col-sm-6.col-md-4
 
-                    article.ruta
+                    a.ruta(href="ruta.html")
 
-                        figure
+                        figure.clearfix
 
                             img(src="images/dummie/logos/lg_ruta.png" alt="ruta")
 
@@ -77,37 +77,38 @@ block content
 
                 .col-xs-12.col-sm-6.col-md-4
 
-                    article.indice
+                    a.indice(href="ficha_indice.html")
 
-                        figure
-
+                        figure.clearfix
                             img(src="images/dummie/logos/lg_indice.png" alt="indice")
+                            span <b>Índice de transporte</b>
 
                         p CATAMP tomó la decisión de calcular índices que reflejen las variaciones del costo de transporte de productos que mueven sus asociados. Motivó esta medida la necesidad de incluir en su cálculo los costos particulares que tiene nuestra actividad.
 
                 .col-xs-12.col-sm-6.col-md-4
 
-                    article.legislacion
+                    a.legislacion(href="legislacion.html")
 
-                        figure
-
+                        figure.clearfix
                             img(src="images/dummie/logos/lg_legizlacion.png" alt="legislacion")
+                            span <b>Legislación</b>
 
                         p Toda la legislación correspondiente al Transporte de Mercancías peligrosas por carretera.
                         p Contiene una recopilación de toda la legislación Nacional, Provincial y Municipal sobre este tipo de transporte en particular y sobre el transporte de cargas generales
                 
                 .col-xs-12.col-sm-6.col-md-4
 
-                    article.registro
+                    a.registro(href="rnpq.html")
 
-                        figure
+                        figure.clearfix
 
                             img(src="images/dummie/logos/lg_rnpq.png" alt="registro")
+                            span <b>Registro Nacional de Precursores Químicos</b>
 
                         p CATAMP cuenta con un servicio de asesoramiento y gestión de trámites para los asociados que deban inscribirse ante dicho registro.
                        
     //be part
-    .section-row.row-bepart#asociate  
+    .section-row.row-bepart#asociate
         .container
           
             .col-xs-12
@@ -125,9 +126,9 @@ block content
                 .col-xs-12
                     h2 Noticias
 
-                .col-xs-12.col-sm-6.col-md-4
+                .col-xs-12.col-sm-12.col-md-4
 
-                    article
+                    a.article(href="nota.html")
 
                         figure
 
@@ -140,9 +141,9 @@ block content
                             h3 16° edición del festival Trichaco
                             p gracias al aporte de muchas empresas de transporte llegaron donaciones de comida leche y articulos necesarios para esta comunidad.     
 
-                .col-xs-12.col-sm-6.col-md-4
+                .col-xs-12.col-sm-12.col-md-4
 
-                    article
+                    a.article(href="nota.html")
 
                         figure
 
@@ -155,9 +156,9 @@ block content
                             h3 Reunión de especialistas transporte MMPP
                             p Se definieron los temas que presentará nuestro País en la proxima Asamblea del SGT N° 5 Transporte del MERCOSUR.
 
-                .col-xs-12.col-sm-6.col-md-4
+                .col-xs-12.col-sm-12.col-md-4
 
-                    article
+                    a.article(href="nota.html")
 
                         figure
 
@@ -545,9 +546,11 @@ block content
                     
                 .col-xs-12.col-sm-6.col-md-3
                     
-                    img.iram(src="images/home/im_contacto_iram.png" alt="iram")
+                    a.iram(href="calidad.html")
+                        span Ver políticas de calidad
+                        img.iram(src="images/home/im_contacto_iram.png" alt="iram")
                     
-                .col-xs-12.col-sm-6.col-md-2
+                .col-xs-hidden.col-sm-hidden.col-md-2
                     
                     ul.about-as
                         li
@@ -565,7 +568,7 @@ block content
                         li
                             a(href="#contacto") CONTACTO
                                         
-                .col-xs-12.col-sm-6.col-md-3
+                .col-xs-12.col-sm-12.col-md-3
                     
                     img.registro(src="images/home/im_contacto_rnbd.png" alt="registro")
                         
