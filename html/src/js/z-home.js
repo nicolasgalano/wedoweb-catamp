@@ -3,7 +3,7 @@
     $(document).ready(function(){
 
         // Change this to the correct selector.
-        $('nav.container-fluid').midnight();
+        $('nav').midnight();
 
         //NAV BEHAVIOUR
         $('.open-menu').click(function(e){
@@ -12,7 +12,7 @@
                 opacity: 1,
                 right: "+=300",
                 height: "toggle"
-            }, 1000, function() {
+            }, 500, function() {
                 // Animation complete.
             });
         });
@@ -21,7 +21,7 @@
                 opacity: 0,
                 right: "-=300",
                 height: "toggle"
-            }, 1000, function() {
+            }, 500, function() {
                 // Animation complete.
             });
         });
@@ -30,7 +30,7 @@
                 opacity: 0,
                 right: "-=300",
                 height: "toggle"
-            }, 1000, function() {
+            }, 500, function() {
                 // Animation complete.
             });
         });
@@ -52,6 +52,19 @@
           afterScroll: mobileHack
         });
 
+
+        //SWIPER
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
 
     });
 
