@@ -381,6 +381,53 @@
             bottom:60px !important;
         }
     }
+    .unidades{
+
+        background: #FFFFFF;
+        width: 94%;
+        height: 400px;
+        margin: 50px 3%;
+        border-radius: 12px;
+
+        @media(max-width: 700px){
+            padding:35px 45px;
+        }
+        @media(max-width: 500px){
+            padding:15px 25px;
+            height: auto;
+        }
+        .unidad{
+            height: 200px;
+            background-repeat:no-repeat;
+            background-size: contain;
+            background-position: center center;
+
+        }
+        h5{
+            font-family: 'Roboto';
+            font-size:25px;
+            font-weight:700 ;
+            font-style: italic;
+            text-align: center;
+        }
+        ul{
+            li{
+                list-style: none;
+                font-size: 20px;
+                font-weight: 100;
+                font-style: italic;
+                text-align: center;
+                padding-right: 50px;
+
+            }
+        }
+    }
+    figure.cuaderno{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
     .chabon{
         box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
         background: #FFF;
@@ -406,6 +453,13 @@
                 background-repeat:no-repeat;
                 background-size: cover;
                 background-position: center center;
+            }
+            .unidad{
+                height: 200px;
+                background-repeat:no-repeat;
+                background-size: cover;
+                background-position: center center;
+
             }
             .texto{
                 float:left;
@@ -499,7 +553,7 @@
 
 //ASOCIADOS
 .row-asociados{
-    padding:110px 0 70px;
+    padding:90px 0 70px;
 
     h2{
         margin:40px 0 40px;
@@ -531,7 +585,12 @@
     background: url(../images/home/bg_consultas.jpg) center center no-repeat;
     background-size: cover;
     padding:60px 0 70px;
-
+    p{
+        color:#FFFFFF;
+        font-size: 12px;
+        font-weight: 100;
+        padding-top: 10px;
+    }
     li{
         list-style:none;
         color:#FFF;
@@ -612,7 +671,15 @@
         width:48%;
         margin-top:33px;
     }
-
+    img.sec{
+        width: 60%;
+        display: block;
+        padding-bottom: 10px;
+    }
+    img.min{
+        width: 90%;
+        display: block;
+    }
     @media(max-width: 1000px){
         ul.about-as{
             display:none;
@@ -627,6 +694,36 @@
     }
 
 }
+//sinagir
+.row-sinagir{
+
+    height:90vh;
+    background: url(../images/home/bg_sinagir.jpg) center center no-repeat;
+    background-size: contain;
+    padding-top:25vh;
+    text-align: center;
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
+    }
+    img{
+        width:40%;
+        max-width:647px;
+        min-width:320px;
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+    h2{
+        text-transform: uppercase;
+        color: #0094D4;
+        text-align: center;
+        font-size: 45px;
+        font-weight: 500;
+    }
+
+}
+
+
 //Ficha Indice
 .row-ficha-indice{
 
@@ -695,6 +792,41 @@
 .inner-rnpq{
     margin-top: 75px;
     margin-bottom: 75px;
+
+    h4{
+        text-transform: uppercase;
+    }
+
+    figure{
+        img{
+            margin-top: 75px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .firma{
+
+        img{
+            float: right;
+        }
+    }
+    h6{
+        font-size: 30px;
+        color: #59595B;
+        margin-bottom: 40px;
+    }
+    span{
+        display: block;
+        color: #003263;
+        margin-bottom: 40px;
+    }
+    ul{
+        li{
+            p{
+                margin-bottom: 0px !important;
+            }
+        }
+    }
 }
 
 
@@ -792,6 +924,25 @@
 .inner-ruta{
     margin-top: 75px;
     margin-bottom: 75px;
+
+    article{
+        font-size: 47px;
+        font-weight: 200;
+        font-family: 'Roboto';
+        text-align: center;
+    }
+    h6{
+        font-size: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    ul{
+        li{
+            p{
+                margin-bottom: 0 !important;
+            }
+        }
+    }
     .laws{
         label{
             font-family: 'Roboto';
@@ -819,6 +970,27 @@
             color: #098909;
         }
     }
+    figure.emergencia{
+        img{
+            width: 95%;
+            padding: 20px;
+        }
+    }
+    form.search{
+
+        span{
+            float: right;
+            margin-right: 15px;
+            margin-top: -24px;
+            position: relative;
+
+        }
+        input{
+            border-radius: 15px;
+
+        }
+
+    }
 }
 
 // What is
@@ -840,6 +1012,10 @@
     a.btn{
         padding-left: 60px;
         padding-right: 60px;
+    }
+    img{
+        width: 80%;
+        padding: 10px;
     }
 }
 //join us
@@ -879,4 +1055,62 @@
 .inner-noticias{
     margin-top: 75px;
     margin-bottom: 75px;
+}
+
+//Estadisticas
+.row-estadistica{
+    height:90vh;
+    background: url(../images/inner/bg_estadistica.jpg) center center no-repeat;
+    background-size: cover;
+    padding-top:20vh;
+    text-align: center;
+    min-height: 700px;
+    @media(max-width: 800px){
+        min-height: 500px;
+    }
+    img{
+    }
+    h2{
+        font-size: 80px;
+        font-weight: 100;
+        line-height: 100px;
+        color: #FFFFFF;
+    }
+}
+.inner-estadistica{
+
+    h5{
+        font-family: 'Roboto';
+        font-size: 53px;
+        font-weight: 200;
+        text-transform: uppercase;
+        padding-left: 30px;
+        }
+    h6{
+        font-family: 'Roboto';
+        font-size: 27px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #19345E;
+        padding-left: 30px;
+
+    }
+    figure{
+
+        img{
+            width: 95%;
+        }
+    }
+    .boton{
+        text-align: center;
+
+            a.btn{
+                display:inline-block;
+            }
+        }
+}
+.cipet{
+    .row-asociados{
+        background-color: #F2F2F2;
+    }
 }
