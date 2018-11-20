@@ -23,7 +23,9 @@
       "node_modules/jquery-validation/dist/jquery.validate.min.js"
     ],
     "pug": [ "src/pug/**/*.pug",
-             "!src/pug/partials/**/*.pug"
+             "!src/pug/partials/**/*.pug",
+             "!src/pug/**/partials/*.pug",
+             "!src/pug/**/layout.pug"            
            ],
     "sass": ["src/sass/app.scss"]
   },

@@ -1,0 +1,393 @@
+extends layout
+
+block body
+    body.cipet
+    
+block header
+    include partials/header
+            
+block content
+    
+    //Logo
+    
+    .section-row.row-main(data-midnight="blue")
+        .container
+
+            img(src="../images/home/im_main_logo_cipet.png",style="max-width:647px;")
+
+            P Centro de Información<br>para Emergencias en el Transporte
+                
+                
+    //About
+    .section-row.row-about#about
+        .container
+            .row
+                
+                .col-xs-18.col-sm-9.col-md-6
+                      
+                    h2 ¿Qué es CIPET?
+                    P CIPET es el Centro de Información para Emergencias en el Transporte. Un servicio de la Cámara Argentina del Transporte Automotor de Mercancías y Residuos Peligrosos junto con la Secretaría de Protección Civil del Ministerio de Seguridad de la Nación.
+                    a.btn(href="about_cipet.html", target="_blank") Ver más
+                          
+                .col-xs-18.col-sm-9.col-md-6
+                  
+                    .multimedia
+                        span Mirá que hace el CIPET
+                              
+                    
+    //services
+    .section-row.row-services#servicios(data-midnight="white")
+        .container
+            .row
+                
+                .col-xs-12
+                    h2
+              
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.emergencia(href="emergencia.html")
+
+                        figure
+
+                            img(src="../images/dummie/logos/lg_emergencia.png" alt="cipet")
+
+                        p Los vehículos de carga de las empresas asociadas al CIPET cuentan con una identificación exterior con el número de emergencias en un soporte autoadhesivo de material retro-reflectivo.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.estadistica(href="estadistica.html")
+
+                        figure
+
+                            img(src="../images/dummie/logos/lg_estadistica.png" alt="cursos")
+
+                        p Nuestras actividades nos dan la posibilidad de elaborar informes y estadísticas sobre accidentes, rutas y localidades en donde se produzcan, tipos de siniestros, fugas,  derrames, frecuencias y gravedad de los mismos.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.boletin(href="boletin.html")
+
+                        figure.clearfix
+
+                            img(src="../images/dummie/logos/lg_boletin.png" alt="ruta")
+
+                        p CIPET emite periodicamente boletines que presentan información técnica resumida sobre Respuesta a la Emergencia con diferentes mercancías y residuos peligrosos. 
+                        
+                       
+    //be part
+    .section-row.row-bepart#asociate
+        .container
+          
+            .col-xs-12
+                h2 ¿Queres adherirte al CIPET?
+                
+                a.btn(href="join_us.html", target="_blank" ) Adherite
+                
+                
+            
+    //News
+    .section-row.row-news#noticias
+        .container
+            .row
+
+                .col-xs-12
+                    h2 Noticias
+
+                .col-xs-12.col-sm-12.col-md-4
+
+                    a.article(href="nota.html")
+
+                        figure
+
+                            img(src="../images/dummie/noticias/news1.png" alt="noticia1")
+                        
+                        .cont
+                            
+                            span Solidaridad
+
+                            h3 16° edición del festival Trichaco
+                            p gracias al aporte de muchas empresas de transporte llegaron donaciones de comida leche y articulos necesarios para esta comunidad.     
+
+                .col-xs-12.col-sm-12.col-md-4
+
+                    a.article(href="nota.html")
+
+                        figure
+
+                            img(src="../images/dummie/noticias/news2.png" alt="noticia2")
+                        
+                        .cont
+                            
+                            span Actualidad
+
+                            h3 Reunión de especialistas transporte MMPP
+                            p Se definieron los temas que presentará nuestro País en la proxima Asamblea del SGT N° 5 Transporte del MERCOSUR.
+
+                .col-xs-12.col-sm-12.col-md-4
+
+                    a.article(href="nota.html")
+
+                        figure
+
+                            img(src="../images/dummie/noticias/news3.png" alt="noticia3")
+                        
+                        .cont
+                            
+                            span Formación
+
+                            h3 Entrega de certificados Diplomado en MMPP
+                            p el IRAM Entregó los certificados a los alumnos que aprobaron el curso del diplomado en el transporte de MMPP
+
+                
+                a.btn(href="noticias.html", target="_blank" ) Ver más
+              
+    //questions
+    .section-row.row-questions(data-midnight="white")
+        .container
+          
+          h2 ¿Tenes alguna consulta?
+          
+          a.btn(href="#contacto") Contactanos
+          
+    //sinagir
+    .section-row.row-sinagir#descarga
+        .container
+            .row
+
+                h2 Manual de riesgos en el transporte <br> de mercancías y residuos peligrosos
+                
+                img(src="../images/home/sinagir.png")
+
+            a.btn(href="what_is.html", target="_blank") Descargá el Manual
+                    
+                    
+    //Asociados                                    
+    .section-row.row-asociados#asociados
+        .container
+                .row
+                    
+                    .col-xs-12
+                        h2 Adherentes
+                            
+                    .col-xs-12.col-sm-6.col-md-4
+                        
+                       ul.asociados
+                           
+                            li
+                                p                 Aliani y Meroi S.R.L.
+                            li
+                                p                 All Road S.A
+                            li
+                                p                 Carlos E Delgado y Cia S.A
+                            li
+                                p                 Carlos G Barberis e Hijos S.A
+                            li
+                                p                 Chamical Compactación S.A
+                            li
+                                p                 Conteman S.A
+                            li
+                                p                 Contenedores GA-LE-LIO de Norberto Francisco Gimenez
+                            li
+                                p                 Contenedores Hugo
+                            li
+                                p                 New Conti Group S.A
+                            li
+                                p                 Contrini Hnos S.R.L
+                            li
+                                p                 Deltacom S.A
+                            li
+                                p                 Deposito Alzaga de Roberto Mastronardi y Raul Mastronardi
+                            li
+                                p                 El Charabón S.A.C.I
+                            li
+                                p                 Embalse del Litoral S.A
+                            li
+                                p                 Expreso Ruta 12 de Salomon Canievsky S.A
+                            li
+                                p                 FJW S.A.T
+                            li
+                                p                 Jomase S.R.L
+                            li
+                                p                 Jorge Eduardo Grotschl
+                            li
+                                p                 Jose Eduardo Rodriguez S.A
+                            li
+                                p                 Juan Carlos patricio S.A
+                            li
+                                p                 Logistica y Servicios Integrales S.A
+                            li
+                                p                 Lujan Gas S.A
+                            li
+                                p                 Mameli y Asociados S.R.L
+                            li
+                                p                 Master Transp S.R.L
+                                
+                    .col-xs-12.col-sm-6.col-md-4
+                                    
+                       ul.asociados
+                                       
+                            li
+                                p                 Matlack Roman Transportes S.A 
+                            li
+                                p                 MULTI-TRA S.A
+                            li
+                                p                 P.Tortorielo y Cia S.R.L
+                            li
+                                p                 Petrovalle S.A.T
+                            li
+                                p                 Retiros El Sol de Juan Domingo Danielo
+                            li
+                                p                 Roberto Luis Martinez S.R.L
+                            li
+                                p                 Rodolfo Alberto Donnet S.A
+                            li
+                                p                 Roli Gas S.A
+                            li
+                                p                 S.I.P.E Soluciones Integradas para Empresas S.R.L
+                            li
+                                p                 Sertec gestión Ambiental S.A
+                            li
+                                p                 Spital Hnos S.R.L
+                            li
+                                p                 Telga S.A.T
+                            li
+                                p                 Transporte Tracción S.R.L
+                            li
+                                p                 Trans Luck S.R.L
+                            li
+                                p                 Trans Tony S.R.L
+                            li
+                                p                 Transbahia S.A
+                            li
+                                p                 Translogística Oroz S.R.L
+                            li
+                                p                 Transol S.R.L
+                            li
+                                p                 Transcent S.A
+                            li
+                                p                 Transportes Adamo S.A
+                            li
+                                p                 Transportes Colombo S.R.L
+                            li
+                                p                 Empresa de Transportes Don Pedro S.R.L
+                            li
+                                p                 Transportes Fennema S.A
+                            li
+                                p                 Transportes Garay S.A                                                   
+                            li
+                                p                 Transportes Jose Beraldi S.A
+                                    
+                    .col-xs-12.col-sm-6.col-md-4
+                                                    
+                       ul.asociados
+                                                       
+                            li
+                                p                 Transportes Mammola S.R.L 
+                            li
+                                p                 Transportes Maranata S.H
+                            li
+                                p                 Transporte Mugas S.A
+                            li
+                                p                 Transportes Orlando Menconi
+                            li
+                                p                 Transportes Puerto Nuevo S.R.L
+                            li
+                                p                 Transportes RDP S.R.L
+                            li
+                                p                 Transportes Savini S.R.L
+                            li
+                                p                 Vaca e Hijos S.R.L
+                            li
+                                p                 Victorio Podesta y Cia S.A
+                            li
+                                p                 Vigna S.R.L
+                            li
+                                p                 Volquetes y Transportes Marino S.A
+                            li
+                                p                 Zarcam S.A
+                            li
+                                p                 Defiba Servicios Portuarios S.A
+                            li
+                                p                 SERTEC Servicios y Tecnología en limpieza S.A
+                            li
+                                p                 Servicios HLB S.A
+                            li
+                                p                 Tradelog S.A
+                            li
+                                p                 Tranes S.R.L
+                            li
+                                p                 Transporte Euskadi de Juan Ignacio Otegui
+                            li
+                                p                 Viana y Viana S.R.L
+                            li
+                                p                 Transporte Vesprini S.A
+                            li
+                                p                 Transcont S.R.L
+                            li
+                                p                 Petroandina S.R.L
+                            li
+                                p                 Transporte Hugo Pou S.R.L
+                            li
+                                p                 Logística &amp; Transporte Rodriguez S.A
+                            li
+                                p                 Transportadora La Pampeana S.A
+     
+    
+    include partials/contacto                            
+    //Contacto
+    .section-row.row-contacto#contacto(data-midnight="white")
+        .container
+        
+            .row
+                
+                .col-xs-12.col-sm-6.col-md-4
+                    
+                    h2 Contacto
+                    
+                    ul.contacto
+                        
+                        li Moreno 1850 - 4° Piso
+                        li (C1094AAB) C.A.B.A - Argentina
+                        li (+54-11) 53688480 Lineas rotativas
+                        li.big Pers. Juridica Res. IGJ: 000768
+                        li.mail
+                            img(src="../images/home/im_contacto_mail.png" alt="iram")
+                            a(href="mailto:catamp@catamp.org.ar") cipet@catamp.org.ar                               
+                    
+                .col-xs-12.col-sm-6.col-md-3
+                    
+                    a.iram(href="calidad.html")
+                        span Ver políticas de calidad
+                        img.iram(src="../images/home/im_contacto_iram.png" alt="iram")
+                    
+                .col-xs-hidden.col-sm-hidden.col-md-2
+                    
+                    ul.about-as
+                        li
+                            a(href="#about") ¿QUE ES CIPET?
+                        li
+                            a(href="#servicios") SERVICIOS
+                        li
+                            a(href="#adherite") ADHERITE
+                        li
+                            a(href="#noticias") NOTICIAS
+                        li
+                            a(href="#manual") DESCARGA MANUAL
+                        li
+                            a(href="#adherentes") ADHERENTES
+                        li
+                            a(href="#contacto") CONTACTO
+                                        
+                .col-xs-12.col-sm-12.col-md-3
+                    
+                    img.registro(src="../images/home/im_contacto_rnbd.png" alt="registro")
+                        
+                    p El CIPET Opera el en el ámbito de la Secretaria de protección civil del Ministerio de Seguridad de la Nación a través de un convenio de cooperación y asistencia.    
+                        
+                    img.sec(src="../images/dummie/about/im-logo1.png" alt="secretaria")
+                        
+                    img.min(src="../images/dummie/about/im-logo3.png" alt="ministerio")
+        
+                                
+                        
+                                                                                               

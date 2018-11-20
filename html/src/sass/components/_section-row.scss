@@ -163,9 +163,11 @@
         background: url(../images/home/im_que_play.png) top center no-repeat;
         text-align: center;
         background-size: contain;
-        width: 150px;
+        background-size: 150px auto;
+        max-width: 190px;
+        width:100%;
         padding: 165px 0 0;
-        margin:80px 0 0;
+        margin:70px 0 0;
         span{
             font-size:18px;
             line-height: 25px;
@@ -789,7 +791,8 @@
         }
     }
 }
-.inner-rnpq{
+
+.inner-common{
     margin-top: 75px;
     margin-bottom: 75px;
 

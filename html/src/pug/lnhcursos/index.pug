@@ -1,0 +1,302 @@
+extends layout
+
+block body
+    body.index
+    
+block header
+    include partials/header
+            
+block content
+    
+    //Logo
+    
+    .section-row.row-main(data-midnight="blue")
+        .container
+
+            img(src="../images/home/im_logo_lnh.png",style="max-width:647px;")
+
+            p LICENCIA NACIONAL HABILITANTE <br>Capacitación Obligatoria de Actualización y Perfeccionamiento
+                
+            a.btn.btn-green(href="what_is.html", target="_blank") Inscribite Online    
+                
+    //About
+    .section-row.row-about#about
+        .container
+            .row
+                h2 ¿Qué es LNH?
+                p La Licencia Nacional Habilitante, es el único documento que autoriza al conductor profesional a conducir en jurisdicción nacional. 
+                p El régimen de otorgamiento y uso está establecido por Resolución de la Secretaría de Transporte de la Nación N° 444 del 9 de diciembre de 1999 y sus antecesoras.
+                p La Comisión Nacional de Regulación del Transporte (C.N.R.T.) ha recibido por delegación del gobierno nacional la facultad de su otorgamiento (Decreto N°1388 del de 1996)
+                a.btn(href="about_lnh.html", target="_blank") Ver más
+                                      
+                    
+    //services
+    .section-row.row-services#servicios(data-midnight="white")
+        .container
+            .row
+                
+                .col-xs-12
+                    h2 Cargas Generales
+              
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.cursoslnh(href="#")
+
+                        figure
+                            img(src="../images/home/im_cursos.png" alt="cursos")
+                            span <b>Cursos</b>
+
+                        p Por Concurso Público y Nacional, la FPT es entidad habilitada para dar los cursos básicos y de actualización anual que permiten la obtención de la LNH para la categoría de Cargas Generales. CATAMP, pone a disposición de la fundación, su equipo de formadores para brindar estos cursos.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.requisitos(href="#")
+
+                        figure
+                            img(src="../images/home/im_requisitos.png" alt="requisitos")
+                            span <b>Requisitos</b>
+
+                        p Conocé toda la documentación necesaria, aranceles y boletas de pago para el curso básico y curso de actualización y perfeccionamiento en Cargas Generales.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.agenda(href="#")
+
+                        figure.clearfix
+
+                            img(src="../images/home/im_agenda.png" alt="agenda")
+                            span <b>Agenda</b>
+
+                        p Fechas disponibles para realizar los cursos en todas nuestras Unidades Académicas para Curso Básico Obligatorio y Curso de Acualización y Perfeccionamiento.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.material(href="#")
+
+                        figure.clearfix
+                            img(src="../images/home/im_material.png" alt="material")
+                            span <b>Material</b>
+                            
+                        p Ponemos a disposición material de apoyo a los cursos realizados en CATAMP de Cargas Generales,  legislación, resoluciones y además bibliografía sobre diversos temas que hacen la profesionalización del conductor.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.preguntas(href="#")
+
+                        figure.clearfix
+                            img(src="../images/home/im_preguntas.png" alt="preguntas")
+                            span <b>Preguntas</b>
+                            
+
+                        p Tenemos una selección de las dudas más frecuentes sobre trámites y cursos de Cargas Generales.
+                        
+                
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.boletas(href="#")
+
+                        figure.clearfix
+
+                            img(src="../images/home/im_boletas.png" alt="preguntas")
+                            span <b>Boletas</b>
+                            
+
+                        p Ingresá y generá las Boletas de pago de FPT y de CNRT, abonalas en Banco Nación para poder realizar los cursos con Nosotros.
+
+    //services
+    .section-row.row-services#mercancias(data-midnight="white", style="background-image:url(../images/inner/bg_lnh-servicios2.jpg)")
+        .container
+            .row
+                                    
+                .col-xs-12
+                    h2 Mercancias Peligrosas
+                                  
+                .col-xs-12.col-sm-6.col-md-4
+                    
+                    a.cursoslnh(href="#")
+                    
+                        figure
+                            img(src="../images/home/im_cursos.png" alt="cursos")
+                            span <b>Cursos</b>
+                    
+                        p CATAMP es la cámara de Mercancías y residuos peligrosos, especialista en la materia, brinda curso básico y curso de atualización y perfeccionamiento en Mercancías Peligrosas.
+                    
+                .col-xs-12.col-sm-6.col-md-4
+                    
+                    a.requisitos(href="#")
+                    
+                        figure
+                            img(src="../images/home/im_requisitos.png" alt="requisitos")
+                            span <b>Requisitos</b>
+                    
+                        p Conocé toda la documentación necesaria, aranceles y boletas de pago para el curso básico y curso de actualización y perfeccionamiento en Cargas Generales.
+                    
+                .col-xs-12.col-sm-6.col-md-4
+                    
+                    a.agenda(href="#")
+                    
+                        figure.clearfix
+                            img(src="../images/home/im_agenda.png" alt="agenda")
+                            span <b>Agenda</b>
+                    
+                        p Fechas disponibles para realizar los cursos en todas nuestras Unidades Académicas para Curso Básico Obligatorio y Curso de Acualización y Perfeccionamiento.
+                    
+                .col-xs-12.col-sm-6.col-md-4
+                    
+                    a.material(href="#")
+                    
+                        figure.clearfix
+                            img(src="../images/home/im_material.png" alt="material")
+                            span <b>Material</b>
+                                                
+                        p Ponemos a disposición material de apoyo a los cursos realizados en CATAMP de Cargas Generales,  legislación, resoluciones y además bibliografía sobre diversos temas que hacen la profesionalización del conductor.
+                    
+                .col-xs-12.col-sm-6.col-md-4
+                    
+                    a.preguntas(href="#")
+                    
+                        figure.clearfix
+                            img(src="../images/home/im_preguntas.png" alt="preguntas")
+                            span <b>Preguntas</b>
+                                                
+                    
+                        p Tenemos una selección de las dudas más frecuentes sobre trámites y cursos de Cargas Generales.
+                                            
+                                    
+                .col-xs-12.col-sm-6.col-md-4
+                    
+                    a.boletas(href="#")
+                    
+                        figure.clearfix
+                            img(src="../images/home/im_boletas.png" alt="preguntas")
+                            span <b>Boletas</b>
+                                                
+                    
+                        p Ingresá y generá las Boletas de pago de FPT y de CNRT, abonalas en Banco Nación para poder realizar los cursos con Nosotros.
+                   
+    //be part
+    .section-row.row-bepart#asociate
+        .container
+          
+            .col-xs-12
+                h2 Imprimí tu licencia
+                
+                a.btn(href="join_us.html", target="_blank" ) CLICK AQUÍ
+                
+                
+            
+    //News
+    .section-row.row-news#noticias
+        .container
+            .row
+
+                .col-xs-12
+                    h2 Cartelera
+
+                .col-xs-12.col-sm-12.col-md-4
+
+                    a.article(href="nota.html")
+
+                        figure
+
+                            img(src="../images/dummie/noticias/news1.png" alt="noticia1")
+                        
+                        .cont
+                            
+                            span Aulas 
+                            
+                            h3 Nueva Aula en Mercado Central 
+                            p En Agosto mudamos el aula de capacitación al 3er piso. (Oficina 3060-Aula 2373) en el Mercado Central.
+                            
+                .col-xs-12.col-sm-12.col-md-4
+
+                    a.article(href="nota.html")
+
+                        figure
+
+                            img(src="../images/dummie/noticias/news2.png" alt="noticia2")
+                        
+                        .cont
+                            
+                            span Actualidad
+                            
+                            h3 Bitrenes - Resoluciónnº 884/18
+                            p se aprueba el manual del usuario de configuraciones bitren.
+
+                .col-xs-12.col-sm-12.col-md-4
+
+                    a.article(href="nota.html")
+
+                        figure
+
+                            img(src="../images/dummie/noticias/news3.png" alt="noticia3")
+                        
+                        .cont
+                            
+                            span Formación
+
+                            h3 La FPT esta de festejo
+                            p El centro de capacitación de FADEEAC y FPT cumple 4 años. Mirá el video que muestra las 27 hectáreas que hacen al predio, las aulas, los simuladores, los camiones escuela y mucho más.
+
+                
+                a.btn(href="noticias.html", target="_blank" ) Ver más
+              
+    //questions
+    .section-row.row-questions(data-midnight="white")
+        .container
+          
+          h2 ¿Tenes alguna consulta?
+          
+          a.btn(href="#contacto") Contactanos
+          
+    //comision
+    .section-row.row-comision#comision
+        .container
+            .row
+              
+                .col-xs-12.col-md-12.col-lg-7
+
+                    h2 Centros de Inscripcion <br>y Unidades Académicas
+
+                    // Swiper
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .unidades
+                                    .top.clearfix
+                                        .unidad(style="background-image:url(../images/dummie/comision/unidad_moron.png);")
+                                        .texto
+                                            h5 UNIDAD ACADÉMICA - INSCRIPCIÓN
+                                            ul
+                                                li Av. 9 de Julio 854 - Morón
+                                                li Tel: 5294-9497 o 4628-8820
+                                                li Horario de Atención al Público
+                                                li Lunes a viernes: 08:00 a 16:00 hs
+                                        
+                            .swiper-slide 
+                                .chabon
+                                    .top.clearfix
+                                        .photo(style="background-image:url(../images/dummie/comision/comision-1.png);")
+                                        .texto
+                                            h5 Sr. Angel Fuente Fuente 
+                                            h6 Presidente
+                                    .bottom
+                                        p
+                                            | "Nuestros desafíos implican seguir apostando por nuestro país como lo venimos haciendo y que está demostrado a través de la calidad del servicio que prestamos, la capacitación y constante cuidado de nuestros recursos humanos"    
+                                    
+                        // Add Pagination
+                        .swiper-pagination
+                        
+
+                .col-xs-12.col-md-12.col-lg-5
+                    figure.cuaderno
+                        
+                        img(src="../images/home/im_cuaderno.png" alt="noticia3")
+                    
+    
+                                        
+    include partials/contacto
+        
+                                
+                        
+                                                                                               

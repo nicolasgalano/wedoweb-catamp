@@ -1,0 +1,530 @@
+extends layout
+
+block body
+    body.index
+    
+block header
+    include partials/header
+            
+block content
+    
+    //Logo
+    
+    .section-row.row-main(data-midnight="blue")
+        .container
+
+            img(src="../images/home/im_main_logo.png",style="max-width:647px;")
+
+            p Cámara Argentina del Transporte<br>Automotor de Mercancias y Residuos Peligrosos
+                
+                
+    //About
+    .section-row.row-about#about
+        .container 
+            .row
+                
+                .col-xs-18.col-sm-9.col-md-6
+                      
+                    h2 ¿Qué es CATAMP?
+                    p CATAMP es la Cámara Argentina del Transporte Automotor de Mercancias y Residuos Peligrosos y constituye la única asociación gremial empresaria voluntaria en el rubro que representa.
+                    p Fundada en 1989, su estructura societaria se integra con empresas de transporte de reconocida trayectoria en el mercado.
+                    a.btn(href="what_is.html", target="_blank") Ver más
+                          
+                .col-xs-18.col-sm-9.col-md-6
+                  
+                    .multimedia
+                        span Ver Institucional
+                              
+                    
+    //services
+    .section-row.row-services#servicios(data-midnight="white")
+        .container
+            .row
+                
+                .col-xs-12
+                    h2 Servicios
+              
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.cipet(href="../cipet/index.html")
+
+                        figure
+
+                            img(src="../images/dummie/logos/lg_cipet.png" alt="cipet")
+
+                        p Un servicio de CATAMP que se encuentra operando ininterrumpidamente desde 2008 dando una respuesta rapida y eficiente en la atencion de las emergencias en el transporte carretero, procurando que los caminos sean cada vez mas seguros.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.cursos(href="../lnhcursor/index.html")
+
+                        figure
+
+                            img(src="../images/dummie/logos/lg_lnh.png" alt="cursos")
+
+                        p CATAMP brinda cursos que permiten la obtención de la Licencia Nacional Habilitante para la categoría de Cargas Generales y Mercancías Peligrosas.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.ruta(href="ruta.html")
+
+                        figure.clearfix
+
+                            img(src="../images/dummie/logos/lg_ruta.png" alt="ruta")
+
+                        p Es el Registro Único de Transporte Automotor.
+                        p Es obligatorio y con validez oficial por un año y renovable luego de transcurridos 12 meses.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.indice(href="indice.html")
+
+                        figure.clearfix
+                            img(src="../images/dummie/logos/lg_indice.png" alt="indice")
+                            span <b>Índice de transporte</b>
+
+                        p CATAMP tomó la decisión de calcular índices que reflejen las variaciones del costo de transporte de productos que mueven sus asociados. Motivó esta medida la necesidad de incluir en su cálculo los costos particulares que tiene nuestra actividad.
+
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.legislacion(href="legislacion.html")
+
+                        figure.clearfix
+                            img(src="../images/dummie/logos/lg_legizlacion.png" alt="legislacion")
+                            span <b>Legislación</b>
+
+                        p Toda la legislación correspondiente al Transporte de Mercancías peligrosas por carretera.
+                        p Contiene una recopilación de toda la legislación Nacional, Provincial y Municipal sobre este tipo de transporte en particular y sobre el transporte de cargas generales
+                
+                .col-xs-12.col-sm-6.col-md-4
+
+                    a.registro(href="rnpq.html")
+
+                        figure.clearfix
+
+                            img(src="../images/dummie/logos/lg_rnpq.png" alt="registro")
+                            span <b>Registro Nacional de Precursores Químicos</b>
+
+                        p CATAMP cuenta con un servicio de asesoramiento y gestión de trámites para los asociados que deban inscribirse ante dicho registro.
+                       
+    //be part
+    .section-row.row-bepart#asociate
+        .container
+          
+            .col-xs-12
+                h2 ¿Queres ser parte de CATAMP?
+                
+                a.btn(href="join_us.html", target="_blank" ) Asociate
+                
+                a.link(href="#asociados", target="_blank" ) Ver asociados
+            
+    //News
+    .section-row.row-news#noticias
+        .container
+            .row
+
+                .col-xs-12
+                    h2 Noticias
+
+                .col-xs-12.col-sm-12.col-md-4
+
+                    a.article(href="nota.html")
+
+                        figure
+
+                            img(src="../images/dummie/noticias/news1.png" alt="noticia1")
+                        
+                        .cont
+                            
+                            span Solidaridad
+
+                            h3 16° edición del festival Trichaco
+                            p gracias al aporte de muchas empresas de transporte llegaron donaciones de comida leche y articulos necesarios para esta comunidad.     
+
+                .col-xs-12.col-sm-12.col-md-4
+
+                    a.article(href="nota.html")
+
+                        figure
+
+                            img(src="../images/dummie/noticias/news2.png" alt="noticia2")
+                        
+                        .cont
+                            
+                            span Actualidad
+
+                            h3 Reunión de especialistas transporte MMPP
+                            p Se definieron los temas que presentará nuestro País en la proxima Asamblea del SGT N° 5 Transporte del MERCOSUR.
+
+                .col-xs-12.col-sm-12.col-md-4
+
+                    a.article(href="nota.html")
+
+                        figure
+
+                            img(src="../images/dummie/noticias/news3.png" alt="noticia3")
+                        
+                        .cont
+                            
+                            span Formación
+
+                            h3 Entrega de certificados Diplomado en MMPP
+                            p el IRAM Entregó los certificados a los alumnos que aprobaron el curso del diplomado en el transporte de MMPP
+
+                
+                a.btn(href="noticias.html", target="_blank" ) Ver más
+              
+    //questions
+    .section-row.row-questions(data-midnight="white")
+        .container
+          
+          h2 ¿Tenes alguna consulta?
+          
+          a.btn(href="#contacto") Contactanos
+          
+    //comision
+    .section-row.row-comision#comision
+        .container
+            .row
+              
+                .col-xs-12.col-md-12.col-lg-7
+
+                    h2 Comisión Directiva 2018/2020
+
+                    // Swiper
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide 
+                                .chabon
+                                    .top.clearfix
+                                        .photo(style="background-image:url(../images/dummie/comision/comision-2.png);")
+                                        .texto
+                                            h5 Sr. Juan Diego Segovia
+                                            h6 Vicepresidente
+                                    .bottom
+                                        p
+                                            | "Nuestros desafíos implican seguir apostando por nuestro país como lo venimos haciendo y que está demostrado a través de la calidad del servicio que prestamos, la capacitación y constante cuidado de nuestros recursos humanos"    
+                            .swiper-slide 
+                                .chabon
+                                    .top.clearfix
+                                        .photo(style="background-image:url(../images/dummie/comision/comision-1.png);")
+                                        .texto
+                                            h5 Sr. Angel Fuente Fuente 
+                                            h6 Presidente
+                                    .bottom
+                                        p
+                                            | "Nuestros desafíos implican seguir apostando por nuestro país como lo venimos haciendo y que está demostrado a través de la calidad del servicio que prestamos, la capacitación y constante cuidado de nuestros recursos humanos"    
+                                    
+                        // Add Pagination
+                        .swiper-pagination
+                        
+
+                .col-xs-12.col-md-12.col-lg-5
+                
+                    .comision-box
+                
+                        h3 Comisión Directiva 2018/2020
+                            
+                        ul.comision.clearfix
+                      
+                            li
+                                p 
+                                    span Sr. Angel Fuente Fuente
+                                    label Presidente
+                            li
+                                p 
+                                    span Sr. Juan Diego Segovia
+                                    label Vicepresidente
+                            li
+                                p 
+                                    span Sr. Walter José Bo
+                                    label Secretario
+                            li
+                                p 
+                                    span Lic. Gustavo A. Contrini
+                                    label Prosecretario
+                            li
+                                p 
+                                    span Dr. Guillermo Canievsky
+                                    label Tesorero
+                            li
+                                p 
+                                    span Sr. Nestor Angiletta
+                                    label Protesorero
+                            li
+                                p 
+                                    span Sr. Hugo Daniel Baciunas
+                                    label Vocal Titular            
+                            li
+                                p 
+                                    span Sr. José Nereo Silva
+                                    label Vocal Titular
+                            li
+                                p 
+                                    span Ing. Christian E Barbara
+                                    label Vocal Titular
+                            li
+                                p 
+                                    span Ing Claudio Kauffmann
+                                    label Vocal Suplente
+                            li
+                                p 
+                                    span Sr. Jorge fennema
+                                    label Vocal Suplente
+                                    
+                        h3 Órgano de Fiscalización Comisión Revisora de Cuentas
+                        
+                        ul.fiscales.clearfix
+
+                            li
+                                p 
+                                    span Sr. Roberto Atilio Colombo
+                                    label Titular
+                            li
+                                p 
+                                    span Sr. Roberto Luis Martinez
+                                    label Titular
+                            li
+                                p 
+                                    span Ing. Diego Mariano Folch
+                                    label Titular
+                            li
+                                p 
+                                    span Srta. Carolina Colombo
+                                    label Suplente
+                            li
+                                p 
+                                    span Sr. Guillermo Conti
+                                    label Suplente
+                    
+    //Asociados                                    
+    .section-row.row-asociados#asociados
+        .container
+                .row
+                    
+                    .col-xs-12
+                        h2 Asociados
+                            
+                    .col-xs-12.col-sm-6.col-md-4
+                        
+                       ul.asociados
+                           
+                            li
+                                p                 Aliani y Meroi S.R.L.
+                            li
+                                p                 All Road S.A
+                            li
+                                p                 Carlos E Delgado y Cia S.A
+                            li
+                                p                 Carlos G Barberis e Hijos S.A
+                            li
+                                p                 Chamical Compactación S.A
+                            li
+                                p                 Conteman S.A
+                            li
+                                p                 Contenedores GA-LE-LIO de Norberto Francisco Gimenez
+                            li
+                                p                 Contenedores Hugo
+                            li
+                                p                 New Conti Group S.A
+                            li
+                                p                 Contrini Hnos S.R.L
+                            li
+                                p                 Deltacom S.A
+                            li
+                                p                 Deposito Alzaga de Roberto Mastronardi y Raul Mastronardi
+                            li
+                                p                 El Charabón S.A.C.I
+                            li
+                                p                 Embalse del Litoral S.A
+                            li
+                                p                 Expreso Ruta 12 de Salomon Canievsky S.A
+                            li
+                                p                 FJW S.A.T
+                            li
+                                p                 Jomase S.R.L
+                            li
+                                p                 Jorge Eduardo Grotschl
+                            li
+                                p                 Jose Eduardo Rodriguez S.A
+                            li
+                                p                 Juan Carlos patricio S.A
+                            li
+                                p                 Logistica y Servicios Integrales S.A
+                            li
+                                p                 Lujan Gas S.A
+                            li
+                                p                 Mameli y Asociados S.R.L
+                            li
+                                p                 Master Transp S.R.L
+                                
+                    .col-xs-12.col-sm-6.col-md-4
+                                    
+                       ul.asociados
+                                       
+                            li
+                                p                 Matlack Roman Transportes S.A 
+                            li
+                                p                 MULTI-TRA S.A
+                            li
+                                p                 P.Tortorielo y Cia S.R.L
+                            li
+                                p                 Petrovalle S.A.T
+                            li
+                                p                 Retiros El Sol de Juan Domingo Danielo
+                            li
+                                p                 Roberto Luis Martinez S.R.L
+                            li
+                                p                 Rodolfo Alberto Donnet S.A
+                            li
+                                p                 Roli Gas S.A
+                            li
+                                p                 S.I.P.E Soluciones Integradas para Empresas S.R.L
+                            li
+                                p                 Sertec gestión Ambiental S.A
+                            li
+                                p                 Spital Hnos S.R.L
+                            li
+                                p                 Telga S.A.T
+                            li
+                                p                 Transporte Tracción S.R.L
+                            li
+                                p                 Trans Luck S.R.L
+                            li
+                                p                 Trans Tony S.R.L
+                            li
+                                p                 Transbahia S.A
+                            li
+                                p                 Translogística Oroz S.R.L
+                            li
+                                p                 Transol S.R.L
+                            li
+                                p                 Transcent S.A
+                            li
+                                p                 Transportes Adamo S.A
+                            li
+                                p                 Transportes Colombo S.R.L
+                            li
+                                p                 Empresa de Transportes Don Pedro S.R.L
+                            li
+                                p                 Transportes Fennema S.A
+                            li
+                                p                 Transportes Garay S.A                                                   
+                            li
+                                p                 Transportes Jose Beraldi S.A
+                                    
+                    .col-xs-12.col-sm-6.col-md-4
+                                                    
+                       ul.asociados
+                                                       
+                            li
+                                p                 Transportes Mammola S.R.L 
+                            li
+                                p                 Transportes Maranata S.H
+                            li
+                                p                 Transporte Mugas S.A
+                            li
+                                p                 Transportes Orlando Menconi
+                            li
+                                p                 Transportes Puerto Nuevo S.R.L
+                            li
+                                p                 Transportes RDP S.R.L
+                            li
+                                p                 Transportes Savini S.R.L
+                            li
+                                p                 Vaca e Hijos S.R.L
+                            li
+                                p                 Victorio Podesta y Cia S.A
+                            li
+                                p                 Vigna S.R.L
+                            li
+                                p                 Volquetes y Transportes Marino S.A
+                            li
+                                p                 Zarcam S.A
+                            li
+                                p                 Defiba Servicios Portuarios S.A
+                            li
+                                p                 SERTEC Servicios y Tecnología en limpieza S.A
+                            li
+                                p                 Servicios HLB S.A
+                            li
+                                p                 Tradelog S.A
+                            li
+                                p                 Tranes S.R.L
+                            li
+                                p                 Transporte Euskadi de Juan Ignacio Otegui
+                            li
+                                p                 Viana y Viana S.R.L
+                            li
+                                p                 Transporte Vesprini S.A
+                            li
+                                p                 Transcont S.R.L
+                            li
+                                p                 Petroandina S.R.L
+                            li
+                                p                 Transporte Hugo Pou S.R.L
+                            li
+                                p                 Logística &amp; Transporte Rodriguez S.A
+                            li
+                                p                 Transportadora La Pampeana S.A
+    
+                    .col-xs-12
+                        h2 Adherentes
+                
+                    .col-xs-12.col-sm-6.col-md-4
+                    
+                        ul.adherentes
+                            
+                            li
+                                p              Air Liquide Argentina S.A
+                            li
+                                p              Bayer Argentina S.A
+                            li
+                                p              Bolland y Cia S.A       
+                            li
+                                p              Clariant Argentina S.A               
+                            li
+                                p              Destileria Argentina de Petroleo S.A    
+                            li
+                                p              DGM Argentina S.R.L
+                            li
+                                p              El Emporio del Tanque S.A
+                                    
+                    .col-xs-12.col-sm-6.col-md-4
+                                    
+                        ul.adherentes
+                                            
+                            li
+                                p              Grupo Linde Gas S.A
+                            li
+                                p              Heil Trailer Int S.A
+                            li
+                                p              Oxy-net S.A    
+                            li
+                                p              Pampa Energía S.A               
+                            li
+                                p              Proviser S.A    
+                            li
+                                p              Química Callegari S.R.L
+                            li
+                                p              Soil Keeper S.A
+                                    
+                    .col-xs-12.col-sm-6.col-md-4
+                                    
+                        ul.adherentes
+                                            
+                            li
+                                p              UNIPAR INDUCA SAIC
+                            li
+                                p              Transporte Gottig S.R.L
+                            li
+                                p              YPF       
+                            li
+                                p              Juan Messina S.A               
+                            li
+                                p              Michelín Argentina S.A.I.C y F  
+                                        
+    
+    include partials/contacto                                
+                        
+                                                                                               

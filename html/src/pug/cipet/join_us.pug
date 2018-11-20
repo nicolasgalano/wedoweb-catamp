@@ -1,0 +1,51 @@
+extends layout
+
+block body
+    body.index
+    
+block header
+    include partials/header
+            
+block content
+            
+    //ficha
+    .section-row.row-inner.row-join_us(data-midnight="white")
+        .container                  
+            h2 Adherirse al CIPET
+                
+    .section-row.row-inner.inner-join_us
+        .container
+            .row
+                .col-xs-12
+                
+                    h3 ¿Porqué adherirse?
+                    
+                    p CIPET es la unica entidad que ayuda a las Empresas Transportistas y Dadoras de la Carga a cumplir con el Articulo 35 parrafo b), apartado VI. El mismo indica que las fichas de intervención, obligatorias en el transporte de Mercancías Peligrosas, deben poseer los teléfonos de emergencia de los cuerpos de bomberos, órganos policiales...que esté disponible las 24 horas del día los 365 días del año, que resulte operativo a lo largo y ancho del territorio nacional…”
+
+                    p Complete el formulario para solicitar una cotización del servicio y coordinar una charla informativa sobre nuestro Centro de información.
+
+                    form(method='post' action='')
+                        
+                        div.form-group
+                            label(for='name') Nombre y Apellido
+                            input#name.form-control(type='text', name='name' required )
+                        div.form-group
+                            label(for='company') Empresa
+                            input#company.form-control(type='text', name='company' required )
+                        div.form-group
+                            label(for='phone') Telefono de Contacto
+                            input#phone.form-control(type='number', name='phone' required )
+                        div.form-group
+                            label(for='time') Horario de Contacto
+                            input#time.form-control(type='text', name='time' required ) 
+                        div.form-group
+                            label(for='activity') Actividad de la empresa
+                            input#activity.form-control(type='text', name='activity' required )                          
+                        div.form-group
+                            label(for='email') Email
+                            input#email.form-control(type='email', name='email' required )
+                        div.form-group
+                            label(for='message') Comentarios
+                            input#message.form-control(type='text', name='message' )
+                                
+                            button.btn(type='submit') Enviar
