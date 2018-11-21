@@ -1,9 +1,47 @@
 .cipet{
 
+    &.inner{
 
+        nav{
+            h1{
+                a{
+                    background-image:url(../images/header/lg_cipet-color.png);
+                }
+            }
+            //MIDNIGHT JS
+            .midnightHeader.white{
+                h1{
+                    a{
+                        background-image:url(../images/header/lg_cipet-white.png);
+                    }
+                }
+            }
+        }
+
+    }
 
 }
 .lnh{
+
+    &.inner{
+
+        nav{
+            h1{
+                a{
+                    background-image:url(../images/header/lg_lnh-color.png);
+                }
+            }
+            //MIDNIGHT JS
+            .midnightHeader.white{
+                h1{
+                    a{
+                        background-image:url(../images/header/lg_lnh-white.png);
+                    }
+                }
+            }
+        }
+
+    }
 
     .row-services{
 

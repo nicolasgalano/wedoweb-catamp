@@ -4,7 +4,7 @@ block body
     body.cipet
     
 block header
-    include partials/header
+    include partials/header-home
             
 block content
     
@@ -86,7 +86,7 @@ block content
                 
             
     //News
-    .section-row.row-news#noticias
+    .section-row.row-news#noticias(data-midnight="gray")
         .container
             .row
 
@@ -162,7 +162,7 @@ block content
                     
                     
     //Asociados                                    
-    .section-row.row-asociados#asociados
+    .section-row.row-asociados#asociados(data-midnight="gray")
         .container
                 .row
                     
@@ -333,61 +333,5 @@ block content
                                 p                 Transportadora La Pampeana S.A
      
     
-    include partials/contacto                            
-    //Contacto
-    .section-row.row-contacto#contacto(data-midnight="white")
-        .container
-        
-            .row
-                
-                .col-xs-12.col-sm-6.col-md-4
-                    
-                    h2 Contacto
-                    
-                    ul.contacto
-                        
-                        li Moreno 1850 - 4° Piso
-                        li (C1094AAB) C.A.B.A - Argentina
-                        li (+54-11) 53688480 Lineas rotativas
-                        li.big Pers. Juridica Res. IGJ: 000768
-                        li.mail
-                            img(src="../images/home/im_contacto_mail.png" alt="iram")
-                            a(href="mailto:catamp@catamp.org.ar") cipet@catamp.org.ar                               
-                    
-                .col-xs-12.col-sm-6.col-md-3
-                    
-                    a.iram(href="calidad.html")
-                        span Ver políticas de calidad
-                        img.iram(src="../images/home/im_contacto_iram.png" alt="iram")
-                    
-                .col-xs-hidden.col-sm-hidden.col-md-2
-                    
-                    ul.about-as
-                        li
-                            a(href="#about") ¿QUE ES CIPET?
-                        li
-                            a(href="#servicios") SERVICIOS
-                        li
-                            a(href="#adherite") ADHERITE
-                        li
-                            a(href="#noticias") NOTICIAS
-                        li
-                            a(href="#manual") DESCARGA MANUAL
-                        li
-                            a(href="#adherentes") ADHERENTES
-                        li
-                            a(href="#contacto") CONTACTO
-                                        
-                .col-xs-12.col-sm-12.col-md-3
-                    
-                    img.registro(src="../images/home/im_contacto_rnbd.png" alt="registro")
-                        
-                    p El CIPET Opera el en el ámbito de la Secretaria de protección civil del Ministerio de Seguridad de la Nación a través de un convenio de cooperación y asistencia.    
-                        
-                    img.sec(src="../images/dummie/about/im-logo1.png" alt="secretaria")
-                        
-                    img.min(src="../images/dummie/about/im-logo3.png" alt="ministerio")
-        
-                                
-                        
-                                                                                               
+    include partials/contacto
+                                   

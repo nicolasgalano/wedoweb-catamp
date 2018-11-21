@@ -1,7 +1,7 @@
 extends layout
 
 block body
-    body.index
+    body.lnh.inner
     
 block header
     include partials/header
@@ -9,13 +9,13 @@ block header
 block content
             
     //ficha
-    .section-row.row-inner.row-ruta(data-midnight="white")
+    .section-row.row-inner.row-common(data-midnight="white", style="background-image:url(../images/home/bg_contenidos-generales.jpg);")
         .container                  
             img(src="../images/inner/im_cursos.png")
                       
             h2 Cursos
                 
-    .section-row.row-inner.inner-ruta
+    .section-row.row-inner.inner-common
         .container
             .row
                 .col-xs-12
@@ -42,13 +42,16 @@ block content
                     
                     p Podes realizar todo consultas sobre los cursos enviandonos un mensaje de Lunes a Viernes de 9:00 a 17:00 hs.
                     
-                    a.btn.btn-green(href="#") 
-                        i.fab.fa-whatsapp 11 6353 1727
+                    .whatsapp
+                        
+                        a.btn(href="https://api.whatsapp.com/send?phone=5491163531727", target="_blank") 
+                            i.fab.fa-whatsapp
+                            | +54 9 11 6353 1727
                         
     .section-row.row-questions(data-midnight="white")
         .container
-                .col-xs-12                  
+                .col-xs-12
+                                
                     h2 Quiero obtener mi Licencia para Cargas Generales
-                        br
                                                           
-                        a.btn.btn-green(href="#",style="color:#FFFFFF !important;") Inscribite Online        
+                    a.btn.btn-green(href="#",style="color:#FFFFFF !important;") Inscribite Online        

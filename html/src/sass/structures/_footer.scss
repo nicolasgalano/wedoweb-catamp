@@ -11,6 +11,9 @@ footer {
     @media(max-width: 800px){
         padding:20px 20px;
     }
+    @media(max-width: 400px){
+        padding:10px 0px;
+    }
     a.logo{
         display: block;
         position:absolute;
@@ -19,6 +22,9 @@ footer {
         width:145px;
         @media(max-width: 800px){
             left:30px;
+        }
+        @media(max-width: 400px){
+            left:15px;
         }
         img{
             width:100%;
@@ -33,6 +39,10 @@ footer {
         @media(max-width: 900px){
             padding-top:70px;
         }
+        @media(max-width: 400px){
+            font-size: 13px;
+            line-height: 60px;
+        }
     }
 
     ul.redes{
@@ -41,6 +51,9 @@ footer {
         right:50px;
         @media(max-width: 800px){
             right:30px;
+        }
+        @media(max-width: 400px){
+            right:15px;
         }
         li{
             float:left;

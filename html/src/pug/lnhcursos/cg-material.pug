@@ -1,7 +1,7 @@
 extends layout
 
 block body
-    body.index
+    body.lnh.inner
     
 block header
     include partials/header
@@ -9,7 +9,7 @@ block header
 block content
             
     //ficha
-    .section-row.row-inner.row-rnpq(data-midnight="white")
+    .section-row.row-inner.row-common(data-midnight="white", style="background-image:url(../images/home/bg_contenidos-generales.jpg);")
         
         .container
                       
@@ -21,6 +21,8 @@ block content
         .container
             .row
                 .col-xs-12
+                    
+                    h3 Material Adicional
                     
                     p Ponemos a tu dispocición material de interes sobre el transporte de Cargas Generales. 
                     .descargas

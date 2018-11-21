@@ -1,0 +1,57 @@
+extends layout
+
+block body
+    body.lnh.inner
+    
+block header
+    include partials/header
+            
+block content
+            
+    //ficha
+    .section-row.row-inner.row-common(data-midnight="white", style="background-image:url(../images/home/bg_materiales-peligrosos.jpg);")
+        .container                  
+            img(src="../images/inner/im_cursos.png")
+                      
+            h2 Cursos
+                
+    .section-row.row-inner.inner-common
+        .container
+            .row
+                .col-xs-12
+                
+                    h3 Cursos Cargas generales
+                    
+                    h6 CBO (Curso básico obligatorio)  
+                    
+                    p Duración: 5 jornadas completas de 8 horas cada una. Total 40 horas
+                    
+                    a(href="#", target="_blank" ) 
+                         h4 &middot DESCARGAR PROGRAMA CURSO Curso básico obligatorio (CBO)
+                        
+                    h6 Renovación  (Actualización y perfeccionamiento)
+                    
+                    p “El Profesional”
+                    
+                    p Duración: 1 jornada de 8 horas.
+                    
+                    a(href="#", target="_blank" ) 
+                        h4 &middot DESCARGAR PROGRAMA CURSO Actualización y perfeccionamiento (AP)    
+                    
+                    h4 CONSULTAS WHATSAPP
+                    
+                    p Podes realizar todo consultas sobre los cursos enviandonos un mensaje de Lunes a Viernes de 9:00 a 17:00 hs.
+                    
+                    .whatsapp
+                        
+                        a.btn(href="https://api.whatsapp.com/send?phone=5491163531727", target="_blank") 
+                            i.fab.fa-whatsapp
+                            | +54 9 11 6353 1727
+                        
+    .section-row.row-questions(data-midnight="white")
+        .container
+                .col-xs-12
+                                
+                    h2 Quiero obtener mi Licencia para Cargas Generales
+                                                          
+                    a.btn.btn-green(href="#",style="color:#FFFFFF !important;") Inscribite Online        

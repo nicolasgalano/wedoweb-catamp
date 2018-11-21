@@ -1,0 +1,43 @@
+extends layout
+
+block body
+    body.lnh.inner
+    
+block header
+    include partials/header
+            
+block content
+            
+    //ficha
+    .section-row.row-inner.row-common(data-midnight="white", style="background-image:url(../images/home/bg_materiales-peligrosos.jpg);")
+        .container
+                  
+            img(src="../images/inner/im_inscripcion.png")
+                  
+            h2 Inscripción
+                
+    .section-row.row-inner.inner-common
+        .container
+            .row
+                .col-xs-12
+                
+                    h3 Pago electrónico de arancel y canon C.N.R.T. 
+                    
+                    figure
+
+                        img(src="../images/dummie/logos/lg_fpt.png" alt="fpt")
+                            
+                    a(href="#", target="_blank" )
+                        | DESCARGAR BOLETA para (CBO) CURSO BÁSICO OBLIGATORIO o (AP) actualización y perfeccionamiento.
+                    
+                    figure
+        
+                        img(src="../images/dummie/logos/lg_cnrt.png" alt="cnrt")
+                                
+                    a(href="#", target="_blank" )
+                        | DESCARGAR BOLETA Canon/Derecho Curso Básico Obligatorio.
+                        
+                    a(href="#", target="_blank" )
+                        | DESCARGAR BOLETA Canon/Derecho Curso Obligatorio de Actualización.   
+                        
+                             
