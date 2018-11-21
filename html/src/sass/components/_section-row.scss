@@ -199,7 +199,7 @@
 
     a{
         display:block;
-        min-height:300px;
+        min-height:305px;
         padding-bottom:20px;
 
         figure{
@@ -220,7 +220,7 @@
             }
         }
         @media(max-width: 1100px){
-            min-height:360px;
+            min-height:370px;
         }
         @media(max-width: 770px){
             min-height:auto;
@@ -306,6 +306,7 @@
             }
             h3{
                 font-size: 24px;
+                line-height: 29px;
                 font-weight: 300;
                 color:#414042;
             }
@@ -350,9 +351,13 @@
 
 //COMISION
 .row-comision{
-
+    position:relative;
     background: #f2f2f2;
     padding:110px 0 50px;
+
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
 
     h2{
 
@@ -360,6 +365,11 @@
 
     .swiper-container{
         padding-bottom: 90px;
+        width: 92%;
+        margin-left: 0;
+        @media(max-width: 1100px){
+            width:100%;
+        }
 
         .swiper-pagination-bullet{
             border:0;
@@ -383,53 +393,93 @@
             bottom:60px !important;
         }
     }
-    .unidades{
+    .unidad{
 
         background: #FFFFFF;
-        width: 94%;
-        height: 400px;
-        margin: 50px 3%;
+        width: 84%;
+        min-height: 410px;
+        margin: 50px 12% 50px 4%;
         border-radius: 12px;
 
-        @media(max-width: 700px){
-            padding:35px 45px;
-        }
         @media(max-width: 500px){
-            padding:15px 25px;
             height: auto;
+            width: 94%;
+            margin: 40px 3%;
         }
-        .unidad{
-            height: 200px;
-            background-repeat:no-repeat;
-            background-size: contain;
-            background-position: center center;
-
-        }
-        h5{
-            font-family: 'Roboto';
-            font-size:25px;
-            font-weight:700 ;
-            font-style: italic;
+        .titulo{
+            padding:50px 0px;
+            border-top-right-radius:12px;
+            border-top-left-radius:12px;
+            background-color:#1d9c56;
+            font-size: 40px;
+            line-height:50px;
+            color:#FFF;
             text-align: center;
-        }
-        ul{
-            li{
-                list-style: none;
-                font-size: 20px;
+            font-family: 'Roboto';
+            span{
+                display: block;
                 font-weight: 100;
+            }
+            h4{
+                margin: 0;
+                font-size:40px;
+                font-weight: 500;
+            }
+            @media(max-width: 600px){
+                padding:35px 0px;
+                font-size:30px;
+                h4{
+                    font-size:30px;
+                }
+            }
+        }
+        .texto{
+            padding:20px 0;
+            color:#6D6E71;
+            h5{
+                font-family: 'Roboto';
+                font-size:25px;
+                font-weight:700 ;
                 font-style: italic;
                 text-align: center;
-                padding-right: 50px;
+            }
+            ul{
+                li{
+                    list-style: none;
+                    font-size: 21px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    font-style: italic;
+                    text-align: center;
+                    padding-right: 50px;
 
+                }
+            }
+            @media(max-width: 600px){
+                h5{
+                    font-size:20px;
+                }
+                ul{
+                    li{
+                        font-size:18px;
+                    }
+                }
             }
         }
     }
     figure.cuaderno{
+        position:absolute;
+        bottom:0;right:0;
+        width: 590px;
         img{
             width: 100%;
             height: 100%;
         }
+        @media(max-width: 600px){
+            display:none;
+        }
     }
+
     .chabon{
         box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
         background: #FFF;
@@ -606,22 +656,46 @@
         margin-bottom: 32px;
     }
 
+    .whatsapp{
+
+        padding:20px 0 0;
+
+        a.btn{
+            background-color: #1d9c56;
+            font-size:20px;
+            padding:8px 30px 7px;
+            i{
+                font-size:20px;
+            }
+        }
+        span{
+            display: block;
+            color:#FFF;
+            font-size:12px;
+            font-weight: 100;
+        }
+
+    }
+
     ul.contacto{
         margin:0;
         padding:0;
         li{
             font-family: 'Roboto';
             font-weight: 100 !important;
-            font-size:16px;
+            font-size:15px;
             margin-bottom: 6px;
             &.big{
                 font-weight: 300 !important;
-                font-size:18px;
+                font-size:16px;
             }
             &.mail{
-                padding-top:23px;
+                padding-top:18px;
                 font-weight: 500 !important;
-                font-size:20px;
+                font-size:18px;
+                img{
+                    width:48px;
+                }
                 a{
                     display:inline-block;
                     padding-left:14px;
@@ -647,7 +721,7 @@
         li{
             padding:0 0 20px;
             a{
-                font-size: 14px;
+                font-size: 13px;
                 font-weight: 100 !important;
                 &:hover{
                     text-decoration: underline;
