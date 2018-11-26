@@ -41,6 +41,24 @@
         border-radius:8px;
     }
 
+    .whatsapp{
+        padding:20px 0 0;
+        a.btn{
+            background-color: #1d9c56;
+            font-size:20px;
+            padding:8px 30px 7px;
+            i{
+                font-size:20px;
+            }
+        }
+        span{
+            display: block;
+            color:#FFF;
+            font-size:12px;
+            font-weight: 100;
+        }
+    }
+
 }
 
 //NOTHOME
@@ -158,6 +176,7 @@
         width:100%;
         padding: 165px 0 0;
         margin:70px 0 0;
+        cursor: pointer;
         span{
             font-size:18px;
             line-height: 25px;

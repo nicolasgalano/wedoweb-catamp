@@ -2,12 +2,22 @@
 
     $(document).ready(function(){
 
+        //Popups
+        $('.open-popup-youtube').click(function(){
+            $('.popup-youtube iframe').attr('src',$(this).data('youtube')+'?autoplay=1');
+            $('.popup-youtube').addClass('opened');
+        });
+        //Popups
+        $('.popup .close').click(function(e){
+            $(this).parent().parent().removeClass('opened');
+            $('.popup-youtube iframe').attr('src','');
+        })
+
         // Change this to the correct selector.
         $('nav').midnight();
 
         //NAV BEHAVIOUR
         $('.open-menu').click(function(e){
-
             $( "div.menu" ).animate({
                 opacity: 1,
                 right: "+=300",
@@ -34,7 +44,6 @@
                 // Animation complete.
             });
         });
-
 
 
         //SMOOTH SCROLL
