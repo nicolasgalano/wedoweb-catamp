@@ -75,6 +75,11 @@
             },
         });
 
+        $('.pregunta-item .pregunta').click(function(){
+            console.log('asdasd');
+            $(this).parent().toggleClass('opened');
+        });
+
     });
 
 })(jQuery);

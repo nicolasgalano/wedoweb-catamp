@@ -1089,7 +1089,8 @@
     .preguntas{
         padding:20px 0 0;
         .pregunta-item{
-            margin:0 0 10px;
+            background: #FFF;
+            padding:0 0 10px;
             .pregunta{
                 min-height:70px;
                 background:#eeeeee;
@@ -1115,24 +1116,38 @@
                     background-size: 55%;
                     width:70px;
                     height:100%;
+                    transition: all .5s;
                 }
             }
             .respuesta{
-                display:none;
-                p{
-
+                padding:0px 20px;
+                display:block;
+                height:0;
+                transition: all .5s;
+                p, ul{
+                    color:#59595B;
+                    font-size:18px;
+                    font-weight: 300;
+                    opacity:0;
+                    margin-bottom: 0px;
+                    padding:0 0 10px;
+                    transition: all .5s;
                 }
             }
 
             &.opened{
-
                 .pregunta{
                     span{
                         background-image:url(../images/inner/ic_question-opened.png);
                     }
                 }
                 .respuesta{
-                    display:none;
+                    padding:20px 20px 0;
+                    display:block;
+                    height:auto;
+                    p, ul{
+                        opacity:1;
+                    }
                 }
             }
 
