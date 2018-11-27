@@ -9,10 +9,21 @@ block header
 block content
             
     //ficha
-    .section-row.row-inner.row-noticias(data-midnight="white")
-        .container
-                      
-                .slider
+    .section-row.row-noticias(data-midnight="white")
+                  
+        // Swiper
+        .swiper-container
+            .swiper-wrapper
+                
+                .swiper-slide(style="background-image:url(../images/dummie/noticias/im_nota2.jpg);")
+                    .sw-inner
+                
+                .swiper-slide(style="background-image:url(../images/dummie/noticias/im_nota.png);")
+                    .sw-inner
+                        
+                
+            // Add Pagination
+            .swiper-pagination
                       
     .section-row.row-inner.inner-noticias                    
         .container
@@ -36,4 +47,18 @@ block content
                     p Felicitamos a Walter por tan encomiosa labor, demostrando un gran espíritu de lucha y Solidaridad con quienes mas lo necesitan.
                 
                 .col-sm-12.col-md-4
+                    
+                    //WORDPRESS STUFF
+                
+                    
+    .posts-links
+        a.prev-post(href="#", style="background-image:url(../images/dummie/noticias/im_nota2.jpg);")
+            .inner-link
+                span Anterior noticia
+                h5 Reunión de especialistas transporte Mercancías Peligrosas
+        a.next-post(href="#", style="background-image:url(../images/dummie/noticias/im_nota.png);")
+            .inner-link
+                span Próxima noticia
+                h5 Reunión de especialistas transporte Mercancías Peligrosas
+    
                     

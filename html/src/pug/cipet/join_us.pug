@@ -24,28 +24,34 @@ block content
 
                     p Complete el formulario para solicitar una cotización del servicio y coordinar una charla informativa sobre nuestro Centro de información.
 
-                    form(method='post' action='')
-                        
-                        div.form-group
-                            label(for='name') Nombre y Apellido
-                            input#name.form-control(type='text', name='name' required )
-                        div.form-group
-                            label(for='company') Empresa
-                            input#company.form-control(type='text', name='company' required )
-                        div.form-group
-                            label(for='phone') Telefono de Contacto
-                            input#phone.form-control(type='number', name='phone' required )
-                        div.form-group
-                            label(for='time') Horario de Contacto
-                            input#time.form-control(type='text', name='time' required ) 
-                        div.form-group
-                            label(for='activity') Actividad de la empresa
-                            input#activity.form-control(type='text', name='activity' required )                          
-                        div.form-group
-                            label(for='email') Email
-                            input#email.form-control(type='email', name='email' required )
-                        div.form-group
-                            label(for='message') Comentarios
-                            input#message.form-control(type='text', name='message' )
-                                
+                    .form-group
+                        form(method='post' action='')
+                            
+                            div.form-item
+                                h6 Socio CATAMP
+                                .form-radio
+                                    input#radio-si(type='radio', name='socio', value="Si")
+                                    label(for="radio-si") Si
+                                    input#radio-no(type='radio', name='socio', value="No")
+                                    label(for="radio-no") No
+                                    
+                            div.form-item
+                                label Empresa
+                                input(type='text', name='name', required )
+                            div.form-item
+                                label Rubro
+                                input(type='text', name='company', required )
+                            div.form-item
+                                label Nombre y apellido del responsable
+                                input(type='text', name='company', required )
+                            div.form-item.size-50
+                                label Teléfono de Contacto
+                                input(type='number', name='phone' required )
+                            div.form-item.size-50
+                                label Mail
+                                input(type='text', name='time' required ) 
+                            div.form-item
+                                label Detalle flota
+                                textarea(name='message')
+                                    
                             button.btn(type='submit') Enviar
