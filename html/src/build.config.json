@@ -8,6 +8,7 @@
   },
   "app_files": {
     "images": "src/images/**/*",
+    "pdfs": "src/pdfs/**/*",
     "videos": "src/videos/**/*",
     "fonts": [
       "src/fonts/**/*",
@@ -25,7 +26,7 @@
     "pug": [ "src/pug/**/*.pug",
              "!src/pug/partials/**/*.pug",
              "!src/pug/**/partials/*.pug",
-             "!src/pug/**/layout.pug"            
+             "!src/pug/**/layout.pug"
            ],
     "sass": ["src/sass/app.scss"]
   },

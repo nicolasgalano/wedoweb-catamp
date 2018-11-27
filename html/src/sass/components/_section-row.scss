@@ -1,5 +1,5 @@
 @media(min-width: 1400px){
-    .container {
+    .container, .container-fluid {
         width: 1370px !important;
     }
 }
@@ -61,6 +61,56 @@
 
 }
 
+
+//NOTHOME
+.section-row.row-inner{
+    padding-right:30px;
+    padding-left:30px;
+    p{
+        font-size:20px;
+        font-weight: 300;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    h2{
+        font-size: 47px;
+        font-weight: 100;
+        line-height: 56px;
+        color: #FFFFFF;
+        @media(max-width: 600px){
+            font-size: 35px;
+            font-weight: 100;
+            line-height: 44px;
+        }
+    }
+
+    h3{
+        font-size: 60px;
+        font-weight: 100;
+        line-height: 80px;
+    }
+
+    h4{
+        font-size:20px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #003263
+    }
+
+    li{
+
+        a{
+            font-size:20px;
+            font-weight: 400;
+            line-height: 40px;
+            color: #003263;
+
+        }
+
+    }
+}
+
 //STUFF
 .posts-links{
     display:flex;
@@ -113,43 +163,6 @@
     }
 }
 
-//NOTHOME
-.section-row.row-inner{
-    padding-right:30px;
-    padding-left:30px;
-    p{
-        font-size:20px;
-        font-weight: 300;
-        line-height: 30px;
-        margin-bottom: 30px;
-    }
-
-    h3{
-        font-size: 60px;
-        font-weight: 100;
-        line-height: 80px;
-    }
-
-    h4{
-        font-size:20px;
-        font-weight: 400;
-        line-height: 30px;
-        color: #003263
-    }
-
-    li{
-
-        a{
-            font-size:20px;
-            font-weight: 400;
-            line-height: 40px;
-            color: #003263;
-
-        }
-
-    }
-
-}
 .link{
     margin-bottom: 30px;
     span{
@@ -864,7 +877,6 @@
 
 //Ficha Indice
 .row-ficha-indice{
-
     height:90vh;
     background: url(../images/inner/bg_indice.jpg) center center no-repeat;
     background-size: cover;
@@ -874,23 +886,11 @@
     @media(max-width: 800px){
         min-height: 500px;
     }
-    img{
-
-    }
-    h2{
-        font-size: 47px;
-        font-weight: 100;
-        line-height: 56px;
-        color: #FFFFFF;
-    }
 }
 .inner-ficha{
-
     margin-top: 75px;
     margin-bottom: 75px;
-
     a.btn{
-
         padding-left: 100px;
         padding-right: 100px;
         text-align: center;
@@ -901,9 +901,8 @@
         padding-left: 20px;
 
     }
-
-
 }
+
 // RNPQ
 .row-rnpq{
     height:90vh;
@@ -915,22 +914,11 @@
     @media(max-width: 800px){
         min-height: 500px;
     }
-    h2{
-        font-size: 47px;
-        font-weight: 100;
-        line-height: 56px;
-        color: #FFFFFF;
-        @media(max-width: 600px){
-            font-size: 35px;
-            font-weight: 100;
-            line-height: 44px;
-        }
-    }
 }
 
 // COMMON
 .section-row.row-common{
-    height:75vh;
+    height:79vh;
     background: url(../images/inner/bg_rnpq.jpg) center center no-repeat;
     background-size: cover;
     padding-top:18vh;
@@ -988,6 +976,18 @@
             }
         }
     }
+    h2{
+        font-size: 47px;
+        font-weight: 100;
+        line-height: 56px;
+        color: #FFFFFF;
+        text-align: left;
+        @media(max-width: 600px){
+            font-size: 35px;
+            font-weight: 100;
+            line-height: 44px;
+        }
+    }
     h3{
         font-size: 50px !important;
         line-height: 62px !important;
@@ -1003,13 +1003,6 @@
         font-size: 20px;
         color: #59595B;
         margin-bottom: 40px;
-    }
-    figure{
-        img{
-            max-width: 300px;
-            margin-top: 75px;
-            margin-bottom: 25px;
-        }
     }
     span{
         display: block;
@@ -1134,7 +1127,6 @@
                     transition: all .5s;
                 }
             }
-
             &.opened{
                 .pregunta{
                     span{
@@ -1150,10 +1142,49 @@
                     }
                 }
             }
-
         }
-
     }
+
+    figure.emergencia{
+        img{
+            width: 95%;
+            padding: 20px;
+        }
+    }
+
+}
+
+.boletin{
+    form.search{
+        padding:0 0 20px;
+        span{
+            float: right;
+            margin-right: 15px;
+            margin-top: -24px;
+            position: relative;
+        }
+        input{
+            border-radius: 15px;
+        }
+    }
+    article{
+
+        h4{
+            text-transform: uppercase;
+            font-size: 18px !important;
+            font-weight: 400;
+            line-height: 30px;
+            margin: 10px 0 10px !important;
+            color: #003263;
+        }
+        p{
+            font-size: 16px !important;
+            font-weight: 300;
+            line-height: 30px;
+            margin-bottom: 15px !important;
+        }
+    }
+
 }
 
 
@@ -1200,6 +1231,11 @@
         font-weight: 100;
         line-height: 56px;
         color: #FFFFFF;
+        @media(max-width: 600px){
+            font-size: 35px;
+            font-weight: 100;
+            line-height: 44px;
+        }
     }
 
 }
@@ -1218,14 +1254,7 @@
     ul{
         margin:10px;
         padding:0;
-
-        li{
-
-            p{
-                margin: 0 !important;
-                }
-            }
-        }
+    }
 }
 //RUTA
 .row-ruta{
@@ -1237,15 +1266,6 @@
     min-height: 700px;
     @media(max-width: 800px){
         min-height: 500px;
-    }
-    img{
-
-    }
-    h2{
-        font-size: 47px;
-        font-weight: 100;
-        line-height: 56px;
-        color: #FFFFFF;
     }
 }
 .inner-ruta{
@@ -1270,33 +1290,6 @@
             }
         }
     }
-    .laws{
-        label{
-            font-family: 'Roboto';
-            font-size: 22px;
-            font-weight: bold;
-            line-height: 30px;
-        }
-    }
-    .box{
-        padding-top: 30px;
-        padding-bottom: 45px;
-    }
-    .locales{
-
-        span{
-            font-size: 25px;
-            line-height: 40px;
-            font-weight: 500;
-            color: #003263;
-        }
-        p{
-            margin:0 !important;
-        }
-        span.wsp{
-            color: #098909;
-        }
-    }
     figure.emergencia{
         img{
             width: 95%;
@@ -1304,19 +1297,15 @@
         }
     }
     form.search{
-
         span{
             float: right;
             margin-right: 15px;
             margin-top: -24px;
             position: relative;
-
         }
         input{
             border-radius: 15px;
-
         }
-
     }
 }
 
@@ -1365,10 +1354,6 @@
         color: #FFFFFF;
     }
 }
-.inner-join_us{
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
 
 //NOTICIAS
 .row-noticias{
@@ -1401,8 +1386,6 @@
     @media(max-width: 800px){
         min-height: 500px;
     }
-    img{
-    }
     h2{
         font-size: 80px;
         font-weight: 100;
@@ -1410,37 +1393,54 @@
         color: #FFFFFF;
     }
 }
-.inner-estadistica{
-
+.section-row.inner-estadistica{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    p{
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        margin-bottom: 24px;
+    }
     h5{
         font-family: 'Roboto';
-        font-size: 53px;
+        font-size: 43px;
         font-weight: 200;
         text-transform: uppercase;
-        padding-left: 30px;
+        margin:40px 0 20px;
+        padding-left: 0px;
+        @media(max-width: 800px){
+            font-size: 30px;
         }
+    }
     h6{
         font-family: 'Roboto';
-        font-size: 27px;
+        font-size: 20px;
         font-weight: 300;
         text-transform: uppercase;
         color: #19345E;
-        padding-left: 30px;
-
+        margin:0 0 20px;
+        padding-left: 0px;
+        @media(max-width: 800px){
+            font-size: 16px;
+        }
     }
     figure{
-
         img{
             width: 95%;
         }
     }
     .boton{
         text-align: center;
-
-            a.btn{
-                display:inline-block;
-            }
+        a.btn{
+            display:inline-block;
         }
+    }
+    .img-link{
+        display:block;
+        font-size:14px;
+        padding:10px 0 40px;
+    }
 }
 .cipet{
     .row-asociados{
