@@ -6,3 +6,5 @@
 node_modules
 build
 src/*-manifest.json
+wordpress/wp-content/themes/wedoweb-catamp/js
+wordpress/wp-content/themes/wedoweb-catamp/css

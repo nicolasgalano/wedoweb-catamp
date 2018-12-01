@@ -7,6 +7,7 @@
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,26 +26,23 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<!-- wrapper -->
-		<div class="wrapper">
-
-			<!-- header -->
-			<header class="header clear" role="banner">
-
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
-
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
-
-			</header>
+    <nav>
+        <h1><a href="index.html"></a></h1><a class="btn-menu open-menu" href="javascript:;"></a>
+        <ul class="redes">
+            <li class="facebook"><a href="https://www.facebook.com/catampok/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="instagram"><a href="https://www.instagram.com/catamp_oficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li class="twitter"><a href="https://twitter.com/CATAMP_oficial" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </nav>
+    <div class="menu clearfix"><a class="btn-menu close-menu" href="javascript:;"></a>
+        <ul>
+            <li><a href="index.html#about">¿QUE ES CATAMP?</a></li>
+            <li><a href="index.html#servicios">SERVICIOS</a></li>
+            <li><a href="index.html#asociate">ASOCIATE</a></li>
+            <li><a href="index.html#noticias">NOTICIAS</a></li>
+            <li><a href="index.html#comision">COMISIÓN DIRECTIVA</a></li>
+            <li><a href="index.html#asociados">ASOCIADOS</a></li>
+            <li><a href="index.html#contacto">CONTACTO</a></li>
+        </ul>
+    </div>
 			<!-- /header -->

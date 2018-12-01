@@ -1,0 +1,64 @@
+// *************************************
+//
+//   Bootstrap
+//   -> Import individual modules
+//
+// *************************************
+
+
+// ----- Import modules -----//
+
+// Configure to import Bootstrap modules per project requirements
+
+// Core variables and mixins
+@import
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins',
+
+// Reset and dependencies
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons',
+// 'print',
+
+// Core CSS
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid',
+// 'tables',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms',
+//'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons',
+
+// Components
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar',
+// 'breadcrumbs',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pagination',
+// 'pager',
+// 'labels',
+// 'badges',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron',
+// 'thumbnails',
+// 'alert',
+// 'progress-bar',
+// 'media',
+// 'list-group',
+// 'panels',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed',
+// 'wells';
+// 'close';
+
+// Components w/ JavaScript
+// 'modals'
+// 'tooltip'
+// 'popovers'
+// 'carousel'
+
+// Utility classes
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities',
+'node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities'
+;

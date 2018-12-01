@@ -98,8 +98,17 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('html5blankscripts'); // Enqueue it!
+        $js_version = file_get_contents("src/js-manifest.json", FILE_USE_INCLUDE_PATH);
+        $js_manifest = json_decode($js_version, true);
+//        var_dump($js_manifest);
+        wp_register_script('wedowebcatampscripts', get_template_directory_uri() . '/js/vendor.js', array(), '1.0.0', true); // Custom scripts
+        wp_enqueue_script('wedowebcatampscripts'); // Enqueue it!
+
+        wp_register_script('wedowebcatampscripts2', get_template_directory_uri() . '/js/' . $js_manifest['app.js'], array(), '1.0.0', true); // Custom scripts
+        wp_enqueue_script('wedowebcatampscripts2'); // Enqueue it!
+
+//        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+//        wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
 }
 
@@ -115,11 +124,17 @@ function html5blank_conditional_scripts()
 // Load HTML5 Blank styles
 function html5blank_styles()
 {
+    $css_version = file_get_contents("src/css-manifest.json", FILE_USE_INCLUDE_PATH);
+    $css_manifest = json_decode($css_version, true);
+
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
+
+    wp_register_style('wedowebcatamp', get_template_directory_uri() . '/css/' . $css_manifest['app.css'], array(), '1.0', 'all');
+    wp_enqueue_style('wedowebcatamp'); // Enqueue it!
 }
 
 // Register HTML5 Blank Navigation

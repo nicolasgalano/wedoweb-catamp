@@ -1,0 +1,69 @@
+.cipet{
+
+    &.inner{
+
+        nav{
+            h1{
+                a{
+                    background-image:url(../images/header/lg_cipet-color.png);
+                }
+            }
+            //MIDNIGHT JS
+            .midnightHeader.white{
+                h1{
+                    a{
+                        background-image:url(../images/header/lg_cipet-white.png);
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+.lnh{
+
+    &.inner{
+
+        nav{
+            h1{
+                a{
+                    background-image:url(../images/header/lg_lnh-color.png);
+                }
+            }
+            //MIDNIGHT JS
+            .midnightHeader.white, .midnightHeader.red{
+                h1{
+                    a{
+                        background-image:url(../images/header/lg_lnh-white.png);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .row-services{
+
+        p{
+            font-size:15px;
+        }
+    }
+
+    .row-main{
+        padding-top: 30vh;
+        p{
+            font-size: 28px;
+            line-height: 36px;
+            margin: 40px 0 60px;
+        }
+        a.btn{
+            font-size: 21px;
+            font-weight: 300 !important;
+            text-transform: none;
+            padding: 8px 34px 7px;
+
+        }
+    }
+
+}
