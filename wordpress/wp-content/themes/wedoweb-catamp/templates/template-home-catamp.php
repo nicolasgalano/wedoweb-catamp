@@ -57,6 +57,7 @@ get_header();
     </div>
 </div>
 <?php
+
     set_query_var( 'rowFreeContentSetId', true );
     get_template_part('templates/partials/rowFreeContent');
 
@@ -67,7 +68,6 @@ $args = array(
     'meta_value' => 'catamp'
 );
 $loop = new WP_Query( $args );
-
 if($loop->have_posts()) {
     ?>
     <!--News-->
@@ -79,6 +79,7 @@ if($loop->have_posts()) {
                 </div>
                 <?php
                     while($loop->have_posts()) {
+//                        var_dump($loop);
                         $loop->the_post();
                         $image = false;
                         if(have_rows('top_header')) {
@@ -131,7 +132,12 @@ if($loop->have_posts()) {
         </div>
     </div>
 <?php
+    wp_reset_query();
 }
+
+set_query_var( 'rowFreeContentSetId', false );
+set_query_var( 'rowFreeContentClone', true );
+get_template_part('templates/partials/rowFreeContent');
 ?>
 
 <?php get_footer(); ?>

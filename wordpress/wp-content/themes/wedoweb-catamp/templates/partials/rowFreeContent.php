@@ -1,6 +1,7 @@
 <?php
-$rowFreeContent = get_field('row-free-content');
-$rowFreeBackgroundType = get_field('row-free-background-type');
+$prefix = ($rowFreeContentClone)? 'clone_' : '';
+$rowFreeContent = get_field($prefix.'row-free-content');
+$rowFreeBackgroundType = get_field($prefix.'row-free-background-type');
 $rowClass = ($rowFreeBackgroundType == 'white')? 'row-bepart' : 'row-questions';
 ?>
 <div class="section-row <?php echo $rowClass; ?>"
