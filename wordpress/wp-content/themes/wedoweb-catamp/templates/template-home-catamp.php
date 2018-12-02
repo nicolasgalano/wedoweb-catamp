@@ -56,5 +56,83 @@ get_header();
         </div>
     </div>
 </div>
+<?php
+    set_query_var( 'rowFreeContentSetId', true );
+    get_template_part('templates/partials/rowFreeContent');
+
+$args = array(
+    'post_type' => 'noticia',
+    'posts_per_page'   => 3,
+    'meta_key' => 'news-group',
+    'meta_value' => 'catamp'
+);
+$loop = new WP_Query( $args );
+
+if($loop->have_posts()) {
+    ?>
+    <!--News-->
+    <div class="section-row row-news" id="noticias" data-midnight="gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Noticias</h2>
+                </div>
+                <?php
+                    while($loop->have_posts()) {
+                        $loop->the_post();
+                        $image = false;
+                        if(have_rows('top_header')) {
+                            while (have_rows('top_header')) {
+                                the_row();
+                                $image = get_sub_field('top_header_image');
+                                if($image) {break;}
+                            }
+                        }
+                        $tagsList = get_the_tags();
+                        $tag = false;
+                        if(count($tagsList) > 0) {
+                            $tag = $tagsList[0]->name;
+                        }
+                        ?>
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            <a class="article" href="<?php echo get_the_permalink(); ?>">
+                                <?php
+                                if($image) {
+                                    ?>
+                                    <figure>
+                                        <img src="<?php echo $image['sizes']['news-size']?>" alt="<?php echo $image['alt']; ?>"/>
+                                    </figure>
+                                <?php
+                                }
+                                ?>
+                                <div class="cont">
+                                    <?php
+                                        if($tag) {
+                                    ?>
+                                    <span><?php echo $tag ?></span>
+                                    <?php
+                                        }
+                                    ?>
+                                    <h3><?php echo get_the_title()?></h3>
+                                    <p><?php echo get_the_excerpt()?></p>
+                                </div>
+                            </a>
+                        </div>
+                <?php
+                    }
+
+                    if($loop->post_count >= 3) {
+                        ?>
+                        <a class="btn" href="<?php echo esc_url(home_url('/'))?>noticias" target="_blank">Ver más</a>
+                <?php
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+<?php
+}
+?>
+
 <?php get_footer(); ?>
 

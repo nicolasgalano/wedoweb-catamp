@@ -27,7 +27,7 @@
 	<body <?php body_class(); ?>>
 
     <nav>
-        <h1><a href="<?php echo esc_url(home_url('/')); ?>"></a></h1><a class="btn-menu open-menu" href="javascript:;"></a>
+        <h1><a href="index.html"></a>cipet</h1><a class="btn-menu open-menu" href="javascript:;"></a>
         <ul class="redes">
             <li class="facebook"><a href="https://www.facebook.com/catampok/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
             <li class="instagram"><a href="https://www.instagram.com/catamp_oficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>

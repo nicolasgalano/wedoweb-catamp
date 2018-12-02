@@ -30,7 +30,7 @@ if (function_exists('add_theme_support'))
     add_image_size('large', 700, '', true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('news-size', 480, 335, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -370,6 +370,10 @@ add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comment
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+add_action( 'init', 'create_servicio_cpt', 0 );
+add_action( 'init', 'create_noticia_cpt', 0 );
+
+
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 add_action('admin_head', 'remove_page_supports');
@@ -416,6 +420,121 @@ add_shortcode('boton', 'content_button_shortcode');
 /*------------------------------------*\
 	Custom Post Types
 \*------------------------------------*/
+// Register Custom Post Type Servicio
+// Post Type Key: servicio
+function create_servicio_cpt() {
+
+    $labels = array(
+        'name' => __( 'Servicios', 'Post Type General Name', 'textdomain' ),
+        'singular_name' => __( 'Servicio', 'Post Type Singular Name', 'textdomain' ),
+        'menu_name' => __( 'Servicios', 'textdomain' ),
+        'name_admin_bar' => __( 'Servicio', 'textdomain' ),
+        'archives' => __( 'Archivos Servicio', 'textdomain' ),
+        'attributes' => __( 'Atributos Servicio', 'textdomain' ),
+        'parent_item_colon' => __( 'Padres Servicio:', 'textdomain' ),
+        'all_items' => __( 'Todos los Servicios', 'textdomain' ),
+        'add_new_item' => __( 'Añadir nuevo Servicio', 'textdomain' ),
+        'add_new' => __( 'Añadir nuevo', 'textdomain' ),
+        'new_item' => __( 'Nuevo Servicio', 'textdomain' ),
+        'edit_item' => __( 'Editar Servicio', 'textdomain' ),
+        'update_item' => __( 'Actualizar Servicio', 'textdomain' ),
+        'view_item' => __( 'Ver Servicio', 'textdomain' ),
+        'view_items' => __( 'Ver Servicios', 'textdomain' ),
+        'search_items' => __( 'Buscar Servicio', 'textdomain' ),
+        'not_found' => __( 'No se encontraron Servicios.', 'textdomain' ),
+        'not_found_in_trash' => __( 'Ningún Servicio encontrado en la papelera.', 'textdomain' ),
+        'featured_image' => __( 'Imagen destacada', 'textdomain' ),
+        'set_featured_image' => __( 'Establecer imagen destacada', 'textdomain' ),
+        'remove_featured_image' => __( 'Borrar imagen destacada', 'textdomain' ),
+        'use_featured_image' => __( 'Usar como imagen destacada', 'textdomain' ),
+        'insert_into_item' => __( 'Insertar en la Servicio', 'textdomain' ),
+        'uploaded_to_this_item' => __( 'Subido a esta Servicio', 'textdomain' ),
+        'items_list' => __( 'Lista de Servicios', 'textdomain' ),
+        'items_list_navigation' => __( 'Navegación por el listado de Servicios', 'textdomain' ),
+        'filter_items_list' => __( 'Lista de Servicios filtradas', 'textdomain' ),
+    );
+    $args = array(
+        'label' => __( 'Servicio', 'textdomain' ),
+        'description' => __( '', 'textdomain' ),
+        'labels' => $labels,
+        'menu_icon' => 'dashicons-schedule',
+        'supports' => array(),
+        'taxonomies' => array('category', ),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'show_in_admin_bar' => false,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => false,
+        'hierarchical' => false,
+        'exclude_from_search' => false,
+        'show_in_rest' => true,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+    );
+    register_post_type( 'servicio', $args );
+
+}
+
+// Register Custom Post Type Noticia
+// Post Type Key: noticia
+function create_noticia_cpt() {
+
+    $labels = array(
+        'name' => __( 'Noticias', 'Post Type General Name', 'textdomain' ),
+        'singular_name' => __( 'Noticia', 'Post Type Singular Name', 'textdomain' ),
+        'menu_name' => __( 'Noticias', 'textdomain' ),
+        'name_admin_bar' => __( 'Noticia', 'textdomain' ),
+        'archives' => __( 'Archivos Noticia', 'textdomain' ),
+        'attributes' => __( 'Atributos Noticia', 'textdomain' ),
+        'parent_item_colon' => __( 'Padres Noticia:', 'textdomain' ),
+        'all_items' => __( 'Todas las Noticias', 'textdomain' ),
+        'add_new_item' => __( 'Añadir nueva Noticia', 'textdomain' ),
+        'add_new' => __( 'Añadir nueva', 'textdomain' ),
+        'new_item' => __( 'Nueva Noticia', 'textdomain' ),
+        'edit_item' => __( 'Editar Noticia', 'textdomain' ),
+        'update_item' => __( 'Actualizar Noticia', 'textdomain' ),
+        'view_item' => __( 'Ver Noticia', 'textdomain' ),
+        'view_items' => __( 'Ver Noticias', 'textdomain' ),
+        'search_items' => __( 'Buscar Noticia', 'textdomain' ),
+        'not_found' => __( 'No se encontraron Noticias.', 'textdomain' ),
+        'not_found_in_trash' => __( 'Ningún Noticia encontrado en la papelera.', 'textdomain' ),
+        'featured_image' => __( 'Imagen destacada', 'textdomain' ),
+        'set_featured_image' => __( 'Establecer imagen destacada', 'textdomain' ),
+        'remove_featured_image' => __( 'Borrar imagen destacada', 'textdomain' ),
+        'use_featured_image' => __( 'Usar como imagen destacada', 'textdomain' ),
+        'insert_into_item' => __( 'Insertar en la Noticia', 'textdomain' ),
+        'uploaded_to_this_item' => __( 'Subido a esta Noticia', 'textdomain' ),
+        'items_list' => __( 'Lista de Noticias', 'textdomain' ),
+        'items_list_navigation' => __( 'Navegación por el listado de Noticias', 'textdomain' ),
+        'filter_items_list' => __( 'Lista de Noticias filtradas', 'textdomain' ),
+    );
+    $args = array(
+        'label' => __( 'Noticia', 'textdomain' ),
+        'description' => __( '', 'textdomain' ),
+        'labels' => $labels,
+        'menu_icon' => 'dashicons-megaphone',
+        'supports' => array('title', 'editor', 'excerpt'),
+        'taxonomies' => array('post_tag'),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'show_in_admin_bar' => false,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'hierarchical' => false,
+        'exclude_from_search' => false,
+        'show_in_rest' => true,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+    );
+    register_post_type( 'noticia', $args );
+
+}
 
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
 function create_post_type_html5()
@@ -472,8 +591,12 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 }
 
 function content_button_shortcode($atts, $content = null) {
+    $externo = array_search('externo', $atts);
+
+    $target = ($externo !== false)? '_blank': '_self';
     return "<a class='btn' 
-                href='{$atts['link']}'>".
+                href='{$atts['link']}'
+                target='{$target}'>".
                 $content .
             "</a>";
 }
