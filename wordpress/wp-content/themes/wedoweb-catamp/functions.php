@@ -61,7 +61,22 @@ if (function_exists('add_theme_support'))
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
+function display_navigation($menuKey)
+{
+    if (($locations = get_nav_menu_locations()) && isset($locations[$menuKey])) {
+        $menu = wp_get_nav_menu_object($locations[$menuKey]);
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+//        var_dump($menu_items);
+        $menu_list = '<ul>';
+        foreach ($menu_items as $item) {
+            $menu_list .= "<li><a href='{$item->url}'>{$item->title}</a></li>";
+        }
 
+        $menu_list .= '</ul>';
+
+        echo $menu_list;
+    }
+}
 // HTML5 Blank navigation
 function html5blank_nav()
 {
@@ -138,12 +153,12 @@ function html5blank_styles()
 }
 
 // Register HTML5 Blank Navigation
-function register_html5_menu()
+function register_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
-        'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+        'catamp-menu' => __('Catamp Menu', 'html5blank'), // Main Navigation
+        'cipet-menu' => __('Cipet Menu', 'html5blank'), // Sidebar Navigation
+        'lnhcursos-menu' => __('LnhCursos Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
 
@@ -368,7 +383,7 @@ add_action('init', 'html5blank_header_scripts'); // Add Custom Scripts to wp_hea
 add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
-add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
+add_action('init', 'register_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action( 'init', 'create_servicio_cpt', 0 );
 add_action( 'init', 'create_noticia_cpt', 0 );

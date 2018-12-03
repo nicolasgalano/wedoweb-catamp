@@ -11,37 +11,9 @@ export default {
             $('.popup-youtube iframe').attr('src','');
         })
 
-        // Change this to the correct selector.
-        $('nav').midnight();
 
-        //NAV BEHAVIOUR
-        $('.open-menu').click(function(e){
-            $( "div.menu" ).animate({
-                opacity: 1,
-                right: "+=300",
-                height: "toggle"
-            }, 500, function() {
-                // Animation complete.
-            });
-        });
-        $('.close-menu').click(function(e){
-            $( "div.menu" ).animate({
-                opacity: 0,
-                right: "-=300",
-                height: "toggle"
-            }, 500, function() {
-                // Animation complete.
-            });
-        });
-        $('.menu li a').click(function(e){
-            $( "div.menu" ).animate({
-                opacity: 0,
-                right: "-=300",
-                height: "toggle"
-            }, 500, function() {
-                // Animation complete.
-            });
-        });
+
+
 
 
         //SMOOTH SCROLL

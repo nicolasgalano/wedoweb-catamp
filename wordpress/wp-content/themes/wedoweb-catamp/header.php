@@ -25,7 +25,6 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-
     <nav>
         <h1><a href="<?php echo esc_url(home_url('/')); ?>"></a></h1><a class="btn-menu open-menu" href="javascript:;"></a>
         <ul class="redes">
@@ -35,7 +34,7 @@
         </ul>
     </nav>
     <div class="menu clearfix"><a class="btn-menu close-menu" href="javascript:;"></a>
-        <ul>
+        <!--<ul>
             <li><a href="index.html#about">¿QUE ES CATAMP?</a></li>
             <li><a href="index.html#servicios">SERVICIOS</a></li>
             <li><a href="index.html#asociate">ASOCIATE</a></li>
@@ -43,6 +42,8 @@
             <li><a href="index.html#comision">COMISIÓN DIRECTIVA</a></li>
             <li><a href="index.html#asociados">ASOCIADOS</a></li>
             <li><a href="index.html#contacto">CONTACTO</a></li>
-        </ul>
+        </ul>-->
+        <?php display_navigation('catamp-menu')?>
+
     </div>
 			<!-- /header -->
