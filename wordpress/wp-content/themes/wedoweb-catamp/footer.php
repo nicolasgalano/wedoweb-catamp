@@ -1,30 +1,16 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
-
-			</footer>
-			<!-- /footer -->
-
-		</div>
-		<!-- /wrapper -->
-
-		<?php wp_footer(); ?>
-
-		<!-- analytics -->
-		<script>
-		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
-		ga('send', 'pageview');
-		</script>
+<footer>
+    <div class="container-fluid">
+        <a class="logo" href="<?php echo esc_url(home_url('')); ?>/">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/home/im_footer_logo.png">
+        </a>
+        <p class="copyright">2018 CATAMP. Todos los derechos reservados        </p>
+        <ul class="redes">
+            <li class="facebook"><a href="https://www.facebook.com/catampok/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="instagram"><a href="https://www.instagram.com/catamp_oficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li class="twitter"><a href="https://twitter.com/CATAMP_oficial" target="_blank"><i class="fab fa-twitter">    </i></a></li>
+        </ul>
+    </div>
+</footer>
 
 	</body>
 </html>
