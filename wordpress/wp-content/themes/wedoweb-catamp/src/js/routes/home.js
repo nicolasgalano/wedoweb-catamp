@@ -9,12 +9,7 @@ export default {
         $('.popup .close').click(function(e){
             $(this).parent().parent().removeClass('opened');
             $('.popup-youtube iframe').attr('src','');
-        })
-
-
-
-
-
+        });
 
         //SMOOTH SCROLL
         var $stupid = $('<div></div>')
@@ -30,7 +25,6 @@ export default {
         $('a').smoothScroll({
             afterScroll: mobileHack
         });
-
 
         //SWIPER
         var swiper = new Swiper('.swiper-container', {
