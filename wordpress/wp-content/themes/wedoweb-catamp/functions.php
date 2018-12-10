@@ -77,6 +77,23 @@ function display_navigation($menuKey)
         echo $menu_list;
     }
 }
+
+function display_contact_navigation($menuKey)
+{
+    if (($locations = get_nav_menu_locations()) && isset($locations[$menuKey])) {
+        $menu = wp_get_nav_menu_object($locations[$menuKey]);
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+//        var_dump($menu_items);
+        $menu_list = '<ul class="about-as">';
+        foreach ($menu_items as $item) {
+            $menu_list .= "<li><a href='{$item->url}'>{$item->title}</a></li>";
+        }
+
+        $menu_list .= '</ul>';
+
+        echo $menu_list;
+    }
+}
 // HTML5 Blank navigation
 function html5blank_nav()
 {
@@ -384,7 +401,7 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditi
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+//add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action( 'init', 'create_servicio_cpt', 0 );
 add_action( 'init', 'create_noticia_cpt', 0 );
 
@@ -392,6 +409,7 @@ add_action( 'init', 'create_noticia_cpt', 0 );
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 add_action('admin_head', 'remove_page_supports');
+add_action( 'admin_menu', 'remove_menus' );
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -432,6 +450,10 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 add_shortcode('boton', 'content_button_shortcode');
 
 
+
+function remove_menus() {
+    remove_menu_page( 'edit-comments.php' );
+}
 /*------------------------------------*\
 	Custom Post Types
 \*------------------------------------*/
@@ -552,7 +574,7 @@ function create_noticia_cpt() {
 }
 
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
-function create_post_type_html5()
+/*function create_post_type_html5()
 {
     register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
     register_taxonomy_for_object_type('post_tag', 'html5-blank');
@@ -587,7 +609,7 @@ function create_post_type_html5()
             'category'
         ) // Add Category and Post Tags support
     ));
-}
+}*/
 
 /*------------------------------------*\
 	ShortCode Functions
@@ -615,5 +637,70 @@ function content_button_shortcode($atts, $content = null) {
                 $content .
             "</a>";
 }
+
+/* Opciones de tema Settings Page */
+class opcionesdetema_Settings_Page {
+    public function __construct() {
+        add_action( 'admin_menu', array( $this, 'wph_create_settings' ) );
+        add_action( 'admin_init', array( $this, 'wph_setup_sections' ) );
+        add_action( 'admin_init', array( $this, 'wph_setup_fields' ) );
+    }
+    public function wph_create_settings() {
+        $page_title = 'Opciones de tema';
+        $menu_title = 'Opciones de tema';
+        $capability = 'edit_pages';
+        $slug = 'opcionesdetema';
+        $callback = array($this, 'wph_settings_content');
+        $icon = 'dashicons-admin-generic';
+        $position = 25;
+        add_menu_page($page_title, $menu_title, $capability, $slug, $callback, $icon, $position);
+    }
+    public function wph_settings_content() { ?>
+        <div class="wrap">
+            <h1>Opciones de tema</h1>
+            <?php settings_errors(); ?>
+            <form method="POST" action="options.php">
+                <?php
+                settings_fields( 'opcionesdetema' );
+                do_settings_sections( 'opcionesdetema' );
+                submit_button();
+                ?>
+            </form>
+        </div> <?php
+    }
+    public function wph_setup_sections() {
+        add_settings_section( 'opcionesdetema_section', '', array(), 'opcionesdetema' );
+    }
+    public function wph_setup_fields() {
+        $fields = array(
+            array(
+                'label' => 'Copyright',
+                'id' => 'copyright_33696',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section',
+            ),
+        );
+        foreach( $fields as $field ){
+            add_settings_field( $field['id'], $field['label'], array( $this, 'wph_field_callback' ), 'opcionesdetema', $field['section'], $field );
+            register_setting( 'opcionesdetema', $field['id'] );
+        }
+    }
+    public function wph_field_callback( $field ) {
+        $value = get_option( $field['id'] );
+        switch ( $field['type'] ) {
+            default:
+                printf( '<input name="%1$s" id="%1$s" type="%2$s" placeholder="%3$s" value="%4$s" />',
+                    $field['id'],
+                    $field['type'],
+                    $field['placeholder'],
+                    $value
+                );
+        }
+        if( $desc = $field['desc'] ) {
+            printf( '<p class="description">%s </p>', $desc );
+        }
+    }
+}
+new opcionesdetema_Settings_Page();
 
 ?>

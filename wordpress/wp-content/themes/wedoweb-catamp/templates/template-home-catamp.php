@@ -250,7 +250,77 @@ if(have_rows('directorylist')) {
     </div>
 <?php
 }
-?>
 
+$associateslist_title = get_field('associateslist_title');
+if(have_rows('associatelist_list')) {
+    $rows = array();
+    while(have_rows('associatelist_list')) {
+        the_row();
+        array_push($rows, get_sub_field('associateslist_name'));
+    }
+
+    $catamp_associateslist_title = get_field('catamp_associateslist_title');
+    if(have_rows('catamp_associatelist_list')) {
+        $adherente_rows = array();
+        while(have_rows('catamp_associatelist_list')) {
+            the_row();
+            array_push($adherente_rows, get_sub_field('associateslist_name'));
+        }
+
+        set_query_var( 'associateslist2_title', $catamp_associateslist_title );
+        set_query_var( 'associatelist2_list', $adherente_rows );
+    }
+
+    set_query_var( 'associateslist_title', $associateslist_title );
+    set_query_var( 'associatelist_list', $rows );
+    set_query_var( 'associatelist_setId', 'asociados' );
+
+    get_template_part('templates/partials/associateListContent');
+}
+?>
+<div class="section-row row-contacto" id="contacto" data-midnight="white">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <h2><?php echo get_field('catamp_contact_title'); ?></h2>
+                <ul class="contacto">
+                    <li><?php echo get_field('catamp_contact_address'); ?></li>
+                    <li><?php echo get_field('catamp_contact_region'); ?></li>
+                    <li><?php echo get_field('catamp_contact_phone'); ?></li>
+                    <li class="big"><?php echo get_field('catamp_contact_register'); ?></li>
+                    <li class="mail">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/home/im_contacto_mail.png" alt="email">
+                        <a href="mailto:<?php echo get_field('catamp_contact_email'); ?>">
+                            <?php echo get_field('catamp_contact_email'); ?>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <a class="iram" href="<?php echo get_field('catamp_contact_quality_link'); ?>">
+                    <span><?php echo get_field('catamp_contact_quality_label'); ?></span>
+                    <img class="iram"
+                         src="<?php echo get_field('catamp_contact_quality_image')['url']; ?>"
+                         alt="<?php echo get_field('catamp_contact_quality_image')['alt']; ?>">
+                </a>
+            </div>
+            <div class="col-xs-hidden col-sm-hidden col-md-2">
+                <?php display_contact_navigation('catamp-menu')?>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3">
+                <a href="<?php echo get_field('catamp_contact_nac_link'); ?>" target="_blank">
+                    <img class="registro"
+                         src="<?php echo get_field('catamp_contact_nac_image')['url'] ?>"
+                         alt="<?php echo get_field('catamp_contact_nac_image')['alt'] ?>">
+                </a>
+                <a href="<?php echo get_field('catamp_contact_external_link') ?>" target="_blank"><img class="faadeac"
+                         src="<?php echo get_field('catamp_contact_external_image')['url'] ?>"
+                         alt="<?php echo get_field('catamp_contact_external_image')['alt'] ?>"></a><a href="<?php echo get_field('catamp_contact_external_link_2') ?>" target="_blank"><img class="fpt"
+                         src="<?php echo get_field('catamp_contact_external_image_2')['url'] ?>"
+                         alt="<?php echo get_field('catamp_contact_external_image_2')['alt'] ?>"></a>
+            </div>
+        </div>
+    </div>
+</div>
 <?php get_footer(); ?>
 
