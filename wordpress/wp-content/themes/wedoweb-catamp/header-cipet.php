@@ -27,22 +27,14 @@
 	<body <?php body_class(); ?>>
 
     <nav>
-        <h1><a href="index.html"></a>cipet</h1><a class="btn-menu open-menu" href="javascript:;"></a>
+        <h1><a href="<?php echo esc_url(home_url('/')); ?>"></a></h1><a class="btn-menu open-menu" href="javascript:;"></a>
         <ul class="redes">
-            <li class="facebook"><a href="https://www.facebook.com/catampok/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="facebook"><a href="https://www.facebook.com/cipetcatamp/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
             <li class="instagram"><a href="https://www.instagram.com/catamp_oficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
             <li class="twitter"><a href="https://twitter.com/CATAMP_oficial" target="_blank"><i class="fab fa-twitter"></i></a></li>
         </ul>
     </nav>
     <div class="menu clearfix"><a class="btn-menu close-menu" href="javascript:;"></a>
-        <ul>
-            <li><a href="index.html#about">¿QUE ES CATAMP?</a></li>
-            <li><a href="index.html#servicios">SERVICIOS</a></li>
-            <li><a href="index.html#asociate">ASOCIATE</a></li>
-            <li><a href="index.html#noticias">NOTICIAS</a></li>
-            <li><a href="index.html#comision">COMISIÓN DIRECTIVA</a></li>
-            <li><a href="index.html#asociados">ASOCIADOS</a></li>
-            <li><a href="index.html#contacto">CONTACTO</a></li>
-        </ul>
+        <?php display_navigation('cipet-menu')?>
     </div>
 			<!-- /header -->

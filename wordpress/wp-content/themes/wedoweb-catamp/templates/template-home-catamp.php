@@ -82,8 +82,13 @@ $pagelist_background = get_field('pagelist_background');
 $args = array(
     'post_type' => 'noticia',
     'posts_per_page'   => 3,
-    'meta_key' => 'news-group',
-    'meta_value' => 'catamp'
+    'meta_query' => array(
+        array(
+            'key' => 'news-group',
+            'value' => 'catamp',
+            'compare' => 'LIKE'
+        )
+    )
 );
 $loop = new WP_Query( $args );
 if($loop->have_posts()) {
@@ -154,7 +159,7 @@ if($loop->have_posts()) {
 }
 
 set_query_var( 'rowFreeContentSetId', false );
-set_query_var( 'rowFreeContentClone', true );
+set_query_var( 'rowFreeContentClone', 'clone_' );
 get_template_part('templates/partials/rowFreeContent');
 
 if(have_rows('directorylist')) {

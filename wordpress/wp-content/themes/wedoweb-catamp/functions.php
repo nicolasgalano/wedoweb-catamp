@@ -386,7 +386,8 @@ function remove_page_supports(){
 //    var_dump(get_page_template_slug());
     $template = get_page_template_slug();
 
-    if($template == 'templates/template-home-catamp.php') {
+    if($template == 'templates/template-home-catamp.php' ||
+        $template == 'templates/template-home-cipet.php') {
         remove_post_type_support('page', 'editor');
     }
 }

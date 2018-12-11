@@ -1,31 +1,5 @@
 export default {
     init() {
-//Popups
-        $('.open-popup-youtube').click(function(){
-            $('.popup-youtube iframe').attr('src',$(this).data('youtube')+'?autoplay=1');
-            $('.popup-youtube').addClass('opened');
-        });
-        //Popups
-        $('.popup .close').click(function(e){
-            $(this).parent().parent().removeClass('opened');
-            $('.popup-youtube iframe').attr('src','');
-        });
-
-        //SMOOTH SCROLL
-        var $stupid = $('<div></div>')
-            .height(1)
-            .hide()
-            .appendTo('body');
-        var mobileHack = function() {
-            $stupid.show();
-            setTimeout(function() {
-                $stupid.hide();
-            }, 10);
-        };
-        $('a').smoothScroll({
-            afterScroll: mobileHack
-        });
-
         //SWIPER
         var swiper = new Swiper('.swiper-container', {
             loop: true,
