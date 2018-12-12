@@ -202,12 +202,15 @@ function remove_category_rel_from_category_list($thelist)
 function add_slug_to_body_class($classes)
 {
     global $post;
+//    var_dump(get_post_meta($post->ID,'_wp_page_template',true));
     if (is_home()) {
         $key = array_search('blog', $classes);
         if ($key > -1) {
             unset($classes[$key]);
         }
-    } elseif (is_page()) {
+    } elseif (is_page_template('templates/template-home-lnh.php')) {
+        $classes[] = 'lnh';
+    }elseif (is_page()) {
         $classes[] = sanitize_html_class($post->post_name);
     } elseif (is_singular()) {
         $classes[] = sanitize_html_class($post->post_name);
@@ -387,7 +390,8 @@ function remove_page_supports(){
     $template = get_page_template_slug();
 
     if($template == 'templates/template-home-catamp.php' ||
-        $template == 'templates/template-home-cipet.php') {
+        $template == 'templates/template-home-cipet.php' ||
+        $template == 'templates/template-home-lnh.php') {
         remove_post_type_support('page', 'editor');
     }
 }
