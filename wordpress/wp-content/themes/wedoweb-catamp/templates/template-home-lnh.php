@@ -2,12 +2,10 @@
 /* Template Name: Home LNH */
 get_header('lnh');
 ?>
-<div class="section-row row-main" data-midnight="blue">
-    <div class="container"><img src="<?php echo get_template_directory_uri(); ?>/images/home/im_logo_lnh.png" style="max-width:647px;">
-        <p>LICENCIA NACIONAL HABILITANTE <br>Capacitación Obligatoria de Actualización y Perfeccionamiento</p>
-        <a class="btn btn-green" href="licencia.html">Inscribite Online</a>
-    </div>
-</div>
+<?php
+set_query_var('mainHeaderContentClone', 'lnh_');
+get_template_part('templates/partials/mainHeaderContent');
+?>
 
 <?php
 $about_video_label = get_field('lnh_about-video-label');

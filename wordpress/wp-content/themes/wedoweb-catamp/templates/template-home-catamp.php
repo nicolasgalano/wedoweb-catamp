@@ -2,11 +2,9 @@
 /* Template Name: Home Catamp */
 get_header();
 ?>
-<div class="section-row row-main" data-midnight="blue">
-    <div class="container"><img src="<?php echo get_template_directory_uri(); ?>/images/home/im_main_logo.png" style="max-width:647px;">
-        <p>Cámara Argentina del Transporte<br>Automotor de Mercancias y Residuos Peligrosos</p>
-    </div>
-</div>
+<?php
+get_template_part('templates/partials/mainHeaderContent')
+?>
 
 <?php
     $videoLabel = get_field('about-video-label')

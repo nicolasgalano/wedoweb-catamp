@@ -2,12 +2,10 @@
 /* Template Name: Home Cipet */
 get_header('cipet');
 ?>
-<!--Logo-->
-<div class="section-row row-main" data-midnight="blue">
-    <div class="container"><img src="<?php echo get_template_directory_uri(); ?>/images/home/im_main_logo_cipet.png" style="max-width:647px;">
-        <P>Centro de Información<br>para Emergencias en el Transporte</P>
-    </div>
-</div>
+<?php
+set_query_var('mainHeaderContentClone', 'cipet_');
+get_template_part('templates/partials/mainHeaderContent');
+?>
 
 <?php
     $about_video_label = get_field('cipet_about-video-label');

@@ -634,9 +634,10 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 function content_button_shortcode($atts, $content = null) {
     $externo = array_search('externo', $atts);
+    $colorClass = (isset($atts['color']) && $atts['color'] == 'verde')? 'btn-green' : '';
 
     $target = ($externo !== false)? '_blank': '_self';
-    return "<a class='btn' 
+    return "<a class='btn {$colorClass}' 
                 href='{$atts['link']}'
                 target='{$target}'>".
                 $content .
