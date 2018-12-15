@@ -4,7 +4,7 @@
     for($i = 0; $i < 3; $i++) {
         $content = array();
         for($c = $i*$div; $c < ($i+1)*$div; $c++) {
-            if($associatelist_list[$c]) {
+            if(isset($associatelist_list[$c])) {
                 array_push($content, $associatelist_list[$c]);
             }
         }
@@ -12,12 +12,12 @@
     }
 
     $columns2 = array();
-    if($associatelist2_list) {
+    if(isset($associatelist2_list)) {
         $div2 = ceil(count($associatelist2_list)/3);
         for($i = 0; $i < 3; $i++) {
             $content = array();
             for($c = $i*$div2; $c < ($i+1)*$div2; $c++) {
-                if($associatelist2_list[$c]) {
+                if(isset($associatelist2_list[$c])) {
                     array_push($content, $associatelist2_list[$c]);
                 }
             }
@@ -98,7 +98,7 @@
             }
             ?>
             <?php
-            if($columns2[0]) {
+            if(isset($columns2[0])) {
                 ?>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <ul class="adherentes">
@@ -117,7 +117,7 @@
             }
             ?>
             <?php
-            if($columns2[1]) {
+            if(isset($columns2[1])) {
                 ?>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <ul class="adherentes">
@@ -136,7 +136,7 @@
             }
             ?>
             <?php
-            if($columns2[2]) {
+            if(isset($columns2[2])) {
                 ?>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <ul class="adherentes">

@@ -1,5 +1,5 @@
 <?php
-$prefix = ($rowFreeContentClone)? $rowFreeContentClone : '';
+$prefix = (isset($rowFreeContentClone))? $rowFreeContentClone : '';
 $rowFreeContent = get_field($prefix.'row-free-content');
 $rowFreeBackgroundType = get_field($prefix.'row-free-background-type');
 $rowClass = ($rowFreeBackgroundType == 'white')? 'row-bepart' : 'row-questions';
