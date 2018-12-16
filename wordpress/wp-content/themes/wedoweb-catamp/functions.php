@@ -215,6 +215,18 @@ function add_slug_to_body_class($classes)
     } else if (is_page_template('templates/template-noticias-lnh.php')) {
         $classes[] = 'lnh inner';
     } else if (is_page()) {
+        $parentId = wp_get_post_parent_id($post->ID);
+        $headerType = '';
+        if($parentId) {
+            $parentPage = get_post($parentId);
+            $headerType = $parentPage->post_name;
+        }
+        if($headerType == 'cipet') {
+            $classes[] = 'cipet inner';
+        }
+        else if($headerType == 'lnhcursos') {
+            $classes[] = 'lnh inner';
+        }
         $classes[] = sanitize_html_class($post->post_name);
     } else if (is_singular()) {
         $newsGroup = get_field('news-group', $post->ID);
@@ -413,7 +425,8 @@ function remove_page_supports(){
         $template == 'templates/template-home-lnh.php' ||
         $template == 'templates/template-noticias-cipet.php' ||
         $template == 'templates/template-noticias-catamp.php' ||
-        $template == 'templates/template-noticias-lnh.php') {
+        $template == 'templates/template-noticias-lnh.php' ||
+        $template == 'templates/template-inner-common.php') {
         remove_post_type_support('page', 'editor');
     }
 }
@@ -475,6 +488,7 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 
 // Shortcodes
 add_shortcode('boton', 'content_button_shortcode');
+add_shortcode('whatsapp', 'content_whatsapp_shortcode');
 
 
 
@@ -657,13 +671,30 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 function content_button_shortcode($atts, $content = null) {
     $externo = array_search('externo', $atts);
     $colorClass = (isset($atts['color']) && $atts['color'] == 'verde')? 'btn-green' : '';
+    $link = (isset($atts['link']))? $atts['link'] : '';
+    $legend = (isset($atts['leyenda']))? "<span>{$atts['leyenda']}</span>" : '';
 
     $target = ($externo !== false)? '_blank': '_self';
     return "<a class='btn {$colorClass}' 
-                href='{$atts['link']}'
+                href='{$link}'
                 target='{$target}'>".
                 $content .
-            "</a>";
+            "</a>
+            {$legend}";
+}
+
+function content_whatsapp_shortcode($atts, $content = null) {
+    $phone = str_replace(' ', '', $content);
+    $phone = (substr($phone, 0, 1) == '+')? substr($phone, 1) : $phone;
+
+    return "<div class='whatsapp'>
+                <a class='btn' 
+                    href='https://api.whatsapp.com/send?phone={$phone}' 
+                    target='_blank'> 
+                    <i class='fab fa-whatsapp'></i>{$content} 
+                </a>
+                <span>{$atts['horarios']}</span>
+            </div>";
 }
 
 /* Opciones de tema Settings Page */
