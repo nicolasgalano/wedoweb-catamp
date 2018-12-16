@@ -208,12 +208,31 @@ function add_slug_to_body_class($classes)
         if ($key > -1) {
             unset($classes[$key]);
         }
-    } elseif (is_page_template('templates/template-home-lnh.php')) {
+    } else if (is_page_template('templates/template-home-lnh.php')) {
         $classes[] = 'lnh';
-    }elseif (is_page()) {
+    } else if (is_page_template('templates/template-noticias-cipet.php')) {
+        $classes[] = 'cipet inner';
+    } else if (is_page_template('templates/template-noticias-lnh.php')) {
+        $classes[] = 'lnh inner';
+    } else if (is_page()) {
         $classes[] = sanitize_html_class($post->post_name);
-    } elseif (is_singular()) {
-        $classes[] = sanitize_html_class($post->post_name);
+    } else if (is_singular()) {
+        $newsGroup = get_field('news-group', $post->ID);
+        $isFromCatamp = array_search('catamp', $newsGroup);
+        if($isFromCatamp === 0 || count($newsGroup) > 1) {
+            $classes[] = 'index';
+        }
+        else {
+            if(array_search('cipet', $newsGroup) === 0) {
+                $classes[] = 'cipet inner';
+            }
+            else if(array_search('lnh', $newsGroup) === 0) {
+                $classes[] = 'lnh inner';
+            }
+            else {
+                $classes[] = sanitize_html_class($post->post_name);
+            }
+        }
     }
 
     return $classes;
@@ -391,7 +410,10 @@ function remove_page_supports(){
 
     if($template == 'templates/template-home-catamp.php' ||
         $template == 'templates/template-home-cipet.php' ||
-        $template == 'templates/template-home-lnh.php') {
+        $template == 'templates/template-home-lnh.php' ||
+        $template == 'templates/template-noticias-cipet.php' ||
+        $template == 'templates/template-noticias-catamp.php' ||
+        $template == 'templates/template-noticias-lnh.php') {
         remove_post_type_support('page', 'editor');
     }
 }

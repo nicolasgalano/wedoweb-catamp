@@ -2,11 +2,25 @@
 if(have_posts()) {
     while (have_posts()) {
         the_post();
-//        var_dump(get_the_category_list());
-        $newGroup = get_field('news-group');
+        $newsGroup = get_field('news-group');
     }
 }
-get_header($newGroup);
+//var_dump($newsGroup);
+$isFromCatamp = array_search('catamp', $newsGroup);
+
+$headerType = '';
+if($isFromCatamp === 0 || count($newsGroup) > 1) {
+    $headerType = '';
+}
+else {
+    if(array_search('cipet', $newsGroup) === 0) {
+        $headerType = 'cipet';
+    }
+    else if(array_search('lnh', $newsGroup) === 0) {
+        $headerType = 'lnh';
+    }
+}
+get_header($headerType);
 
 if (is_singular('noticia')) {
     get_template_part('templates/single', 'news');

@@ -44,8 +44,10 @@ if(count($images)) {
     </div>
 </div>
 <?php
-$nextPostId = get_adjacent_post(false,'',false)->ID;
-$prevPostId = get_adjacent_post(false,'',true)->ID;
+$nextAdjacentPost = get_adjacent_post(false,'',false);
+$prevAdjacentPost = get_adjacent_post(false,'',true);
+$nextPostId = ($nextAdjacentPost)? $nextAdjacentPost->ID : false;
+$prevPostId = ($prevAdjacentPost)? $prevAdjacentPost->ID : false;
 
 if($nextPostId || $prevPostId) {
 ?>

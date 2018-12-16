@@ -74,12 +74,6 @@ $pagelist_background = get_field('cipet_pagelist_background');
     set_query_var( 'rowFreeContentClone', 'cipet_' );
     get_template_part('templates/partials/rowFreeContent');
 
-/*$args = array(
-    'post_type' => 'noticia',
-    'posts_per_page'   => 3,
-    'meta_key' => 'news-group',
-    'meta_value' => 'cipet'
-);*/
 $args = array(
     'post_type' => 'noticia',
     'posts_per_page'   => 3,
@@ -104,7 +98,6 @@ if($loop->have_posts()) {
                 </div>
                 <?php
                     while($loop->have_posts()) {
-//                        var_dump($loop);
                         $loop->the_post();
                         $image = false;
                         if(have_rows('top_header')) {
@@ -149,7 +142,7 @@ if($loop->have_posts()) {
 
                     if($loop->post_count >= 3) {
                         ?>
-                        <a class="btn" href="<?php echo esc_url(home_url('/'))?>noticias" target="_blank">Ver más</a>
+                        <a class="btn" href="<?php echo esc_url(home_url('/cipet/noticias'))?>" target="_blank">Ver más</a>
                 <?php
                     }
                 ?>
