@@ -426,7 +426,8 @@ function remove_page_supports(){
         $template == 'templates/template-noticias-cipet.php' ||
         $template == 'templates/template-noticias-catamp.php' ||
         $template == 'templates/template-noticias-lnh.php' ||
-        $template == 'templates/template-inner-common.php') {
+        $template == 'templates/template-inner-common.php' ||
+        $template == 'templates/template-agenda.php') {
         remove_post_type_support('page', 'editor');
     }
 }
