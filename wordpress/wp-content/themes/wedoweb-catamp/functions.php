@@ -430,7 +430,8 @@ function remove_page_supports(){
         $template == 'templates/template-agenda.php' ||
         $template == 'templates/template-estadisticas.php' ||
         $template == 'templates/template-boletin.php' ||
-        $template == 'templates/template-about.php') {
+        $template == 'templates/template-about.php' ||
+        $template == 'templates/template-licencia.php') {
         remove_post_type_support('page', 'editor');
     }
 }
