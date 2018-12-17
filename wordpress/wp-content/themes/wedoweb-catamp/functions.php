@@ -428,7 +428,8 @@ function remove_page_supports(){
         $template == 'templates/template-noticias-lnh.php' ||
         $template == 'templates/template-inner-common.php' ||
         $template == 'templates/template-agenda.php' ||
-        $template == 'templates/template-estadisticas.php') {
+        $template == 'templates/template-estadisticas.php' ||
+        $template == 'templates/template-boletin.php') {
         remove_post_type_support('page', 'editor');
     }
 }
