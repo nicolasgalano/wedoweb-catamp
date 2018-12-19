@@ -13,7 +13,8 @@
       "node_modules/bootstrap-sass/assets/fonts/**/*"
     ],
     "js": [
-      "src/js/app.js"
+      "src/js/app.js",
+      "src/js/boletinSearch.js"
     ],
     "vendor_js": [
       "node_modules/jquery/dist/jquery.min.js",

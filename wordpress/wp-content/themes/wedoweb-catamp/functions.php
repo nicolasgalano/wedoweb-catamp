@@ -431,7 +431,10 @@ function remove_page_supports(){
         $template == 'templates/template-estadisticas.php' ||
         $template == 'templates/template-boletin.php' ||
         $template == 'templates/template-about.php' ||
-        $template == 'templates/template-licencia.php') {
+        $template == 'templates/template-licencia.php' ||
+        $template == 'templates/template-calidad.php' ||
+        $template == 'templates/template-join.php' ||
+        $template == 'templates/template-material.php') {
         remove_post_type_support('page', 'editor');
     }
 }
@@ -675,7 +678,15 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
 function content_button_shortcode($atts, $content = null) {
     $externo = array_search('externo', $atts);
-    $colorClass = (isset($atts['color']) && $atts['color'] == 'verde')? 'btn-green' : '';
+    $colorClass = '';
+    if(isset($atts['color'])){
+        if($atts['color'] == 'verde') {
+            $colorClass = 'btn-green';
+        }
+        else if($atts['color'] == 'rojo') {
+            $colorClass = 'btn-red';
+        }
+    }
     $link = (isset($atts['link']))? $atts['link'] : '';
     $legend = (isset($atts['leyenda']))? "<span>{$atts['leyenda']}</span>" : '';
 

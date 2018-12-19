@@ -45,18 +45,40 @@ $boletin_contenido = get_field('boletin_contenido');
                 ?>
                 <div class="boletin">
                     <form class="search">
-                        <input class="form-control" type="search" name="q" placeholder="Buscar tema de boletín Técnico..." required><span class="i fas fa-search"></span>
+                        <input class="form-control" type="text" name="boletinSearch" placeholder="Buscar tema de boletín Técnico..." required><span class="i fas fa-search"></span>
                     </form>
                     <?php
+                    $allBoletin = [];
+                    $cont = 0;
                     if(have_rows('boletin_list')) {
                         while (have_rows('boletin_list')) {
                             the_row();
+                            $boletin_list_title = get_sub_field('boletin_list_title');
+                            $boletin_list_file = get_sub_field('boletin_list_file');
                             $boletin_list_boletin = get_sub_field('boletin_list_boletin');
-
+                            $cont++;
+                            array_push($allBoletin, array(
+                                    "id" => $cont,
+                                    "title" => $boletin_list_title,
+                                    "content" => strip_tags($boletin_list_boletin)
+                            ));
+                            ?>
+                            <article id="boletin_<?php echo $cont; ?>">
+                            <h4>
+                                <a href="<?php echo $boletin_list_file['url']; ?>" target="_blank">
+                                    &middot; <?php echo $boletin_list_title; ?>
+                                </a>
+                            </h4>
+                            <?php
                             echo $boletin_list_boletin;
+                            ?>
+                            </article>
+                    <?php
                         }
                     }
+//                    var_dump(json_encode($allBoletin));
                     ?>
+                    <input type="hidden" id="allBoletin" value='<?php echo json_encode($allBoletin, JSON_UNESCAPED_UNICODE); ?>'>
                 </div>
             </div>
         </div>
