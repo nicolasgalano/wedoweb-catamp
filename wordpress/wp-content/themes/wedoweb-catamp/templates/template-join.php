@@ -36,7 +36,7 @@ $inner_header_title = get_field('join_inner_header_title');
 <?php
 $join_content = get_field('join_content');
 ?>
-<div class="section-row row-inner inner-common">
+<div class="section-row row-inner inner-join_us">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
