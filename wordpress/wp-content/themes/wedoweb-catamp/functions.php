@@ -434,7 +434,8 @@ function remove_page_supports(){
         $template == 'templates/template-licencia.php' ||
         $template == 'templates/template-calidad.php' ||
         $template == 'templates/template-join.php' ||
-        $template == 'templates/template-material.php') {
+        $template == 'templates/template-material.php' ||
+        $template == 'templates/template-questions.php') {
         remove_post_type_support('page', 'editor');
     }
 }

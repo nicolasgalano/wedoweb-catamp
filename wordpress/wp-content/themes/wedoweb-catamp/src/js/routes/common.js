@@ -74,6 +74,11 @@ export default {
             afterScroll: mobileHack
         });
 
+        $('.pregunta-item .pregunta').click(function(){
+            console.log('asdasd');
+            $(this).parent().toggleClass('opened');
+        });
+
     },
     finalize() {
         // JavaScript to be fired on all pages, after page specific JS is fired
