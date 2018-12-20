@@ -47,6 +47,11 @@ $boletin_contenido = get_field('boletin_contenido');
                     <form class="search">
                         <input class="form-control" type="text" name="boletinSearch" placeholder="Buscar tema de boletín Técnico..." required><span class="i fas fa-search"></span>
                     </form>
+                    <div class="empty-container hide">
+                        <h4 class="legend">
+                            No se encontraron resultados para la busqueda: <span class="term"></span>
+                        </h4>
+                    </div>
                     <?php
                     $allBoletin = [];
                     $cont = 0;
