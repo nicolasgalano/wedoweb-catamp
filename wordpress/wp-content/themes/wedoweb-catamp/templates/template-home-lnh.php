@@ -296,10 +296,10 @@ $academy_background = get_field('academy_background');
                          alt="<?php echo get_field('lnh_contact_quality_image')['alt']; ?>">
                 </a>
             </div>
-            <div class="col-xs-hidden col-sm-hidden col-md-5">
+            <div class="col-xs-hidden col-sm-hidden col-md-4">
                 <?php display_contact_navigation('lnhcursos-menu')?>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="col-xs-12 col-sm-6 col-md-4">
                 <a href="<?php echo get_field('lnh_contact_nac_link'); ?>" target="_blank">
                     <img class="registro"
                          src="<?php echo get_field('lnh_contact_nac_image')['url'] ?>"
