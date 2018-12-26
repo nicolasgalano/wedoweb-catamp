@@ -45,7 +45,7 @@ $pagelist_background = get_field('lnh_pagelist_background');
                     $pagelist_item_page = get_sub_field('pagelist_item_page');
                     $link = '';
 
-                    if($pagelist_item_link_type ==  'interna') {
+                    if($pagelist_item_link_type == 'interna') {
                         $link = $pagelist_item_page;
                     }
                     else {
@@ -275,10 +275,10 @@ $academy_background = get_field('academy_background');
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <h2><?php echo get_field('lnh_contact_title'); ?></h2>
                 <ul class="contacto">
-                    <li><?php echo get_field('lnh_contact_address'); ?></li>
-                    <li><?php echo get_field('lnh_contact_region'); ?></li>
-                    <li><?php echo get_field('lnh_contact_phone'); ?></li>
-                    <li class="big"><?php echo get_field('lnh_contact_register'); ?></li>
+                    <li class="hidden"><?php echo get_field('lnh_contact_address'); ?></li>
+                    <li class="hidden"><?php echo get_field('lnh_contact_region'); ?></li>
+                    <li class="hidden"><?php echo get_field('lnh_contact_phone'); ?></li>
+                    <li class="big hidden"><?php echo get_field('lnh_contact_register'); ?></li>
                     <li class="mail">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/home/im_contacto_mail.png" alt="email">
                         <a href="mailto:<?php echo get_field('lnh_contact_email'); ?>">
@@ -288,7 +288,7 @@ $academy_background = get_field('academy_background');
                 </ul>
                 <div class="whatsapp"><a class="btn" href="https://api.whatsapp.com/send?phone=<?php echo str_replace(' ', '',get_field('lnh_contact_whatsapp_button')); ?>" target="_blank"> <i class="fab fa-whatsapp"></i>+<?php echo get_field('lnh_contact_whatsapp_button') ?>  </a><span><?php echo get_field('lnh_contact_time') ?></span></div>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="col-xs-12 col-sm-6 col-md-3 hidden">
                 <a class="iram" href="<?php echo get_field('lnh_contact_quality_link'); ?>">
                     <span><?php echo get_field('lnh_contact_quality_label'); ?></span>
                     <img class="iram"
@@ -296,10 +296,10 @@ $academy_background = get_field('academy_background');
                          alt="<?php echo get_field('lnh_contact_quality_image')['alt']; ?>">
                 </a>
             </div>
-            <div class="col-xs-hidden col-sm-hidden col-md-2">
+            <div class="col-xs-hidden col-sm-hidden col-md-5">
                 <?php display_contact_navigation('lnhcursos-menu')?>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-3">
+            <div class="col-xs-12 col-sm-6 col-md-3">
                 <a href="<?php echo get_field('lnh_contact_nac_link'); ?>" target="_blank">
                     <img class="registro"
                          src="<?php echo get_field('lnh_contact_nac_image')['url'] ?>"
@@ -315,4 +315,3 @@ $academy_background = get_field('academy_background');
     </div>
 </div>
 <?php get_footer(); ?>
-
