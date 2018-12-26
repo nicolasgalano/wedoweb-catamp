@@ -72,5 +72,5 @@ if($inner_freeRow_content) {
 ?>
 
 <?php
-get_footer();
+get_footer($headerType);
 ?>

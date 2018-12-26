@@ -14,7 +14,6 @@ if($parentId) {
 if($headerType == 'lnhcursos') {
     $headerType = 'lnh';
 }
-
 get_header($headerType);
 
 $inner_header_background = get_field('header_background');
@@ -67,5 +66,5 @@ $about_content = get_field('about_content');
 </div>
 
 <?php
-get_footer();
+get_footer($headerType);
 ?>

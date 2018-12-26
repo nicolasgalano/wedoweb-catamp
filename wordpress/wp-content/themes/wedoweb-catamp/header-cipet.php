@@ -33,9 +33,23 @@
     <nav>
         <h1><a href="<?php echo esc_url(home_url($homeLink)); ?>"></a></h1><a class="btn-menu open-menu" href="javascript:;"></a>
         <ul class="redes">
-            <li class="facebook"><a href="https://www.facebook.com/cipetcatamp/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="instagram"><a href="https://www.instagram.com/catamp_oficial/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li class="twitter"><a href="https://twitter.com/CATAMP_oficial" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <?php
+            if(get_option('facebook_cipet')) {
+                ?>
+                <li class="facebook"><a href="<?php echo get_option('facebook_cipet'); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <?php
+            }
+            if(get_option('instagram_cipet')) {
+                ?>
+                <li class="instagram"><a href="<?php echo get_option('instagram_cipet'); ?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <?php
+            }
+            if(get_option('twitter_cipet')) {
+                ?>
+                <li class="twitter"><a href="<?php echo get_option('twitter_cipet'); ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <?php
+            }
+            ?>
         </ul>
     </nav>
     <div class="menu clearfix"><a class="btn-menu close-menu" href="javascript:;"></a>
