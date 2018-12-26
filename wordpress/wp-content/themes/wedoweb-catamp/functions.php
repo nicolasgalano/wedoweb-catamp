@@ -434,7 +434,8 @@ function remove_page_supports(){
         $template == 'templates/template-licencia.php' ||
         $template == 'templates/template-calidad.php' ||
         $template == 'templates/template-join.php' ||
-        $template == 'templates/template-material.php') {
+        $template == 'templates/template-material.php' ||
+        $template == 'templates/template-questions.php') {
         remove_post_type_support('page', 'editor');
     }
 }
@@ -718,7 +719,11 @@ class opcionesdetema_Settings_Page {
     public function __construct() {
         add_action( 'admin_menu', array( $this, 'wph_create_settings' ) );
         add_action( 'admin_init', array( $this, 'wph_setup_sections' ) );
+        add_action( 'admin_init', array( $this, 'wph_setup_sections_cipet' ) );
+        add_action( 'admin_init', array( $this, 'wph_setup_sections_lnh' ) );
         add_action( 'admin_init', array( $this, 'wph_setup_fields' ) );
+        add_action( 'admin_init', array( $this, 'wph_setup_fields_cipet' ) );
+        add_action( 'admin_init', array( $this, 'wph_setup_fields_lnh' ) );
     }
     public function wph_create_settings() {
         $page_title = 'Opciones de tema';
@@ -744,15 +749,127 @@ class opcionesdetema_Settings_Page {
         </div> <?php
     }
     public function wph_setup_sections() {
-        add_settings_section( 'opcionesdetema_section', '', array(), 'opcionesdetema' );
+        add_settings_section( 'opcionesdetema_section', 'Catamp', array(), 'opcionesdetema' );
+    }
+    public function wph_setup_sections_cipet() {
+        add_settings_section( 'opcionesdetema_section_cipet', 'Cipet', array(), 'opcionesdetema' );
+    }
+    public function wph_setup_sections_lnh() {
+        add_settings_section( 'opcionesdetema_section_lnh', 'LNH Cursos', array(), 'opcionesdetema' );
     }
     public function wph_setup_fields() {
         $fields = array(
             array(
                 'label' => 'Copyright',
-                'id' => 'copyright_33696',
+                'id' => 'copyright_catamp',
                 'type' => 'text',
                 'section' => 'opcionesdetema_section',
+                'placeholder' => '',
+                'desc' => '',
+            ),
+            array(
+                'label' => 'Facebook',
+                'id' => 'facebook_catamp',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section',
+                'placeholder' => '',
+                'desc' => 'Si el campo queda vacio, el icono no se mostrara',
+            ),
+            array(
+                'label' => 'Instagram',
+                'id' => 'instagram_catamp',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section',
+                'placeholder' => '',
+                'desc' => 'Si el campo queda vacio, el icono no se mostrara',
+            ),
+            array(
+                'label' => 'Twitter',
+                'id' => 'twitter_catamp',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section',
+                'placeholder' => '',
+                'desc' => 'Si el campo queda vacio, el icono no se mostrara',
+            ),
+        );
+        foreach( $fields as $field ){
+            add_settings_field( $field['id'], $field['label'], array( $this, 'wph_field_callback' ), 'opcionesdetema', $field['section'], $field );
+            register_setting( 'opcionesdetema', $field['id'] );
+        }
+    }
+    public function wph_setup_fields_cipet() {
+        $fields = array(
+            array(
+                'label' => 'Copyright',
+                'id' => 'copyright_cipet',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section_cipet',
+                'placeholder' => '',
+                'desc' => '',
+            ),
+            array(
+                'label' => 'Facebook',
+                'id' => 'facebook_cipet',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section_cipet',
+                'placeholder' => '',
+                'desc' => 'Si el campo queda vacio, el icono no se mostrara',
+            ),
+            array(
+                'label' => 'Instagram',
+                'id' => 'instagram_cipet',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section_cipet',
+                'placeholder' => '',
+                'desc' => 'Si el campo queda vacio, el icono no se mostrara',
+            ),
+            array(
+                'label' => 'Twitter',
+                'id' => 'twitter_cipet',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section_cipet',
+                'placeholder' => '',
+                'desc' => 'Si el campo queda vacio, el icono no se mostrara',
+            ),
+        );
+        foreach( $fields as $field ){
+            add_settings_field( $field['id'], $field['label'], array( $this, 'wph_field_callback' ), 'opcionesdetema', $field['section'], $field );
+            register_setting( 'opcionesdetema', $field['id'] );
+        }
+    }
+    public function wph_setup_fields_lnh() {
+        $fields = array(
+            array(
+                'label' => 'Copyright',
+                'id' => 'copyright_lnh',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section_lnh',
+                'placeholder' => '',
+                'desc' => '',
+            ),
+            array(
+                'label' => 'Facebook',
+                'id' => 'facebook_lnh',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section_lnh',
+                'placeholder' => '',
+                'desc' => 'Si el campo queda vacio, el icono no se mostrara',
+            ),
+            array(
+                'label' => 'Instagram',
+                'id' => 'instagram_lnh',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section_lnh',
+                'placeholder' => '',
+                'desc' => 'Si el campo queda vacio, el icono no se mostrara',
+            ),
+            array(
+                'label' => 'Twitter',
+                'id' => 'twitter_lnh',
+                'type' => 'text',
+                'section' => 'opcionesdetema_section_lnh',
+                'placeholder' => '',
+                'desc' => 'Si el campo queda vacio, el icono no se mostrara',
             ),
         );
         foreach( $fields as $field ){
@@ -764,7 +881,7 @@ class opcionesdetema_Settings_Page {
         $value = get_option( $field['id'] );
         switch ( $field['type'] ) {
             default:
-                printf( '<input name="%1$s" id="%1$s" type="%2$s" placeholder="%3$s" value="%4$s" />',
+                printf( '<input class="regular-text" name="%1$s" id="%1$s" type="%2$s" placeholder="%3$s" value="%4$s" />',
                     $field['id'],
                     $field['type'],
                     $field['placeholder'],

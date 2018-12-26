@@ -1,0 +1,17 @@
+.empty-container {
+  height: 180px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding-bottom: 20px;
+
+  h4.legend {
+    text-transform: inherit;
+    text-align: center;
+    color: $gray-light;
+
+    span.term {
+      display: inline;
+    }
+  }
+}

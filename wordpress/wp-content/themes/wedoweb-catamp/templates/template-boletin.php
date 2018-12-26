@@ -21,7 +21,7 @@ $inner_header_logo = get_field('boletin_inner_header_logo');
 $inner_header_title = get_field('boletin_inner_header_title');
 ?>
 <div class="section-row row-inner row-common"
-    <?php if($inner_header_background) {?> style="background: url('<?php echo $inner_header_background['url']; ?>') center center no-repeat;" <?php } ?>
+    <?php if($inner_header_background) {?> style="background-image: url('<?php echo $inner_header_background['url']; ?>');" <?php } ?>
      data-midnight="white">
     <div class="container">
         <?php if($inner_header_logo) {?>
@@ -47,6 +47,11 @@ $boletin_contenido = get_field('boletin_contenido');
                     <form class="search">
                         <input class="form-control" type="text" name="boletinSearch" placeholder="Buscar tema de boletín Técnico..." required><span class="i fas fa-search"></span>
                     </form>
+                    <div class="empty-container hide">
+                        <h4 class="legend">
+                            No se encontraron resultados para la busqueda: <span class="term"></span>
+                        </h4>
+                    </div>
                     <?php
                     $allBoletin = [];
                     $cont = 0;

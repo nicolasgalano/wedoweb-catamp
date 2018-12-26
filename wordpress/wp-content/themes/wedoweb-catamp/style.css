@@ -1,1 +1,15 @@
 .width-100{width:100%;height:auto}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+.row-news a.article{
+	overflow:hidden;
+}
+
+.row-join_us.section-row.row-inner{
+	height: 75vh;
+	min-height: 600px;
+}
+.inner-join_us.section-row.row-inner h3{
+	margin:100px 0 30px;
+}

@@ -21,7 +21,7 @@ $inner_header_logo = get_field('material_inner_header_logo');
 $inner_header_title = get_field('material_inner_header_title');
 ?>
 <div class="section-row row-inner row-common"
-    <?php if($inner_header_background) {?> style="background: url('<?php echo $inner_header_background['url']; ?>') center center no-repeat;" <?php } ?>
+    <?php if($inner_header_background) {?> style="background-image: url('<?php echo $inner_header_background['url']; ?>');" <?php } ?>
      data-midnight="white">
     <div class="container">
         <?php if($inner_header_logo) {?>

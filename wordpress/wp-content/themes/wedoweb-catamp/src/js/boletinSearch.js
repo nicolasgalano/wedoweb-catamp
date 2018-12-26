@@ -18,9 +18,20 @@
     if(boletin.length > 0) {
         var boletinSearch = boletin.find('input[name="boletinSearch"]');
         var allBoletin = JSON.parse(boletin.find('#allBoletin').val());
+        var form = boletin.find('form');
+        var termContainer = boletin.find('.term');
+        var emptyContainer = boletin.find('.empty-container');
+
+        form.on('submit', ev => {
+           ev.preventDefault();
+        });
+
+        var boletinCount = allBoletin.length;
 
         var myEfficientFn = debounce(function() {
             var searchVal = boletinSearch.val();
+
+            termContainer.html(searchVal);
             searchVal = (searchVal)? searchVal.toLowerCase() : '';
 
             if(searchVal) {
@@ -37,6 +48,13 @@
                 boletin.find('article').show();
             }
 
+            var totalHidden = boletin.find('article:hidden').length;
+            if(totalHidden == boletinCount) {
+                emptyContainer.removeClass('hide');
+            }
+            else {
+                emptyContainer.addClass('hide');
+            }
         }, 500);
         boletinSearch.on('keyup', myEfficientFn)
     }
