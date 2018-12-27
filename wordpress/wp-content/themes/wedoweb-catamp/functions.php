@@ -498,7 +498,7 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 // Shortcodes
 add_shortcode('boton', 'content_button_shortcode');
 add_shortcode('whatsapp', 'content_whatsapp_shortcode');
-
+add_shortcode('iframe', 'content_iframe_shortcode');
 
 
 function remove_menus() {
@@ -692,7 +692,7 @@ function content_button_shortcode($atts, $content = null) {
     $legend = (isset($atts['leyenda']))? "<span>{$atts['leyenda']}</span>" : '';
 
     $target = ($externo !== false)? '_blank': '_self';
-    return "<a class='btn {$colorClass}' 
+    return "<a class='btn {$colorClass}'
                 href='{$link}'
                 target='{$target}'>".
                 $content .
@@ -700,15 +700,31 @@ function content_button_shortcode($atts, $content = null) {
             {$legend}";
 }
 
+function content_iframe_shortcode($atts, $content = null) {
+    $source = '';
+    $width = '100%';
+    $height = '100%';
+    if(isset($atts['src'])){
+        $source = $atts['src'];
+    }
+    if(isset($atts['width'])){
+        $width = $atts['width'];
+    }
+    if(isset($atts['height'])){
+        $height = $atts['height'];
+    }
+    return "<iframe src='{$source}' width='{$width}' height='{$height}' style='border:0;'></iframe>";
+}
+
 function content_whatsapp_shortcode($atts, $content = null) {
     $phone = str_replace(' ', '', $content);
     $phone = (substr($phone, 0, 1) == '+')? substr($phone, 1) : $phone;
 
     return "<div class='whatsapp'>
-                <a class='btn' 
-                    href='https://api.whatsapp.com/send?phone={$phone}' 
-                    target='_blank'> 
-                    <i class='fab fa-whatsapp'></i>{$content} 
+                <a class='btn'
+                    href='https://api.whatsapp.com/send?phone={$phone}'
+                    target='_blank'>
+                    <i class='fab fa-whatsapp'></i>{$content}
                 </a>
                 <span>{$atts['horarios']}</span>
             </div>";
