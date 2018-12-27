@@ -18,6 +18,9 @@ if($headerType == 'lnhcursos') {
     $headerType = 'lnh';
 }
 
+//POST TYPE
+$postType = get_post_type();
+
 get_header($headerType);
 
 $inner_header_background = get_field('inner_header_background');
@@ -40,8 +43,9 @@ $inner_header_title = get_field('inner_header_title');
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                
+
                 <?php
+                    echo $postType;
                     echo get_field('inner_content');
                 ?>
 
@@ -59,11 +63,6 @@ $inner_header_title = get_field('inner_header_title');
         </div>
     </div>
 </div>
-<?php
-$inner_freeRow_content = get_field('inner_freeRow_content');
-$inner_freeRow_background_color = get_field('inner_freeRow_background_color');
-$inner_freeRow_background_image = get_field('inner_freeRow_background_image');
-?>
 
 <?php
 get_footer($headerType);
