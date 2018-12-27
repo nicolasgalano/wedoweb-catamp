@@ -41,19 +41,29 @@ if(count($images)) {
                 <?php echo the_content();?>
             </div>
             <div class="col-sm-12 col-md-4">
-                <?php
-                    $tagsList = get_the_tags();
 
+                <div class="tags">
+
+                    <h4>Etiquetas relaciondas:</h4>
+
+                    <ul class="clearfix">
+                    <?php
+                    $tagsList = get_the_tags();
                     foreach ($tagsList as $tag) {
-                        ?>
-                        <span><?php echo $tag->name ?></span>
-                <?php
+                    ?>
+                        <li><?php echo $tag->name ?></li>
+                    <?php
                     }
-                ?>
+                    ?>
+                    </ul>
+
+                </div>
+
             </div>
         </div>
     </div>
 </div>
+
 <?php
 $nextAdjacentPost = get_adjacent_post(false,'',false);
 $prevAdjacentPost = get_adjacent_post(false,'',true);
