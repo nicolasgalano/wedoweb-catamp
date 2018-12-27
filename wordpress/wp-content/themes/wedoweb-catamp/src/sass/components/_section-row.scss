@@ -1420,6 +1420,35 @@
 .inner-noticias{
     padding-top: 60px;
     padding-bottom: 75px;
+
+    .tags{
+        padding:50px 20px 0;
+        @media(max-width: 992px){
+            padding:50px 0px 0;
+        }
+        h4{
+            font-family: 'Roboto';
+            font-size: 20px;
+            font-weight: 300;
+            margin:0px 0 10px;
+            padding-left: 0px;
+        }
+        ul{
+            list-style: none;
+            margin:0;
+            padding:0;
+            li{
+                list-style: none;
+                font-family: 'Roboto';
+                font-size: 18px;
+                font-weight: 200;
+                margin:0px 10px 0px 0;
+                padding-left: 0px;
+                color:#e43f3c;
+                float:left;
+            }
+        }
+    }
 }
 
 //Estadisticas
