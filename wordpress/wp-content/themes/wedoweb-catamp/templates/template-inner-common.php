@@ -1,5 +1,8 @@
 <?php
-/* Template Name: Página Interna */
+/*
+Template Name: Página Interna
+Template Post Type: post, page, indices
+*/
 ?>
 
 <?php
