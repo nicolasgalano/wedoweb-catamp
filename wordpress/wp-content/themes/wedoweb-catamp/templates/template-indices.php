@@ -41,25 +41,37 @@ $inner_header_title = get_field('inner_header_title');
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
+                <?php echo get_field('inner_content'); ?>
 
-                <?php
-                    echo get_field('inner_content');
-                ?>
-
-                <a class="btn " href="ultimoindice" target="_blank">Índice Diciembre 2018</a>
+                <?php $loopp = new WP_Query( array( 'post_type' => 'indice','posts_per_page' => 1, 'orderby' => 'title', 'order' => 'DESC') ); ?>
+                <?php while ( $loopp->have_posts() ) : $loopp->the_post(); ?>
+                    <?php $rowCount = count( get_field('indices_por_mes') ); //GET THE COUNT ?>
+                    <?php
+                    if( have_rows('indices_por_mes') ) {
+                        $i = 1;
+                        while ( have_rows('indices_por_mes') ) {
+                            the_row();
+                            $mes = get_sub_field('mes');
+                            $archivo = get_sub_field('archivo');
+                    ?>
+                        <?php if($i == $rowCount): ?>
+                            <a class="btn " href="<?php echo $archivo; ?>" target="_blank">Índice <?php echo $mes; ?> <?php echo get_the_title(); ?></a>
+                        <?php endif; ?>
+                        <?php $i++; ?>
+                    <?php
+                        }
+                    }
+                    ?>
+                <?php endwhile; ?>
 
                 <p>&nbsp;</p>
-
                 <h4>DESCARGAR ÍNDICES PASADOS</h4>
 
                 <ul class="indices">
-                <?php $loop = new WP_Query( array( 'post_type' => 'indice' ) ); ?>
-
-                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-                    <li><a href="<?php echo get_permalink(); ?>" target="_blank" rel="noopener"><?php echo get_the_title(); ?></a></li>
-
-                <?php endwhile; ?>
+                    <?php $loop = new WP_Query( array( 'post_type' => 'indice', 'orderby' => 'title', 'order' => 'DESC' ) ); ?>
+                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <li><a href="<?php echo get_permalink(); ?>" target="_blank" rel="noopener"><?php echo get_the_title(); ?></a></li>
+                    <?php endwhile; ?>
                 </ul>
 
             </div>

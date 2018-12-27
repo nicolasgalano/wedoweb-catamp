@@ -33,13 +33,22 @@ if($page){
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                
+
                 <h3>Índices del Transporte <?php echo get_the_title(); ?></h3>
 
                 <ul class="indices">
-                 	<li><a href="http://wedoweb.co/clientes/catamp/catamp/indices.html" target="_blank" rel="noopener">ENERO</a></li>
-                 	<li><a href="http://wedoweb.co/clientes/catamp/catamp/indices.html" target="_blank" rel="noopener">FEBRERO</a></li>
-                 	<li><a href="http://wedoweb.co/clientes/catamp/catamp/indices.html" target="_blank" rel="noopener">DICIEMBRE</a></li>
+                <?php
+                if( have_rows('indices_por_mes') ) {
+                    while ( have_rows('indices_por_mes') ) {
+                        the_row();
+                        $mes = get_sub_field('mes');
+                        $archivo = get_sub_field('archivo');
+                        ?>
+                        <li><a href="<?php echo $archivo; ?>" target="_blank" rel="noopener"><?php echo $mes; ?></a></li>
+                        <?php
+                    }
+                }
+                ?>
                 </ul>
 
             </div>

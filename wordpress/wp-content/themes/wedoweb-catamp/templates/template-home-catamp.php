@@ -38,7 +38,7 @@ $pagelist_background = get_field('pagelist_background');
         <div class="row">
             <?php
                 $pagelist_title = get_field('pagelist_title');
-                    ?>
+            ?>
             <div class="col-xs-12">
                 <h2><?php echo $pagelist_title; ?></h2>
             </div>
