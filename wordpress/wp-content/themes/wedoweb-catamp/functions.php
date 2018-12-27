@@ -499,6 +499,7 @@ remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altoget
 add_shortcode('boton', 'content_button_shortcode');
 add_shortcode('whatsapp', 'content_whatsapp_shortcode');
 add_shortcode('iframe', 'content_iframe_shortcode');
+add_shortcode('youtube', 'content_youtube_shortcode');
 
 
 function remove_menus() {
@@ -704,17 +705,22 @@ function content_iframe_shortcode($atts, $content = null) {
     $source = '';
     $width = '100%';
     $height = '100%';
-    if(isset($atts['src'])){
-        $source = $atts['src'];
-    }
-    if(isset($atts['width'])){
-        $width = $atts['width'];
-    }
-    if(isset($atts['height'])){
-        $height = $atts['height'];
-    }
+    if(isset($atts['src'])){ $source = $atts['src']; }
+    if(isset($atts['width'])){ $width = $atts['width']; }
+    if(isset($atts['height'])){ $height = $atts['height']; }
     return "<iframe src='{$source}' width='{$width}' height='{$height}' style='border:0;'></iframe>";
 }
+
+function content_youtube_shortcode($atts, $content = null) {
+    $source = '';
+    $width = '100%';
+    $height = '600';
+    if(isset($atts['src'])){ $source = $atts['src']; }
+    if(isset($atts['width'])){ $width = $atts['width']; }
+    if(isset($atts['height'])){ $height = $atts['height']; }
+    return "<iframe width='{$width}' height='{$height}' src='{$source}' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+}
+
 
 function content_whatsapp_shortcode($atts, $content = null) {
     $phone = str_replace(' ', '', $content);
