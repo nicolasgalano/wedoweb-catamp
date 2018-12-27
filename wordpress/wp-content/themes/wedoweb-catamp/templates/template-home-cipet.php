@@ -100,6 +100,7 @@ if($loop->have_posts()) {
                     while($loop->have_posts()) {
                         $loop->the_post();
                         $image = false;
+                        $subtitle = get_field('news_subtitle');
                         if(have_rows('top_header')) {
                             while (have_rows('top_header')) {
                                 the_row();
@@ -107,11 +108,11 @@ if($loop->have_posts()) {
                                 if($image) {break;}
                             }
                         }
-                        $tagsList = get_the_tags();
+                        /*$tagsList = get_the_tags();
                         $tag = false;
                         if(count($tagsList) > 0) {
                             $tag = $tagsList[0]->name;
-                        }
+                        }*/
                         ?>
                         <div class="col-xs-12 col-sm-12 col-md-4">
                             <a class="article" href="<?php echo get_the_permalink(); ?>">
@@ -126,9 +127,9 @@ if($loop->have_posts()) {
                                 ?>
                                 <div class="cont">
                                     <?php
-                                        if($tag) {
+                                        if($subtitle) {
                                     ?>
-                                    <span><?php echo $tag ?></span>
+                                    <span><?php echo $subtitle; ?></span>
                                     <?php
                                         }
                                     ?>
@@ -157,13 +158,14 @@ set_query_var( 'rowFreeContentSetId', false );
 set_query_var( 'rowFreeContentClone', 'cipet2_' );
 get_template_part('templates/partials/rowFreeContent');
 
+$sinagir_button_link = get_field('sinagir_button_link');
 ?>
 <!--sinagir-->
 <div class="section-row row-sinagir" id="descarga">
     <div class="container">
         <div class="row">
             <h2><?php echo get_field('sinagir_title'); ?></h2><img src="<?php echo get_field('sinagir_background')['url']; ?>">
-        </div><a class="btn" href="MANUAL_MERCANCIAS_PELIGROSAS.pdf" target="_blank"><?php echo get_field('sinagir_button_label'); ?></a>
+        </div><a class="btn" href="<?php echo ($sinagir_button_link)? $sinagir_button_link['url'] : ''; ?>" target="_blank"><?php echo get_field('sinagir_button_label'); ?></a>
     </div>
 </div>
 <?php

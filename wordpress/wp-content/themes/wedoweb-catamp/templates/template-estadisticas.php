@@ -36,6 +36,8 @@ $inner_header_title = get_field('statistics_inner_header_title');
 <?php
 $statistics_content = get_field('statistics_content');
 $statistics_content_final = get_field('statistics_content_final');
+$statistics_button_label = get_field('statistics_button_label');
+$statistics_button_link = get_field('statistics_button_link');
 ?>
 <div class="section-row row-inner inner-estadistica">
     <div class="container-fluid">
@@ -80,6 +82,17 @@ $statistics_content_final = get_field('statistics_content_final');
                 }
 
                 echo $statistics_content_final;
+                ?>
+                <?php
+                if($statistics_button_label) {
+                    ?>
+                    <a class="btn" href="<?php echo $statistics_button_link['url']; ?>" target="_blank">
+                        <?php
+                            echo $statistics_button_label;
+                        ?>
+                    </a>
+                <?php
+                }
                 ?>
             </div>
         </div>

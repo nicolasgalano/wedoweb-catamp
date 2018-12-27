@@ -108,6 +108,7 @@ if($loop->have_posts()) {
 //                        var_dump($loop);
                         $loop->the_post();
                         $image = false;
+                        $subtitle = get_field('news_subtitle');
                         if(have_rows('top_header')) {
                             while (have_rows('top_header')) {
                                 the_row();
@@ -115,11 +116,11 @@ if($loop->have_posts()) {
                                 if($image) {break;}
                             }
                         }
-                        $tagsList = get_the_tags();
+                        /*$tagsList = get_the_tags();
                         $tag = false;
                         if(count($tagsList) > 0) {
                             $tag = $tagsList[0]->name;
-                        }
+                        }*/
                         ?>
                         <div class="col-xs-12 col-sm-12 col-md-4">
                             <a class="article" href="<?php echo get_the_permalink(); ?>">
@@ -134,9 +135,9 @@ if($loop->have_posts()) {
                                 ?>
                                 <div class="cont">
                                     <?php
-                                        if($tag) {
+                                        if($subtitle) {
                                     ?>
-                                    <span><?php echo $tag ?></span>
+                                    <span><?php echo $subtitle ?></span>
                                     <?php
                                         }
                                     ?>
