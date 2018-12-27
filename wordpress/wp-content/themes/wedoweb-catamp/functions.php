@@ -453,6 +453,7 @@ add_action('init', 'register_menu'); // Add HTML5 Blank Menu
 //add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action( 'init', 'create_servicio_cpt', 0 );
 add_action( 'init', 'create_noticia_cpt', 0 );
+add_action( 'init', 'create_indice_cpt', 0 );
 
 
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
@@ -621,6 +622,60 @@ function create_noticia_cpt() {
         'capability_type' => 'post',
     );
     register_post_type( 'noticia', $args );
+
+}
+
+// Register Custom Post Type Noticia
+// Post Type Key: indices
+function create_indice_cpt() {
+
+    $labels = array(
+        'name' => __( 'Índice', 'Post Type General Name', 'textdomain' ),
+        'singular_name' => __( 'Índice', 'Post Type Singular Name', 'textdomain' ),
+        'menu_name' => __( 'Índices', 'textdomain' ),
+        'name_admin_bar' => __( 'Índice', 'textdomain' ),
+        'archives' => __( 'Archivos Índice', 'textdomain' ),
+        'attributes' => __( 'Atributos Índice', 'textdomain' ),
+        'parent_item_colon' => __( 'Padres Índice:', 'textdomain' ),
+        'all_items' => __( 'Todos los Índices', 'textdomain' ),
+        'add_new_item' => __( 'Añadir nuevo Índice', 'textdomain' ),
+        'add_new' => __( 'Añadir nuevo', 'textdomain' ),
+        'new_item' => __( 'Nuevo Índice', 'textdomain' ),
+        'edit_item' => __( 'Editar Índice', 'textdomain' ),
+        'update_item' => __( 'Actualizar Índice', 'textdomain' ),
+        'view_item' => __( 'Ver Índice', 'textdomain' ),
+        'view_items' => __( 'Ver Índices', 'textdomain' ),
+        'search_items' => __( 'Buscar Índice', 'textdomain' ),
+        'not_found' => __( 'No se encontraron Índices.', 'textdomain' ),
+        'not_found_in_trash' => __( 'Ningún Índice encontrado en la papelera.', 'textdomain' ),
+        'insert_into_item' => __( 'Insertar en la Noticia', 'textdomain' ),
+        'uploaded_to_this_item' => __( 'Subido a este índice', 'textdomain' ),
+        'items_list' => __( 'Lista de Índics', 'textdomain' ),
+        'items_list_navigation' => __( 'Navegación por el listado de índices', 'textdomain' ),
+        'filter_items_list' => __( 'Lista de índices filtrados', 'textdomain' ),
+    );
+    $args = array(
+        'label' => __( 'Índice', 'textdomain' ),
+        'description' => __( '', 'textdomain' ),
+        'labels' => $labels,
+        'menu_icon' => 'dashicons-chart-pie',
+        'supports' => array('title'),
+        'taxonomies' => array('post_tag'),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 6,
+        'show_in_admin_bar' => false,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'hierarchical' => false,
+        'exclude_from_search' => false,
+        'show_in_rest' => true,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+    );
+    register_post_type( 'indice', $args );
 
 }
 
