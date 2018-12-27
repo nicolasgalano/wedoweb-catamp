@@ -229,22 +229,39 @@ function add_slug_to_body_class($classes)
         }
         $classes[] = sanitize_html_class($post->post_name);
     } else if (is_singular()) {
-        $newsGroup = get_field('news-group', $post->ID);
-        $isFromCatamp = array_search('catamp', $newsGroup);
-        if($isFromCatamp === 0 || count($newsGroup) > 1) {
-            $classes[] = 'index';
+
+        if (is_singular('noticia')) {
+
+            $isFromCatamp = 0;
+
+            $newsGroup = get_field('news-group', $post->ID);
+            if($newsGroup){
+
+                $isFromCatamp = array_search('catamp', $newsGroup);
+                if($isFromCatamp === 0 || count($newsGroup) > 1) {
+                    $classes[] = 'index';
+                }
+                else {
+                    if(array_search('cipet', $newsGroup) === 0) {
+                        $classes[] = 'cipet inner';
+                    }
+                    else if(array_search('lnh', $newsGroup) === 0) {
+                        $classes[] = 'lnh inner';
+                    }
+                    else {
+                        $classes[] = sanitize_html_class($post->post_name);
+                    }
+                }
+
+            }
+
+        }else if (is_singular('indice')) {
+
+
+
         }
-        else {
-            if(array_search('cipet', $newsGroup) === 0) {
-                $classes[] = 'cipet inner';
-            }
-            else if(array_search('lnh', $newsGroup) === 0) {
-                $classes[] = 'lnh inner';
-            }
-            else {
-                $classes[] = sanitize_html_class($post->post_name);
-            }
-        }
+
+
     }
 
     return $classes;
@@ -625,12 +642,12 @@ function create_noticia_cpt() {
 
 }
 
-// Register Custom Post Type Noticia
+// Register Custom Post Type Indice
 // Post Type Key: indices
 function create_indice_cpt() {
 
     $labels = array(
-        'name' => __( 'Índice', 'Post Type General Name', 'textdomain' ),
+        'name' => __( 'Índices', 'Post Type General Name', 'textdomain' ),
         'singular_name' => __( 'Índice', 'Post Type Singular Name', 'textdomain' ),
         'menu_name' => __( 'Índices', 'textdomain' ),
         'name_admin_bar' => __( 'Índice', 'textdomain' ),

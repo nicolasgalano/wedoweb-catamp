@@ -32,8 +32,8 @@ if(count($images)) {
 </div>
 <?php
 }
-
 ?>
+
 <div class="section-row row-inner inner-noticias">
     <div class="container">
         <div class="row">
@@ -102,5 +102,3 @@ if($nextPostId || $prevPostId) {
 <?php
 }
 ?>
-
-

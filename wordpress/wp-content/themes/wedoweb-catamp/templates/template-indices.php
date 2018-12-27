@@ -1,7 +1,6 @@
 <?php
 /*
 Template Name: Página Indices
-Template Post Type: post, page, indices
 */
 ?>
 
@@ -18,15 +17,14 @@ if($headerType == 'lnhcursos') {
     $headerType = 'lnh';
 }
 
-//POST TYPE
-$postType = get_post_type();
-
 get_header($headerType);
 
 $inner_header_background = get_field('inner_header_background');
 $inner_header_logo = get_field('inner_header_logo');
 $inner_header_title = get_field('inner_header_title');
+
 ?>
+
 <div class="section-row row-inner row-common"
      <?php if($inner_header_background) {?> style="background-image: url('<?php echo $inner_header_background['url']; ?>');" <?php } ?>
      data-midnight="white">
@@ -45,7 +43,6 @@ $inner_header_title = get_field('inner_header_title');
             <div class="col-xs-12">
 
                 <?php
-                    echo $postType;
                     echo get_field('inner_content');
                 ?>
 
@@ -54,11 +51,17 @@ $inner_header_title = get_field('inner_header_title');
                 <p>&nbsp;</p>
 
                 <h4>DESCARGAR ÍNDICES PASADOS</h4>
+
                 <ul class="indices">
-                 	<li><a href="http://wedoweb.co/clientes/catamp/catamp/indices.html" target="_blank" rel="noopener">2018</a></li>
-                 	<li><a href="http://wedoweb.co/clientes/catamp/catamp/indices.html" target="_blank" rel="noopener">2017</a></li>
-                 	<li><a href="http://wedoweb.co/clientes/catamp/catamp/indices.html" target="_blank" rel="noopener">2016</a></li>
+                <?php $loop = new WP_Query( array( 'post_type' => 'indice' ) ); ?>
+
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+                    <li><a href="<?php echo get_permalink(); ?>" target="_blank" rel="noopener"><?php echo get_the_title(); ?></a></li>
+
+                <?php endwhile; ?>
                 </ul>
+
             </div>
         </div>
     </div>
