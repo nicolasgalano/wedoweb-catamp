@@ -40,6 +40,17 @@ if(count($images)) {
             <div class="col-sm-12 col-md-8">
                 <?php echo the_content();?>
             </div>
+            <div class="col-sm-12 col-md-4">
+                <?php
+                    $tagsList = get_the_tags();
+
+                    foreach ($tagsList as $tag) {
+                        ?>
+                        <span><?php echo $tag->name ?></span>
+                <?php
+                    }
+                ?>
+            </div>
         </div>
     </div>
 </div>
