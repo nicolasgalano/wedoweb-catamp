@@ -23,7 +23,7 @@ $inner_header_title = get_field('material_inner_header_title');
 <div class="section-row row-inner row-common"
     <?php if($inner_header_background) {?> style="background-image: url('<?php echo $inner_header_background['url']; ?>');" <?php } ?>
      data-midnight="white">
-    <div class="container">
+    <div class="container wow fadeInUp">
         <?php if($inner_header_logo) {?>
             <img src="<?php echo $inner_header_logo['url']; ?>">
         <?php } ?>
@@ -51,7 +51,6 @@ $material_content = get_field('material_content');
                             ?>
                             <div class="descargas">
                                 <a href="<?php echo $material_list_file['url']; ?>">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/images/dummie/logos/lg_nube.png">
                                     <span><?php echo $material_list_title; ?></span>
                                     <?php echo $material_list_description; ?>
                                 </a>

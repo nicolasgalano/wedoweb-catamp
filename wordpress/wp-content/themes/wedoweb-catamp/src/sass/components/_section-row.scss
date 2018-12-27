@@ -362,7 +362,7 @@
         box-shadow:0 0px 40px rgba(0,0,0,0.2);
         min-height: 565px;
         overflow: hidden;
-        
+
         figure{
 
             img{
@@ -1153,11 +1153,45 @@
         }
     }
 
+    .descargas{
+
+        padding:60px 0 0;
+
+        a{
+            background:url('../images/inner/im_download-material.png') left center no-repeat;
+            padding:0 0 0 150px;
+            margin-bottom: 30px;
+            display:block;
+            min-height:93px;
+            span{
+                display:block;
+                margin:0 0 10px;
+                padding:0;
+                font-size:24px;
+                line-height: 34px;
+                text-transform: uppercase;
+                font-weight: 300;
+                font-family: 'Roboto';
+            }
+            p{
+                margin:0;
+                padding:0;
+                font-size:18px;
+                line-height: 28px;
+                font-family: 'Roboto';
+            }
+            &:hover{
+                background-image:url('../images/inner/im_download-material-active.png');
+            }
+        }
+
+    }
+
 }
 
 .boletin{
     form.search{
-        padding:0 0 20px;
+        padding:0 0 10px;
         span{
             float: right;
             margin-right: 15px;
@@ -1175,8 +1209,20 @@
             font-size: 18px !important;
             font-weight: 400;
             line-height: 30px;
-            margin: 10px 0 10px !important;
-            color: #003263;
+            margin: 30px 0 10px !important;
+            padding-left:30px;
+            color: #337ab7;
+            background:url(../images/inner/ic_pdf.png) left center no-repeat;
+            background-size: auto 22px;
+            a{
+                span{
+                    text-transform: none;
+                    color: #337ab7 !important;
+                    display: inline !important;
+                    margin: 0 !important;
+                    font-size: 18px !important;
+                }
+            }
         }
         p{
             font-size: 16px !important;

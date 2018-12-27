@@ -55,7 +55,7 @@ $pagelist_background = get_field('cipet_pagelist_background');
                         $link = 'javascript:void(0);';
                     }
                     ?>
-                    <div class="col-xs-12 col-sm-6 col-md-4"><a href="<?php echo $link; ?>">
+                    <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInUp"><a href="<?php echo $link; ?>">
                             <figure class="clearfix"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']?>">
                                 <span><b><?php echo $title; ?></b></span>
                             </figure>
@@ -228,4 +228,3 @@ if(have_rows('cipet_associatelist_list')) {
     </div>
 </div>
 <?php get_footer(); ?>
-

@@ -12,11 +12,11 @@ get_template_part('templates/partials/mainHeaderContent')
 <div class="section-row row-about" id="about">
     <div class="container">
         <div class="row">
-            <div class="col-xs-18 col-sm-9 col-md-6">
+            <div class="col-xs-18 col-sm-9 col-md-6 wow fadeInLeft">
                 <h2><?php echo get_field('about-title'); ?></h2>
                 <?php echo get_field('about-content'); ?>
             </div>
-            <div class="col-xs-18 col-sm-9 col-md-6">
+            <div class="col-xs-18 col-sm-9 col-md-6 wow fadeInRight">
                 <div class="multimedia open-popup-youtube" data-youtube="<?php echo get_field('about-video-link'); ?>"><?php if($videoLabel) {?><span><?php echo $videoLabel; ?></span><?php } ?></div>
             </div>
         </div>
@@ -64,7 +64,7 @@ $pagelist_background = get_field('pagelist_background');
                         $link = 'javascript:void(0);';
                     }
                     ?>
-                    <div class="col-xs-12 col-sm-6 col-md-4"><a href="<?php echo $link; ?>">
+                    <div class="col-xs-12 col-sm-6 col-md-4 wow fadeInUp"><a href="<?php echo $link; ?>">
                             <figure class="clearfix"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']?>">
                                 <span><b><?php echo $title; ?></b></span>
                             </figure>
@@ -331,4 +331,3 @@ if(have_rows('associatelist_list')) {
     </div>
 </div>
 <?php get_footer(); ?>
-

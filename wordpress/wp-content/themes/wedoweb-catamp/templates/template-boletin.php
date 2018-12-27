@@ -23,7 +23,7 @@ $inner_header_title = get_field('boletin_inner_header_title');
 <div class="section-row row-inner row-common"
     <?php if($inner_header_background) {?> style="background-image: url('<?php echo $inner_header_background['url']; ?>');" <?php } ?>
      data-midnight="white">
-    <div class="container">
+    <div class="container wow fadeInUp">
         <?php if($inner_header_logo) {?>
             <img src="<?php echo $inner_header_logo['url']; ?>">
         <?php } ?>
@@ -71,7 +71,7 @@ $boletin_contenido = get_field('boletin_contenido');
                             <article id="boletin_<?php echo $cont; ?>">
                             <h4>
                                 <a href="<?php echo $boletin_list_file['url']; ?>" target="_blank">
-                                    &middot; <?php echo $boletin_list_title; ?>
+                                    <?php echo $boletin_list_title; ?> <span>(Ver PDF)</span>
                                 </a>
                             </h4>
                             <?php

@@ -74,10 +74,22 @@ export default {
             afterScroll: mobileHack
         });
 
+        //PREGUNTAS
         $('.pregunta-item .pregunta').click(function(){
-            console.log('asdasd');
             $(this).parent().toggleClass('opened');
         });
+
+        //WOW
+        var wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset: 0,
+                callback: function(box) {
+                    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+                }
+            }
+        );
+        wow.init();
 
     },
     finalize() {

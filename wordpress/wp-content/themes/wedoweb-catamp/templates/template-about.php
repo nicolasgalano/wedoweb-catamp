@@ -21,7 +21,7 @@ $inner_header_background = get_field('header_background');
 <div class="section-row row-inner row-what_is"
     <?php if($inner_header_background) {?> style="background-image: url('<?php echo $inner_header_background['url']; ?>')" <?php } ?>
      data-midnight="white">
-    <div class="container"></div>
+    <div class="container wow fadeInUp"></div>
 </div>
 <?php
 $about_content = get_field('about_content');

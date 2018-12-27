@@ -23,7 +23,7 @@ $inner_header_title = get_field('licencia_inner_header_title');
 <div class="section-row row-inner row-common"
     <?php if($inner_header_background) {?> style="background-image: url('<?php echo $inner_header_background['url']; ?>');" <?php } ?>
      data-midnight="white">
-    <div class="container">
+    <div class="container wow fadeInUp">
         <?php if($inner_header_logo) {?>
             <img src="<?php echo $inner_header_logo['url']; ?>">
         <?php } ?>
@@ -69,4 +69,3 @@ $licencia_content = get_field('licencia_content');
 <?php
 get_footer();
 ?>
-

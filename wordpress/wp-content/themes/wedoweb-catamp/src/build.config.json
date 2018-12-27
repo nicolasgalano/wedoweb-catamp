@@ -19,11 +19,11 @@
     "vendor_js": [
       "node_modules/jquery/dist/jquery.min.js",
       "node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js",
-      "node_modules/wow.js/dist/wow.min.js",
       "node_modules/jquery-validation/dist/jquery.validate.min.js",
       "src/js/midnight.jquery.min.js",
       "src/js/jquery.smooth-scroll.js",
-      "src/js/swiper.min.js"
+      "src/js/swiper.min.js",
+      "src/js/wow.min.js"
     ],
     "sass": ["src/sass/app.scss"]
   },

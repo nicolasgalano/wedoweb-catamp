@@ -6,7 +6,7 @@ $header_content = get_field($prefix.'header_content');
 
 ?>
 <div class="section-row row-main" data-midnight="blue">
-    <div class="container">
+    <div class="container wow fadeInUp">
         <?php
         if($header_logo) {
             ?>
