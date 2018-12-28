@@ -255,7 +255,7 @@ function add_slug_to_body_class($classes)
 
             }
 
-        }else if (is_singular('indice')) {
+        }else if (is_singular('indices')) {
 
 
 
@@ -692,7 +692,7 @@ function create_indice_cpt() {
         'publicly_queryable' => true,
         'capability_type' => 'post',
     );
-    register_post_type( 'indice', $args );
+    register_post_type( 'indices', $args );
 
 }
 
@@ -765,7 +765,7 @@ function content_button_shortcode($atts, $content = null) {
     $legend = (isset($atts['leyenda']))? "<span>{$atts['leyenda']}</span>" : '';
 
     $target = ($externo !== false)? '_blank': '_self';
-    return "<a class='btn {$colorClass}'
+    return "<a class='btn {$colorClass} wow fadeInUp'
                 href='{$link}'
                 target='{$target}'>".
                 $content .

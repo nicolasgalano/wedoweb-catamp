@@ -43,7 +43,7 @@ $inner_header_title = get_field('inner_header_title');
             <div class="col-xs-12">
                 <?php echo get_field('inner_content'); ?>
 
-                <?php $loopp = new WP_Query( array( 'post_type' => 'indice','posts_per_page' => 1, 'orderby' => 'title', 'order' => 'DESC') ); ?>
+                <?php $loopp = new WP_Query( array( 'post_type' => 'indices', 'posts_per_page' => 1, 'orderby' => 'title', 'order' => 'DESC') ); ?>
                 <?php while ( $loopp->have_posts() ) : $loopp->the_post(); ?>
                     <?php $rowCount = count( get_field('indices_por_mes') ); //GET THE COUNT ?>
                     <?php
@@ -68,7 +68,7 @@ $inner_header_title = get_field('inner_header_title');
                 <h4>DESCARGAR ÍNDICES PASADOS</h4>
 
                 <ul class="indices">
-                    <?php $loop = new WP_Query( array( 'post_type' => 'indice', 'orderby' => 'title', 'order' => 'DESC' ) ); ?>
+                    <?php $loop = new WP_Query( array( 'post_type' => 'indices', 'orderby' => 'title', 'order' => 'DESC' ) ); ?>
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <li><a href="<?php echo get_permalink(); ?>" target="_blank" rel="noopener"><?php echo get_the_title(); ?></a></li>
                     <?php endwhile; ?>
