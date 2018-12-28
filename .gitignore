@@ -5,7 +5,8 @@
 
 node_modules
 build
-src/*-manifest.json
+html/src/*-manifest.json
+wordpress/wp-content/themes/wedoweb-catamp/src/*-manifest.json
 wordpress/wp-content/themes/wedoweb-catamp/js
 wordpress/wp-content/themes/wedoweb-catamp/css
 wordpress/wp-config.local.php
