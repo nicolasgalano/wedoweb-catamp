@@ -116,11 +116,6 @@ if($loop->have_posts()) {
                                 if($image) {break;}
                             }
                         }
-                        /*$tagsList = get_the_tags();
-                        $tag = false;
-                        if(count($tagsList) > 0) {
-                            $tag = $tagsList[0]->name;
-                        }*/
                         ?>
                         <div class="col-xs-12 col-sm-12 col-md-4 wow fadeInUp">
                             <a class="article" href="<?php echo get_the_permalink(); ?>">
