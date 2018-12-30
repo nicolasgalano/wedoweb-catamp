@@ -245,7 +245,7 @@ function add_slug_to_body_class($classes)
                     if(array_search('cipet', $newsGroup) === 0) {
                         $classes[] = 'cipet inner';
                     }
-                    else if(array_search('lnh', $newsGroup) === 0) {
+                    else if(array_search('lnhcursos', $newsGroup) === 0) {
                         $classes[] = 'lnh inner';
                     }
                     else {

@@ -13,11 +13,13 @@ if($newsGroup){
 
     $isFromCatamp = array_search('catamp', $newsGroup);
 
-    if($isFromCatamp === 0 || count($newsGroup) > 1) {} else {
+    if($isFromCatamp === 0 || count($newsGroup) > 1) {
+
+    } else {
         if(array_search('cipet', $newsGroup) === 0) {
             $headerType = 'cipet';
         }
-        else if(array_search('lnh', $newsGroup) === 0) {
+        else if(array_search('lnhcursos', $newsGroup) === 0) {
             $headerType = 'lnh';
         }
     }
@@ -27,7 +29,7 @@ if($newsGroup){
 get_header($headerType);
 
 if (is_singular('noticia')) {
-
+    set_query_var('headerType', $headerType);
     get_template_part('templates/single', 'news');
 
 }else if (is_singular('indice')) {
