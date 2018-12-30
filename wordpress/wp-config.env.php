@@ -24,7 +24,7 @@
  */
 $env = [
     'production'  => [
-        'domain' => 'domain.com',
+        'domain' => 'catamp.org.ar',
         'path'   => '',
         'ssl'    => false,
     ],

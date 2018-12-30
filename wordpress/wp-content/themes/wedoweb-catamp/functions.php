@@ -255,7 +255,7 @@ function add_slug_to_body_class($classes)
 
             }
 
-        }else if (is_singular('indice')) {
+        }else if (is_singular('indices')) {
 
 
 
@@ -468,7 +468,7 @@ add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comment
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_menu'); // Add HTML5 Blank Menu
 //add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
-add_action( 'init', 'create_servicio_cpt', 0 );
+//add_action( 'init', 'create_servicio_cpt', 0 );
 add_action( 'init', 'create_noticia_cpt', 0 );
 add_action( 'init', 'create_indice_cpt', 0 );
 
@@ -692,7 +692,7 @@ function create_indice_cpt() {
         'publicly_queryable' => true,
         'capability_type' => 'post',
     );
-    register_post_type( 'indice', $args );
+    register_post_type( 'indices', $args );
 
 }
 
@@ -765,7 +765,7 @@ function content_button_shortcode($atts, $content = null) {
     $legend = (isset($atts['leyenda']))? "<span>{$atts['leyenda']}</span>" : '';
 
     $target = ($externo !== false)? '_blank': '_self';
-    return "<a class='btn {$colorClass}'
+    return "<a class='btn {$colorClass} wow fadeInUp'
                 href='{$link}'
                 target='{$target}'>".
                 $content .
@@ -988,5 +988,51 @@ class opcionesdetema_Settings_Page {
     }
 }
 new opcionesdetema_Settings_Page();
+
+
+//MENU REORDER
+function wpse_custom_menu_order( $menu_ord ) {
+    if ( !$menu_ord ) return true;
+
+    return array(
+        'index.php', // Dashboard
+
+        'separator1', // First separator
+
+        'upload.php', // Media
+        'edit.php?post_type=page', // Pages
+        'edit.php?post_type=noticia', // Noticias
+        'edit.php?post_type=indices', // Indices
+
+        'separator2', // Second separator
+
+        'opcionesdetema', //Opciones del Tema
+        'wpcf7', //Contact Form
+        'themes.php', // Appearance
+        'plugins.php', // Plugins
+        'users.php', // Users
+        'tools.php', // Tools
+        'options-general.php', // Settings
+        'separator-last', // Last separator
+    );
+}
+add_filter( 'custom_menu_order', 'wpse_custom_menu_order', 10, 1 );
+add_filter( 'menu_order', 'wpse_custom_menu_order', 10, 1 );
+
+//USER ROLES
+add_action( 'admin_init', 'my_remove_menu_pages' );
+function my_remove_menu_pages() {
+    global $user_ID;
+    if ( current_user_can( 'editor' ) ) {
+        remove_menu_page( 'wpcf7' );
+        remove_menu_page( 'themes.php' );
+        remove_menu_page( 'plugins.php' );
+        remove_menu_page( 'users.php' );
+        remove_menu_page( 'tools.php' );
+        remove_menu_page( 'options-general.php' );
+    }
+    remove_menu_page( 'edit.php' );
+}
+
 
 ?>

@@ -7,7 +7,15 @@ textarea {
     resize: none;
 }
 body{
+    .a2a_kit{
+        display:none;
+    }
+}
 
+body.single-noticia{
+    .a2a_kit{
+        display:block;
+    }
 }
 
 

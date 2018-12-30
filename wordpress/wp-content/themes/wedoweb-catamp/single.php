@@ -32,9 +32,9 @@ if (is_singular('noticia')) {
     set_query_var('headerType', $headerType);
     get_template_part('templates/single', 'news');
 
-}else if (is_singular('indice')) {
+}else if (is_singular('indices')) {
 
-    get_template_part('templates/single', 'indice');
+    get_template_part('templates/single', 'indices');
 
 }
 ?>

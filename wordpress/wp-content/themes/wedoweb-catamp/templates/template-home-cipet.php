@@ -108,13 +108,8 @@ if($loop->have_posts()) {
                                 if($image) {break;}
                             }
                         }
-                        /*$tagsList = get_the_tags();
-                        $tag = false;
-                        if(count($tagsList) > 0) {
-                            $tag = $tagsList[0]->name;
-                        }*/
                         ?>
-                        <div class="col-xs-12 col-sm-12 col-md-4">
+                        <div class="col-xs-12 col-sm-12 col-md-4 wow fadeInUp">
                             <a class="article" href="<?php echo get_the_permalink(); ?>">
                                 <?php
                                 if($image) {
@@ -143,7 +138,7 @@ if($loop->have_posts()) {
 
                     if($loop->post_count >= 3) {
                         ?>
-                        <a class="btn" href="<?php echo esc_url(home_url('/cipet/noticias'))?>" target="_blank">Ver más</a>
+                        <a class="btn wow fadeInUp" href="<?php echo esc_url(home_url('/cipet/noticias'))?>" target="_blank">Ver más</a>
                 <?php
                     }
                 ?>
@@ -165,7 +160,7 @@ $sinagir_button_link = get_field('sinagir_button_link');
     <div class="container">
         <div class="row">
             <h2><?php echo get_field('sinagir_title'); ?></h2><img src="<?php echo get_field('sinagir_background')['url']; ?>">
-        </div><a class="btn" href="<?php echo ($sinagir_button_link)? $sinagir_button_link['url'] : ''; ?>" target="_blank"><?php echo get_field('sinagir_button_label'); ?></a>
+        </div><a class="btn wow fadeInUp" href="<?php echo ($sinagir_button_link)? $sinagir_button_link['url'] : ''; ?>" target="_blank"><?php echo get_field('sinagir_button_label'); ?></a>
     </div>
 </div>
 <?php

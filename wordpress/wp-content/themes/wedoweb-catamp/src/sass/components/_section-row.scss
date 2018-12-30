@@ -1062,11 +1062,33 @@
         background: url(../images/inner/im_agenda2.png) center center no-repeat;
         background-size: contain;
         padding: 187px 42px 49px 42px;
-        width: 1103px;
-        height: 900px;
+        width: 100%;
+        max-width:1215px;
+        height: 980px;
         margin: 0 auto;
         iframe{
             margin:0 auto;
+        }
+        @media(max-width: 1400px){
+            max-width:1103px;
+            height: 900px;
+            iframe{
+                -ms-transform:scale(0.80);
+                -moz-transform:scale(0.80);
+                -o-transform: scale(0.80);
+                -webkit-transform: scale(0.80);
+                transform:scale(0.80);
+                position:relative;
+                top: -13%;
+                left: -13%;
+                height: 126%;
+                width: 126%;
+            }
+        }
+        @media(max-width: 1200px){
+            max-width: 930px;
+            height: 799px;
+            padding: 178px 36px 66px;
         }
         @media(max-width: 1100px){
             display:none;
@@ -1415,6 +1437,11 @@
             background: transparent center center no-repeat;
             background-size: cover;
         }
+    }
+    .one-slide{
+        height:55vh;
+        background: transparent center center no-repeat;
+        background-size: cover;
     }
 }
 .inner-noticias{

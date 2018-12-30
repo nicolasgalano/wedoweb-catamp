@@ -10,7 +10,21 @@ if(have_rows('top_header')) {
 ?>
 
 <?php
-if(count($images)) {
+if(count($images) == 1) {
+?>
+<div class="section-row row-noticias" data-midnight="white">
+    <!-- Swiper-->
+    <?php
+    foreach ($images as $img) {
+    ?>
+    <div class="one-slide" style="background-image:url(<?php echo $img['url']?>);">
+    </div>
+    <?php
+    }
+    ?>
+</div>
+<?php
+}else if(count($images)){
 ?>
 <div class="section-row row-noticias" data-midnight="white">
     <!-- Swiper-->
@@ -34,6 +48,7 @@ if(count($images)) {
 }
 ?>
 
+
 <div class="section-row row-inner inner-noticias">
     <div class="container">
         <div class="row">
@@ -41,25 +56,28 @@ if(count($images)) {
                 <?php echo the_content();?>
             </div>
             <div class="col-sm-12 col-md-4">
-
+                <?php
+                $tagsList = get_the_tags();
+                if($tagsList){
+                ?>
                 <div class="tags">
 
                     <h4>Etiquetas relaciondas:</h4>
 
                     <ul class="clearfix">
                     <?php
-                    $tagsList = get_the_tags();
-                    if($tagsList && count($tagsList)) {
-                        foreach ($tagsList as $tag) {
-                            ?>
-                            <li><?php echo $tag->name ?></li>
-                            <?php
-                        }
+                    foreach ($tagsList as $tag) {
+                    ?>
+                        <li><?php echo $tag->name ?></li>
+                    <?php
                     }
                     ?>
                     </ul>
 
                 </div>
+                <?php
+                }
+                ?>
 
             </div>
         </div>

@@ -156,13 +156,8 @@ if($loop->have_posts()) {
                                 if($image) {break;}
                             }
                         }
-                        /*$tagsList = get_the_tags();
-                        $tag = false;
-                        if($tagsList && count($tagsList) > 0) {
-                            $tag = $tagsList[0]->name;
-                        }*/
                         ?>
-                        <div class="col-xs-12 col-sm-12 col-md-4">
+                        <div class="col-xs-12 col-sm-12 col-md-4 wow fadeInUp">
                             <a class="article" href="<?php echo get_the_permalink(); ?>">
                                 <?php
                                 if($image) {
@@ -191,7 +186,7 @@ if($loop->have_posts()) {
 
                     if($loop->post_count >= 3) {
                         ?>
-                        <a class="btn" href="<?php echo esc_url(home_url('/lnhcursos/noticias'))?>" target="_blank">Ver más</a>
+                        <a class="btn wow fadeInUp" href="<?php echo esc_url(home_url('/lnhcursos/noticias'))?>" target="_blank">Ver más</a>
                 <?php
                     }
                 ?>
