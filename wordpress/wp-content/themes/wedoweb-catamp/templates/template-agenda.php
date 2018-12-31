@@ -46,9 +46,11 @@ $agend_content = get_field('agend_content');
                 <div class="agenda">
                     <iframe src="<?php echo $agend_iframe_link; ?>" width="100%" height="100%"></iframe>
                 </div>
-                <?php
-                    echo $agend_content;
-                ?>
+                <div class="agenda-mobile">
+                    <?php
+                        echo $agend_content;
+                    ?>
+                </div>
             </div>
         </div>
     </div>

@@ -66,10 +66,13 @@ function display_navigation($menuKey)
     if (($locations = get_nav_menu_locations()) && isset($locations[$menuKey])) {
         $menu = wp_get_nav_menu_object($locations[$menuKey]);
         $menu_items = wp_get_nav_menu_items($menu->term_id);
-//        var_dump($menu_items);
         $menu_list = '<ul>';
         foreach ($menu_items as $item) {
-            $menu_list .= "<li><a href='{$item->url}'>{$item->title}</a></li>";
+            $itemclass = '';
+            if($item->menu_item_parent !== '0'){
+                $itemclass = 'submenu';
+            }
+            $menu_list .= "<li class='{$itemclass}'><a href='{$item->url}'>{$item->title}</a></li>";
         }
 
         $menu_list .= '</ul>';

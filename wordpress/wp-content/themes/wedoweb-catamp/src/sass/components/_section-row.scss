@@ -5,7 +5,7 @@
 }
 
 .section-row {
-//DIVIDI CADA PARTE DEL DISEÑO EN UNA SECCION NUEVA
+
     min-height:200px;
     font-family: $lato;//VARIABLE DEFINIDA EN CONFIG QUE DEFINE LA TIPOGRAFIA DE GOOGLE FONTS LATO
 
@@ -89,6 +89,11 @@
         font-size: 60px;
         font-weight: 100;
         line-height: 80px;
+        @media(max-width: 600px){
+            font-size: 40px;
+            font-weight: 100;
+            line-height: 44px;
+        }
     }
 
     h4{
@@ -190,6 +195,11 @@
     min-height: 700px;
     @media(max-width: 800px){
         min-height: 500px;
+    }
+    @media(max-width: 600px){
+        height:auto;
+        padding-top:100px;
+        padding-bottom:30px;
     }
     img{
         width:40%;
@@ -926,7 +936,11 @@
     text-align: center;
     min-height: 500px;
     @media(max-width: 800px){
-        min-height: 400px;
+        min-height: 490px;
+    }
+    @media(max-width: 400px){
+        padding-top:120px;
+        height:auto;
     }
     img{
         width:auto;
@@ -936,7 +950,10 @@
         @media(max-width: 800px){
             width: 100%;
             max-width:250px;
-            max-height:auto;
+            max-height:none;
+        }
+        @media(max-width: 400px){
+            max-width:130px;
         }
     }
     h4{
@@ -964,6 +981,22 @@
     .firma{
         img{
             float: right;
+        }
+        @media(max-width: 600px){
+            width:100%;
+            img{
+                float: right;
+                width:100%;
+            }
+        }
+    }
+    figure{
+        margin-bottom:10px;
+        @media(max-width: 600px){
+            width:100%;
+            img{
+                width:100%;
+            }
         }
     }
     .whatsapp{
@@ -993,6 +1026,10 @@
         font-size: 50px !important;
         line-height: 62px !important;
         margin:0px 0 20px;
+        @media(max-width: 600px){
+            font-size: 40px !important;
+            line-height: 44px !important;
+        }
     }
     h4{
         text-transform: uppercase;
@@ -1016,6 +1053,7 @@
         font-weight: 300;
         line-height: 30px;
         margin-bottom: 24px;
+        word-break: break-word;
     }
     a{
         font-size:18px;
@@ -1268,9 +1306,16 @@
     @media(max-width: 800px){
         min-height: 500px;
     }
+    @media(max-width: 400px){
+        height: auto;
+        padding-top:120px;
+    }
     img{
-
-
+        @media(max-width: 400px){
+            width: 100%;
+            max-width:130px;
+            max-height:auto;
+        }
     }
     h2{
         font-size: 47px;

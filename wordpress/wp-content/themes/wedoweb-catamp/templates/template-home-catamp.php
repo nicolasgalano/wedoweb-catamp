@@ -166,9 +166,11 @@ if(have_rows('directorylist')) {
     <div class="section-row row-comision" id="comision" data-midnight="gray">
         <?php
             $directorylist = array();
+            $slidemembers = array();
             while(have_rows('directorylist')) {
                 the_row();
                 $members = array();
+
                 while (have_rows('directorylist_members')) {
                     the_row();
                     $member = array(
@@ -179,6 +181,9 @@ if(have_rows('directorylist')) {
                             "directorylist_member_description" => get_sub_field('directorylist_member_description'),
                     );
                     array_push($members, $member);
+                    if($member['directorylist_member_slider']){
+                        array_push($slidemembers, $member);
+                    }
                 }
 
                 $sectors = array(
@@ -193,36 +198,57 @@ if(have_rows('directorylist')) {
             <div class="row">
                 <div class="col-xs-12 col-md-12 col-lg-7">
                     <h2><?php echo $directorylist[0]['title']; ?></h2>
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <?php
-                            for ($i = 0; $i < count($directorylist); $i++) {
-                                foreach ($directorylist[$i]['members'] as $members) {
-                                    if($members['directorylist_member_slider']) {
-                                    ?>
-                                    <div class="swiper-slide">
-                                        <div class="chabon">
-                                            <div class="top clearfix">
-                                                <div class="photo" style="background-image:url(<?php echo $members['directorylist_member_photo']['url'];?>);"></div>
-                                                <div class="texto">
-                                                    <h5><?php echo $members['directorylist_member_name'];?></h5>
-                                                    <h6><?php echo $members['directorylist_member_position'];?></h6>
+
+                    <?php if(count($slidemembers) > 1){ ?>
+
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <?php
+                                for ($i = 0; $i < count($directorylist); $i++) {
+                                    foreach ($directorylist[$i]['members'] as $members) {
+                                        if($members['directorylist_member_slider']) {
+                                        ?>
+                                        <div class="swiper-slide">
+                                            <div class="chabon">
+                                                <div class="top clearfix">
+                                                    <div class="photo" style="background-image:url(<?php echo $members['directorylist_member_photo']['url'];?>);"></div>
+                                                    <div class="texto">
+                                                        <h5><?php echo $members['directorylist_member_name'];?></h5>
+                                                        <h6><?php echo $members['directorylist_member_position'];?></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <p><?php echo $members['directorylist_member_description'];?></p>
                                                 </div>
                                             </div>
-                                            <div class="bottom">
-                                                <p><?php echo $members['directorylist_member_description'];?></p>
-                                            </div>
                                         </div>
-                                    </div>
-                            <?php
+                                        <?php
+                                        }
                                     }
                                 }
-                            }
-                            ?>
+                                ?>
+                            </div>
+                            <!-- Add Pagination-->
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <!-- Add Pagination-->
-                        <div class="swiper-pagination"></div>
-                    </div>
+
+                    <?php }else{ ?>
+
+                        <div class="chabon">
+                            <div class="top clearfix">
+                                <div class="photo" style="background-image:url(<?php echo $slidemembers[0]['directorylist_member_photo']['url'];?>);"></div>
+                                <div class="texto">
+                                    <h5><?php echo $slidemembers[0]['directorylist_member_name'];?></h5>
+                                    <h6><?php echo $slidemembers[0]['directorylist_member_position'];?></h6>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <p><?php echo $slidemembers[0]['directorylist_member_description'];?></p>
+                            </div>
+                        </div>
+
+                    <?php } ?>
+
                 </div>
                 <div class="col-xs-12 col-md-12 col-lg-5">
                     <div class="comision-box wow fadeInRight">
