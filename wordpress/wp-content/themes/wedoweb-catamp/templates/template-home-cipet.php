@@ -217,7 +217,8 @@ if(have_rows('cipet_associatelist_list')) {
                 <p><?php echo get_field('cipet_contact_nac_text'); ?></p>
                 <a href="<?php echo get_field('cipet_contact_external_link') ?>" target="_blank"><img class="sec"
                          src="<?php echo get_field('cipet_contact_external_image')['url'] ?>"
-                         alt="<?php echo get_field('cipet_contact_external_image')['alt'] ?>"></a><a href="<?php echo get_field('catamp_contact_external_link_2') ?>" target="_blank"><img class="min"
+                         alt="<?php echo get_field('cipet_contact_external_image')['alt'] ?>"></a>
+                <a href="<?php echo get_field('cipet_contact_external_link_2') ?>" target="_blank"><img class="min"
                          src="<?php echo get_field('cipet_contact_external_image_2')['url'] ?>"
                          alt="<?php echo get_field('cipet_contact_external_image_2')['alt'] ?>"></a>
             </div>
