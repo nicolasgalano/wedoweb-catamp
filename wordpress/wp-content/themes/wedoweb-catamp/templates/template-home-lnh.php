@@ -172,7 +172,7 @@ if($loop->have_posts()) {
                                     <?php
                                         if($subtitle) {
                                     ?>
-                                    <span><?php echo $subtitle; ?></span>
+                                    <span><?php echo $subtitle ?></span>
                                     <?php
                                         }
                                     ?>

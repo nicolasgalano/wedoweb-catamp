@@ -85,10 +85,30 @@ if(count($images) == 1) {
 </div>
 
 <?php
-$nextAdjacentPost = get_adjacent_post(false,'',false);
-$prevAdjacentPost = get_adjacent_post(false,'',true);
-$nextPostId = ($nextAdjacentPost)? $nextAdjacentPost->ID : false;
-$prevPostId = ($prevAdjacentPost)? $prevAdjacentPost->ID : false;
+global $wpdb;
+$newGroup = ($headerType == '')? 'catamp' : $headerType;
+$newGroup = ($headerType == 'lnh')? 'lnhcursos' : $headerType;
+
+$prevAdjacentPost = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}posts p 
+              INNER JOIN {$wpdb->prefix}postmeta pm
+              ON pm.post_id = p.ID
+              WHERE 
+              pm.meta_key = 'news-group' AND pm.meta_value LIKE '%{$newGroup}%' AND
+              p.ID < {$post->ID} AND 
+              p.post_status = 'publish'
+              ORDER BY p.post_date DESC limit 1", OBJECT );
+
+$nextAdjacentPost = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}posts p 
+              INNER JOIN {$wpdb->prefix}postmeta pm
+              ON pm.post_id = p.ID
+              WHERE 
+              pm.meta_key = 'news-group' AND pm.meta_value LIKE '%{$newGroup}%' AND
+              p.ID > {$post->ID} AND 
+              p.post_status = 'publish'
+              ORDER BY p.post_date DESC limit 1", OBJECT );
+
+$nextPostId = (count($nextAdjacentPost))? $nextAdjacentPost[0]->ID : false;
+$prevPostId = (count($prevAdjacentPost))? $prevAdjacentPost[0]->ID : false;
 
 if($nextPostId || $prevPostId) {
 ?>
