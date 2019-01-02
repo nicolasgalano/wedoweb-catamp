@@ -122,7 +122,6 @@ nav{
     top:0;
     right:-300px;
     width:320px;
-    height:90vh;
     z-index:20;
     padding:30px 35px 56px 30px;
     box-sizing: border-box;
@@ -142,7 +141,7 @@ nav{
     ul{
         float: left;
         margin:0;
-        padding:12vh 0 0 0;
+        padding:8vh 0 0 0;
         li{
             list-style:none;
             margin:0;
@@ -153,6 +152,14 @@ nav{
                 font-size: 18px;
                 line-height: 30px;
                 font-weight: 100;
+            }
+            &.submenu{
+                a{
+                    display:block;
+                    font-size: 14px;
+                    line-height: 18px;
+                    padding-left: 20px;
+                }
             }
         }
     }

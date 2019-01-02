@@ -303,7 +303,8 @@ $academy_background = get_field('academy_background');
                 </a>
                 <a href="<?php echo get_field('lnh_contact_external_link') ?>" target="_blank"><img class="faadeac"
                          src="<?php echo get_field('lnh_contact_external_image')['url'] ?>"
-                         alt="<?php echo get_field('lnh_contact_external_image')['alt'] ?>"></a><a href="<?php echo get_field('catamp_contact_external_link_2') ?>" target="_blank"><img class="fpt"
+                         alt="<?php echo get_field('lnh_contact_external_image')['alt'] ?>"></a>
+                <a href="<?php echo get_field('lnh_contact_external_link_2') ?>" target="_blank"><img class="fpt"
                          src="<?php echo get_field('lnh_contact_external_image_2')['url'] ?>"
                          alt="<?php echo get_field('lnh_contact_external_image_2')['alt'] ?>"></a>
             </div>
