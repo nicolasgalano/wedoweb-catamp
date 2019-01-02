@@ -65,18 +65,35 @@ function display_navigation($menuKey)
 {
     if (($locations = get_nav_menu_locations()) && isset($locations[$menuKey])) {
         $menu = wp_get_nav_menu_object($locations[$menuKey]);
-        $menu_items = wp_get_nav_menu_items($menu->term_id);
+        $menu_items = wp_get_nav_menu_items($menu->term_id, array( 'order' => 'DESC' ));
         $menu_list = '<ul>';
-        foreach ($menu_items as $item) {
-            $itemclass = '';
-            if($item->menu_item_parent !== '0'){
-                $itemclass = 'submenu';
+        $submenu = false;
+        $menu_items_array = (array) $menu_items;
+        for( $i = 0 ; $i < count($menu_items_array) ; $i++ ){
+            $item = $menu_items_array[$i];
+            if ( !$item->menu_item_parent ){
+                $parent_id = $item->ID;
+                $menu_list .= "<li><a href='{$item->url}'>{$item->title}</a>";
             }
-            $menu_list .= "<li class='{$itemclass}'><a href='{$item->url}'>{$item->title}</a></li>";
+            if ( $parent_id == $item->menu_item_parent ){
+                if ( !$submenu ){
+                    $submenu = true;
+                    $menu_list .= '<ul class="sub-menu">';
+                }
+                $menu_list .= "<li><a href='{$item->url}'>{$item->title}</a></li>";
+                if ( $menu_items_array[$i+1]->menu_item_parent != $parent_id && $submenu ){
+                    $menu_list .= '</ul>';
+                    $submenu = false;
+                }
+            }
+            if(isset($menu_items_array[$i+1])){
+                if ( $menu_items_array[$i+1]->menu_item_parent != $parent_id ){
+                    $menu_list .= '</li>';
+                    $submenu = false;
+                }
+            }
         }
-
         $menu_list .= '</ul>';
-
         echo $menu_list;
     }
 }
@@ -86,17 +103,17 @@ function display_contact_navigation($menuKey)
     if (($locations = get_nav_menu_locations()) && isset($locations[$menuKey])) {
         $menu = wp_get_nav_menu_object($locations[$menuKey]);
         $menu_items = wp_get_nav_menu_items($menu->term_id);
-//        var_dump($menu_items);
         $menu_list = '<ul class="about-as">';
         foreach ($menu_items as $item) {
-            $menu_list .= "<li><a href='{$item->url}'>{$item->title}</a></li>";
+            if($item->menu_item_parent == '0'){
+                $menu_list .= "<li><a href='{$item->url}'>{$item->title}</a></li>";
+            }
         }
-
         $menu_list .= '</ul>';
-
         echo $menu_list;
     }
 }
+
 // HTML5 Blank navigation
 function html5blank_nav()
 {

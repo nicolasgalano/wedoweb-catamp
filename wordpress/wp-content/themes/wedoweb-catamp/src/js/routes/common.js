@@ -37,13 +37,26 @@ export default {
             });
         });
         $('.menu li a').click(function(e){
-            $( "div.menu" ).animate({
-                opacity: 0,
-                right: "-=300",
-                height: "toggle"
-            }, 500, function() {
-                // Animation complete.
-            });
+
+            var $this = $(this);
+
+            if( $this.parent().find('ul.sub-menu').length ){
+
+                e.preventDefault();
+                //$this.parent().toggleClass('active');
+                $this.parent().find('ul.sub-menu').animate({
+                    opacity: 1,
+                    height: "toggle"
+                }, 500, function() { });
+
+            }else{
+                $( "div.menu" ).animate({
+                    opacity: 0,
+                    right: "-=300",
+                    height: "toggle"
+                }, 500, function() { });
+            }
+
         });
 
         //SWIPER

@@ -806,6 +806,9 @@
         padding:0;
         li{
             padding:0 0 20px;
+            &.submenu{
+                display:none;
+            }
             a{
                 font-size: 13px;
                 font-weight: 100 !important;
@@ -1089,7 +1092,7 @@
                 max-width:250px;
             }
             p{
-                padding: 50px 70px 0;
+                padding: 50px 60px 0;
                 font-size: 29px;
                 line-height: 36px;
             }
@@ -1511,13 +1514,18 @@
             padding:0;
             li{
                 list-style: none;
-                font-family: 'Roboto';
-                font-size: 18px;
-                font-weight: 200;
-                margin:0px 10px 0px 0;
-                padding-left: 0px;
-                color:#e43f3c;
                 float:left;
+                a{
+                    font-family: 'Roboto';
+                    font-size: 18px;
+                    font-weight: 200;
+                    margin:0px 10px 0px 0;
+                    padding-left: 0px;
+                    color:#e43f3c;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }

@@ -153,12 +153,24 @@ nav{
                 line-height: 30px;
                 font-weight: 100;
             }
-            &.submenu{
-                a{
-                    display:block;
-                    font-size: 14px;
-                    line-height: 18px;
-                    padding-left: 20px;
+            ul.sub-menu{
+                padding:0;
+                float:none;
+                opacity:0;
+                display: none;
+                li{
+                    a{
+                        display:block;
+                        font-size: 14px;
+                        line-height: 18px;
+                        padding-left: 20px;
+                    }
+                }
+            }
+            &.active{
+                ul.sub-menu{
+                    height:auto;
+                    opacity:0;
                 }
             }
         }
