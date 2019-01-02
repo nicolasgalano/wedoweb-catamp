@@ -68,7 +68,7 @@ if(count($images) == 1) {
                     <?php
                     foreach ($tagsList as $tag) {
                     ?>
-                        <li><?php echo $tag->name ?></li>
+                        <li><a href="<?php echo esc_url(home_url('/noticias/tag/'.$tag->slug)) ?>"><?php echo $tag->name ?></a></li>
                     <?php
                     }
                     ?>

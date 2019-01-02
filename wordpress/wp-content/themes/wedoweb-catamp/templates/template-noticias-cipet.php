@@ -25,18 +25,13 @@ get_header('cipet');
                     while($loop->have_posts()) {
                         $loop->the_post();
                         $image = false;
+                        $subtitle = get_field('news_subtitle');
+
                         if(have_rows('top_header')) {
                             while (have_rows('top_header')) {
                                 the_row();
                                 $image = get_sub_field('top_header_image');
                                 if($image) {break;}
-                            }
-                        }
-                        $tagsList = get_the_tags();
-                        $tag = false;
-                        if($tagsList) {
-                            if(count($tagsList) > 0) {
-                                $tag = $tagsList[0]->name;
                             }
                         }
                         ?>
@@ -53,9 +48,9 @@ get_header('cipet');
                                 ?>
                                 <div class="cont">
                                     <?php
-                                    if($tag) {
+                                    if($subtitle) {
                                         ?>
-                                        <span><?php echo $tag ?></span>
+                                        <span><?php echo $subtitle ?></span>
                                         <?php
                                     }
                                     ?>

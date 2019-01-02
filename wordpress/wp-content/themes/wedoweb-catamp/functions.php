@@ -471,6 +471,7 @@ add_action('init', 'register_menu'); // Add HTML5 Blank Menu
 //add_action( 'init', 'create_servicio_cpt', 0 );
 add_action( 'init', 'create_noticia_cpt', 0 );
 add_action( 'init', 'create_indice_cpt', 0 );
+add_action('init', 'tag_rewrite', 10, 0);
 
 
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
@@ -519,6 +520,14 @@ add_shortcode('whatsapp', 'content_whatsapp_shortcode');
 add_shortcode('iframe', 'content_iframe_shortcode');
 add_shortcode('youtube', 'content_youtube_shortcode');
 
+function tag_rewrite() {
+    add_rewrite_rule(
+        '^noticias/tag/([^/]*)/?', // p followed by a slash, a series of one or more digits and maybe another slash
+        'index.php?pagename=noticias&tags=$matches[1]',
+        'top'
+    );
+    add_rewrite_tag( '%tags%', '([^&]+)' );
+}
 
 function remove_menus() {
     remove_menu_page( 'edit-comments.php' );
