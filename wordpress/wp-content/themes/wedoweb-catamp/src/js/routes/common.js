@@ -47,7 +47,7 @@ export default {
                 $this.parent().find('ul.sub-menu').animate({
                     opacity: 1,
                     height: "toggle"
-                }, 500, function() { });
+                }, 300, function() { });
 
             }else{
                 $( "div.menu" ).animate({

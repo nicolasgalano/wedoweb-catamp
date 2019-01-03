@@ -73,7 +73,11 @@ function display_navigation($menuKey)
             $item = $menu_items_array[$i];
             if ( !$item->menu_item_parent ){
                 $parent_id = $item->ID;
-                $menu_list .= "<li><a href='{$item->url}'>{$item->title}</a>";
+                if ( isset($menu_items_array[$i+1]) && $menu_items_array[$i+1]->menu_item_parent == $parent_id ){
+                    $menu_list .= "<li><a href='javascript:;'>{$item->title}</a>";
+                }else{
+                    $menu_list .= "<li><a href='{$item->url}'>{$item->title}</a>";
+                }
             }
             if ( $parent_id == $item->menu_item_parent ){
                 if ( !$submenu ){
