@@ -34,7 +34,7 @@ $inner_header_title = get_field('quality_inner_header_title');
 </div>
 <?php
 $quality_contenido = get_field('quality_contenido');
-$quality_sign = get_field('quality_sign');
+//$quality_sign = get_field('quality_sign');
 ?>
 <div class="section-row row-inner inner-common">
     <div class="container">
@@ -43,14 +43,6 @@ $quality_sign = get_field('quality_sign');
                 <?php
                 echo $quality_contenido;
 
-                if($quality_sign) {
-                    ?>
-                    <figure class="firma">
-                        <img src="<?php echo $quality_sign['url']; ?>"
-                             alt="<?php echo $quality_sign['alt']; ?>">
-                    </figure>
-                    <?php
-                }
                 ?>
             </div>
         </div>
