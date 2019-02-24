@@ -18,7 +18,31 @@ body.single-noticia{
     }
 }
 
+img {
+  &.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.alignright {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+  }
+  &.alignleft {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+  }
+}
 
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
 
 
 
