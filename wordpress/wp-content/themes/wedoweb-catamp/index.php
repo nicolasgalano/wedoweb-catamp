@@ -30,7 +30,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4"><a class="cipet" href="../cipet/index.html">
                     <figure><img src="<?php echo get_template_directory_uri(); ?>/images/dummie/logos/lg_cipet.png" alt="cipet"></figure>
                     <p>Un servicio de CATAMP que se encuentra operando ininterrumpidamente desde 2008 dando una respuesta rapida y eficiente en la atencion de las emergencias en el transporte carretero, procurando que los caminos sean cada vez mas seguros.</p></a></div>
-            <div class="col-xs-12 col-sm-6 col-md-4"><a class="cursos" href="../lnhcursos/index.html">
+            <div class="col-xs-12 col-sm-6 col-md-4"><a class="cursos" href="../linti/index.html">
                     <figure><img src="<?php echo get_template_directory_uri(); ?>/images/dummie/logos/lg_lnh.png" alt="cursos"></figure>
                     <p>CATAMP brinda cursos que permiten la obtención de la Licencia Nacional Habilitante para la categoría de Cargas Generales y Mercancías Peligrosas.</p></a></div>
             <div class="col-xs-12 col-sm-6 col-md-4"><a class="ruta" href="ruta.html">

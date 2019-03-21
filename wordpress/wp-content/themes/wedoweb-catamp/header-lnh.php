@@ -27,7 +27,7 @@
     <?php
     $pageClasses = get_body_class();
     $isLnhInner = array_search('lnh inner', $pageClasses);
-    $homeLink = ($isLnhInner)? '/lnhcursos' : '/';
+    $homeLink = ($isLnhInner)? '/linti' : '/';
     ?>
     <nav>
         <h1><a href="<?php echo esc_url(home_url($homeLink)); ?>"></a></h1><a class="btn-menu open-menu" href="javascript:;"></a>

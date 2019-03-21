@@ -187,7 +187,7 @@ if($loop->have_posts()) {
                     if($loop->post_count >= 3) {
                 ?>
                         <div class="col-xs-12">
-                            <a class="btn wow fadeInUp" href="<?php echo esc_url(home_url('/lnhcursos/noticias'))?>" target="_blank">Ver más</a>
+                            <a class="btn wow fadeInUp" href="<?php echo esc_url(home_url('/linti/noticias'))?>" target="_blank">Ver más</a>
                         </div>
                 <?php
                     }

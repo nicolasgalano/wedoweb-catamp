@@ -14,7 +14,7 @@ if($parentId) {
     $parentPage = get_post($parentId);
     $headerType = $parentPage->post_name;
 }
-if($headerType == 'lnhcursos') {
+if($headerType == 'linti') {
     $headerType = 'lnh';
 }
 

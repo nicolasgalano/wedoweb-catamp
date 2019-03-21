@@ -248,7 +248,7 @@ function add_slug_to_body_class($classes)
         if($headerType == 'cipet') {
             $classes[] = 'cipet inner';
         }
-        else if($headerType == 'lnhcursos') {
+        else if($headerType == 'linti') {
             $classes[] = 'lnh inner';
         }
         $classes[] = sanitize_html_class($post->post_name);
