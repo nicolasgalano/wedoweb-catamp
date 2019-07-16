@@ -12,6 +12,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
+		<meta name="google-site-verification" content="3ClNl0c2Yk4K64049EngQLY8r_ChQKRYyqimHTs4dfE" />
+
 		<?php wp_head(); ?>
 		<script>
         // conditionizr.com
