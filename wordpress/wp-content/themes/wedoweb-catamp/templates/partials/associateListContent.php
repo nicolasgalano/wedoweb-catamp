@@ -27,7 +27,7 @@
 ?>
 <div class="section-row row-asociados"
     <?php if($associatelist_setId){ ?> id="<?php echo $associatelist_setId; ?>"<?php } ?>
-    >
+    data-midnight="defaultt">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">

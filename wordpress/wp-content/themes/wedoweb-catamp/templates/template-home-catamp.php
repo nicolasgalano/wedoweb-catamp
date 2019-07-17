@@ -9,7 +9,7 @@ get_template_part('templates/partials/mainHeaderContent')
 <?php
     $videoLabel = get_field('about-video-label')
 ?>
-<div class="section-row row-about" id="about">
+<div class="section-row row-about" id="about" data-midnight="defaultt">
     <div class="container">
         <div class="row">
             <div class="col-xs-18 col-sm-9 col-md-6 wow fadeInLeft">

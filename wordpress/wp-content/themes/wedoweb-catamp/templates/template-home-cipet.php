@@ -158,7 +158,7 @@ get_template_part('templates/partials/rowFreeContent');
 $sinagir_button_link = get_field('sinagir_button_link');
 ?>
 <!--sinagir-->
-<div class="section-row row-sinagir" id="descarga">
+<div class="section-row row-sinagir" id="descarga" data-midnight="defaultt">
     <div class="container">
         <div class="row">
             <h2><?php echo get_field('sinagir_title'); ?></h2><img src="<?php echo get_field('sinagir_background')['url']; ?>">

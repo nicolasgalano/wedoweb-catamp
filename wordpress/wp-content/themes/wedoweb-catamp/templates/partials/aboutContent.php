@@ -1,4 +1,4 @@
-<div class="section-row row-about" id="about">
+<div class="section-row row-about" id="about" data-midnight="defaultt">
     <div class="container">
         <div class="row">
             <?php
@@ -17,7 +17,7 @@
                     <div class="col-xs-12 wow fadeInLeft">
                         <h2><?php echo $about_title; ?></h2>
                         <?php echo $about_content; ?>
-                    </div>                    
+                    </div>
             <?php
                 }
             ?>

@@ -60,6 +60,13 @@ nav{
     }
 
     //MIDNIGHT JS
+    .midnightHeader.defaultt{
+        background-color:rgba(255,255,255,0.7);
+        @media(max-width: 800px){
+            background-color:#FFF;
+        }
+    }
+
     .midnightHeader.white,
     .midnightHeader.red{
         background-color:rgba(0,0,0,0.2);
@@ -100,7 +107,7 @@ nav{
         @media(max-width: 600px){
 
             background-color: rgba(255,255,255,0.8);
-            
+
         }
 
         h1{

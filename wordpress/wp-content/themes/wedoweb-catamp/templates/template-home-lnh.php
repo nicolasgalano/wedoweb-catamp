@@ -234,7 +234,7 @@ if(have_rows('associatelist_list')) {
 $academy_title = get_field('academy_title');
 $academy_background = get_field('academy_background');
 ?>
-<div class="section-row row-comision" id="comision" style="background-image:url(<?php echo $academy_background['url']; ?>);">
+<div class="section-row row-comision" id="comision" style="background-image:url(<?php echo $academy_background['url']; ?>);" data-midnight="defaultt">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-12 col-lg-7">
