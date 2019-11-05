@@ -68,6 +68,35 @@ $pagelist_background = get_field('lnh_pagelist_background');
         </div>
     </div>
 </div>
+
+<?php
+$bolsaContent = get_field('lnh-contenido');
+$bolsaImagen = get_field('lnh-imagen');
+$bolsaMostrar = get_field('lnh-mostrar');
+if($bolsaMostrar){
+?>
+<div class="section-row row-structure-1" data-midnight="gray">
+<div class="row-structure-1-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 hidden-xs hidden-xs">
+                <div class="imagen" style="background-position: center right;background-image:url('<?php echo $bolsaImagen; ?>');">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-9 text-center">
+                <?php echo $bolsaContent; ?>
+                <!--
+                    <p>Bolsa de trabajo para choferes de<br>
+                    Cargas Generales y Mercancías Peligrosas</p>
+                    <a href="/bolsa-de-trabajo/" class="btn">Dejá tus datos acá</a>
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<?php } ?>
+
 <?php
 $pagelist_background = get_field('lnh2_pagelist_background');
 ?>

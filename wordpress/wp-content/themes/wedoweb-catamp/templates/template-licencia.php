@@ -39,7 +39,7 @@ $licencia_content = get_field('licencia_content');
 <div class="section-row row-inner inner-common">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-sm-12">
                 <?php
                 echo $licencia_content;
                 ?>
